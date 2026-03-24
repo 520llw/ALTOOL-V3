@@ -1,0 +1,18 @@
+[server]
+maxUploadSize = 500
+enableXsrfProtection = false
+enableCORS = false
+# 减少文件监听开销
+fileWatcherType = "poll"
+# 限制消息大小，加速WebSocket传输
+maxMessageSize = 200
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "dark"
+
+[runner]
+# 快速重跑，跳过模块哈希检查
+fastReruns = true

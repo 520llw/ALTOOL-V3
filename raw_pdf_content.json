@@ -1,0 +1,6222 @@
+{
+  "Sanrise-SRE50N120FSUS7(1).pdf": [
+    {
+      "page": 1,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nGeneral Description Symbol\nThe SRE50N120FSUS7 is a Field Stop Trench\nIGBT with anti-parallel SiC SBD, which offers\nlow switching losses, high energy efficiency and\nhigh avalanche ruggedness for soft switching\napplications such as UPS, solar inverters, etc.\nThe SRE50N120FSUS7 is available in TO-247\nand TO-247-4 packages.\nFeatures\n High Breakdown Voltage to 1200V\n Advanced Trench Fieldstop technology\n Low V\nCE(sat)\n High Ruggedness, Temperature Stability\n Easy Parallel Switching Capability due\nto Positive Temperature Coefficient in\nV\nCE(SAT)\n Soft Current Turn-off Waveforms\n Non-Automotive Qualified\nApplication\n Solar Inverters\n Uninterrupted Power Supply\n Industrial Power Supplies\n Grid Inverter\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD\nG\nE 1\nC\nE 2\nTO-247 TO-247-4\nFigure 1 Symbol of SRE50N120FSUS7\nPackage Type\nTO-247 TO-247-4\nFigure 2 Package Type of SRE50N120FSUDA\nTO-247 Package pin definition:\nPin 1- Gate；Pin 2&backside- Collector；Pin 3-Emitter\nTO-247-4 Package pin definition:\nPin 1- &backside-Collector； Pin 2-Emitter2\nPin 3- Kelvin Emitter1； Pin 4- Gate\nOrdering Information\nSRE50N120FSUS7□□–□\nCircuit Type E: Lead Free\nG: Green\nPackage Blank: Tube\nT: TO-247 TR: Tape & Reel\nT4:TO-247-4\nPart Number Marking ID\nPackage Packing Type\nGreen Green\nTO-247 SRE50N120FSUS7T-G SRE50N120FSUS7TG Tube\nTO-247-4 SRE50N120FSUS7T4-G SRE50N120FSUS7T4G Tube",
+      "tables": [
+        [
+          [
+            "Package",
+            "Part Number",
+            "Marking ID",
+            "Packing Type"
+          ],
+          [
+            null,
+            "Green",
+            "Green",
+            null
+          ],
+          [
+            "TO-247",
+            "SRE50N120FSUS7T-G",
+            "SRE50N120FSUS7TG",
+            "Tube"
+          ],
+          [
+            "TO-247-4",
+            "SRE50N120FSUS7T4-G",
+            "SRE50N120FSUS7T4G",
+            "Tube"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nAbsolute Maximum Ratings\nParameter Symbol Rating Unit\nCollector-emitter voltage V 1200 V\nCES\nGate-emitter Voltage ±20 V\nV\nGES\nTransient Gate-emitter Voltage ±30 V\nT =25ºC 100\nC\nContinuous Collector Current I A\nC\nT =100ºC 50\nC\nPulsed Collector Current, Limited by T Jmax I CM 250 A\nDiode Continuous Collector Current (T C =100ºC) I F 40 A\nNon-Repetitive Forward Surge Current\nI 200 A\n(tp=10ms, Half Sine Wave) FM\ni2t value(tp=10ms) ∫i²dt 242 A2S\nT =25ºC 500 W\nC\nPower dissipation P\ntot\nT =100ºC 250 W\nC\nOperating Junction Temperature T -40~175(1) ºC\nJ\nStorage Temperature T -55 ~ 150 ºC\nSTG\nLead Temperature (Soldering, 10 sec) T 260 ºC\nLEAD\nNote:\n1. Reliability testing conducted at Tjmax=175℃.\nThermal Resistance\nParameter Package Symbol Min Typ Max Unit\nIGBT Thermal Resistance，Junction-to-Case R - - 0.3\nthJC\nTO-247\nSiC SBD Thermal Resistance，Junction-to-Case R - 0.45 0.6 ºC/W\nTO-247-4 thJC\nThermal Resistance，Junction-to-Ambient R - - 40\nthJA\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD",
+      "tables": [
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "Rating",
+            "Unit"
+          ],
+          [
+            "Collector-emitter voltage",
+            null,
+            "V\nCES",
+            "1200",
+            "V"
+          ],
+          [
+            "Gate-emitter Voltage",
+            null,
+            "V\nGES",
+            "±20",
+            "V"
+          ],
+          [
+            "Transient Gate-emitter Voltage",
+            null,
+            null,
+            "±30",
+            "V"
+          ],
+          [
+            "Continuous Collector Current",
+            "T =25ºC\nC",
+            "I\nC",
+            "100",
+            "A"
+          ],
+          [
+            null,
+            "T =100ºC\nC",
+            null,
+            "50",
+            null
+          ],
+          [
+            "Pulsed Collector Current, Limited by T\nJmax",
+            null,
+            "I\nCM",
+            "250",
+            "A"
+          ],
+          [
+            "Diode Continuous Collector Current (T =100ºC)\nC",
+            null,
+            "I\nF",
+            "40",
+            "A"
+          ],
+          [
+            "Non-Repetitive Forward Surge Current\n(tp=10ms, Half Sine Wave)",
+            null,
+            "I\nFM",
+            "200",
+            "A"
+          ],
+          [
+            "i2t value(tp=10ms)",
+            null,
+            "∫i²dt",
+            "242",
+            "A2S"
+          ],
+          [
+            "Power dissipation",
+            "T =25ºC\nC",
+            "P\ntot",
+            "500",
+            "W"
+          ],
+          [
+            null,
+            "T =100ºC\nC",
+            null,
+            "250",
+            "W"
+          ],
+          [
+            "Operating Junction Temperature",
+            null,
+            "T\nJ",
+            "-40~175(1)",
+            "ºC"
+          ],
+          [
+            "Storage Temperature",
+            null,
+            "T\nSTG",
+            "-55 ~ 150",
+            "ºC"
+          ],
+          [
+            "Lead Temperature (Soldering, 10 sec)",
+            null,
+            "T\nLEAD",
+            "260",
+            "ºC"
+          ]
+        ],
+        [
+          [
+            "Parameter",
+            "Package",
+            "Symbol",
+            "Min",
+            "Typ",
+            "Max",
+            "Unit"
+          ],
+          [
+            "IGBT Thermal Resistance，Junction-to-Case",
+            "TO-247\nTO-247-4",
+            "R\nthJC",
+            "-",
+            "-",
+            "0.3",
+            "ºC/W"
+          ],
+          [
+            "SiC SBD Thermal Resistance，Junction-to-Case",
+            null,
+            "R\nthJC",
+            "-",
+            "0.45",
+            "0.6",
+            null
+          ],
+          [
+            "Thermal Resistance，Junction-to-Ambient",
+            null,
+            "R\nthJA",
+            "-",
+            "-",
+            "40",
+            null
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nElectrical Characteristics\nT = 25ºC, unless otherwise specified.\nJ\nParameter Symbol Test Conditions Min Typ Max Unit\nStatistic Characteristics\nV =0V,\nGE\nCollector-emitter Breakdown Voltage BV 1200 V\nCES\nI =500uA\nC\nGate Threshold Voltage V V =V , I =1.6mA 4.4 5.4 6.4 V\nGE(th) CE GE C\nV =15V, I =50A,\nGE C\nT =25ºC 1.6 2.0 V\nJ\nCollector-emitter saturation voltage V\nCEsat\nT =125ºC 2.0 V\nJ\nT =150ºC 2.33 V\nJ\nV =1200V, V =0V\nCE GE\nZero Gate Voltage Collector Current I CES T J =25ºC 100 uA\nT =150ºC 1 mA\nJ\nForward I V =20V, V =0V 100 nA\nGESF GE CE\nGate-emitter Leakage Current\nReverse I V =-20V, =0V -100 nA\nGESR GE CE\nDynamic Characteristics\nInput Capacitance C 4450\nIES\nV =25V,\nCE\nOutput Capacitance C 215 pF\nOES\nV =0V, f=1MHz\nGE\nReverse Transfer Capacitance C 26\nRES\nf=1MHz, Open\nGate Resistance R 1.2 Ω\nG\nDrain\nTurn-on Delay Time t 43 ns\nd(on)\nRise Time t 24 ns\nr\nTj=25℃\nTurn-off Delay Time t 200 ns\nd(off)\nV =600V, I =25A\nCC C\nFall Time t 95 ns\nf\nR =10Ω,\nG\nTurn-on energy E 0.6 mJ\non\nV =0/15V\nGE\nTurn-off energy E 0.8 mJ\noff\nTotal switching energy E 1.4 mJ\nts\nTurn-on Delay Time t 46 ns\nd(on)\nRise Time t\nr\nTj=25℃ 46 ns\nTurn-off Delay Time t d(off) V CC =600V, 244 ns\nFall Time t f I C =50A 102 ns\nTurn-on energy E R =10Ω,V =0/15 1.6 mJ\non G GE\nTurn-off energy E V 1.6 mJ\noff\nTotal switching energy E 3.2 mJ\nts\nGate to Emitter Charge Q 62\nGE\nV =600V, I =50A\nCC C\nGate to Collector Charge Q 170 nC\nGC\nV =0 to 15V\nGE\nGate Charge Total Q 410\nG\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD",
+      "tables": [
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "Test Conditions",
+            "Min",
+            "Typ",
+            "Max",
+            "Unit"
+          ],
+          [
+            "Statistic Characteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Collector-emitter Breakdown Voltage",
+            null,
+            "BV\nCES",
+            "V =0V,\nGE\nI =500uA\nC",
+            "1200",
+            "",
+            "",
+            "V"
+          ],
+          [
+            "Gate Threshold Voltage",
+            null,
+            "V\nGE(th)",
+            "V =V , I =1.6mA\nCE GE C",
+            "4.4",
+            "5.4",
+            "6.4",
+            "V"
+          ],
+          [
+            "Collector-emitter saturation voltage",
+            null,
+            "V\nCEsat",
+            "V =15V, I =50A,\nGE C\nT =25ºC\nJ",
+            "",
+            "1.6",
+            "2.0",
+            "V"
+          ],
+          [
+            null,
+            null,
+            null,
+            "T =125ºC\nJ",
+            "",
+            "2.0",
+            "",
+            "V"
+          ],
+          [
+            null,
+            null,
+            null,
+            "T =150ºC\nJ",
+            "",
+            "2.33",
+            "",
+            "V"
+          ],
+          [
+            "Zero Gate Voltage Collector Current",
+            null,
+            "I\nCES",
+            "V =1200V, V =0V\nCE GE\nT =25ºC\nJ",
+            "",
+            "",
+            "100",
+            "uA"
+          ],
+          [
+            null,
+            null,
+            null,
+            "T =150ºC\nJ",
+            "",
+            "",
+            "1",
+            "mA"
+          ],
+          [
+            "Gate-emitter Leakage Current",
+            "Forward",
+            "I\nGESF",
+            "V =20V, V =0V\nGE CE",
+            "",
+            "",
+            "100",
+            "nA"
+          ],
+          [
+            null,
+            "Reverse",
+            "I\nGESR",
+            "V =-20V, =0V\nGE CE",
+            "",
+            "",
+            "-100",
+            "nA"
+          ],
+          [
+            "Dynamic Characteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Input Capacitance",
+            null,
+            "C\nIES",
+            "V =25V,\nCE\nV =0V, f=1MHz\nGE",
+            "",
+            "4450",
+            "",
+            "pF"
+          ],
+          [
+            "Output Capacitance",
+            null,
+            "C\nOES",
+            null,
+            "",
+            "215",
+            "",
+            null
+          ],
+          [
+            "Reverse Transfer Capacitance",
+            null,
+            "C\nRES",
+            null,
+            "",
+            "26",
+            "",
+            null
+          ],
+          [
+            "Gate Resistance",
+            null,
+            "R\nG",
+            "f=1MHz, Open\nDrain",
+            "",
+            "1.2",
+            "",
+            "Ω"
+          ],
+          [
+            "Turn-on Delay Time",
+            null,
+            "t\nd(on)",
+            "Tj=25℃\nV =600V, I =25A\nCC C\nR =10Ω,\nG\nV =0/15V\nGE",
+            "",
+            "43",
+            "",
+            "ns"
+          ],
+          [
+            "Rise Time",
+            null,
+            "t\nr",
+            null,
+            "",
+            "24",
+            "",
+            "ns"
+          ],
+          [
+            "Turn-off Delay Time",
+            null,
+            "t\nd(off)",
+            null,
+            "",
+            "200",
+            "",
+            "ns"
+          ],
+          [
+            "Fall Time",
+            null,
+            "t\nf",
+            null,
+            "",
+            "95",
+            "",
+            "ns"
+          ],
+          [
+            "Turn-on energy",
+            null,
+            "E\non",
+            null,
+            "",
+            "0.6",
+            "",
+            "mJ"
+          ],
+          [
+            "Turn-off energy",
+            null,
+            "E\noff",
+            null,
+            "",
+            "0.8",
+            "",
+            "mJ"
+          ],
+          [
+            "Total switching energy",
+            null,
+            "E\nts",
+            null,
+            "",
+            "1.4",
+            "",
+            "mJ"
+          ],
+          [
+            "Turn-on Delay Time",
+            null,
+            "t\nd(on)",
+            "Tj=25℃\nV =600V,\nCC\nI =50A\nC\nR =10Ω,V =0/15\nG GE\nV",
+            "",
+            "46",
+            "",
+            "ns"
+          ],
+          [
+            "Rise Time",
+            null,
+            "t\nr",
+            null,
+            "",
+            "46",
+            "",
+            "ns"
+          ],
+          [
+            "Turn-off Delay Time",
+            null,
+            "t\nd(off)",
+            null,
+            "",
+            "244",
+            "",
+            "ns"
+          ],
+          [
+            "Fall Time",
+            null,
+            "t\nf",
+            null,
+            "",
+            "102",
+            "",
+            "ns"
+          ],
+          [
+            "Turn-on energy",
+            null,
+            "E\non",
+            null,
+            "",
+            "1.6",
+            "",
+            "mJ"
+          ],
+          [
+            "Turn-off energy",
+            null,
+            "E\noff",
+            null,
+            "",
+            "1.6",
+            "",
+            "mJ"
+          ],
+          [
+            "Total switching energy",
+            null,
+            "E\nts",
+            null,
+            "",
+            "3.2",
+            "",
+            "mJ"
+          ],
+          [
+            "Gate to Emitter Charge",
+            null,
+            "Q\nGE",
+            "V =600V, I =50A\nCC C\nV =0 to 15V\nGE",
+            "",
+            "62",
+            "",
+            "nC"
+          ],
+          [
+            "Gate to Collector Charge",
+            null,
+            "Q\nGC",
+            null,
+            "",
+            "170",
+            "",
+            null
+          ],
+          [
+            "Gate Charge Total",
+            null,
+            "Q\nG",
+            null,
+            "",
+            "410",
+            "",
+            null
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nParameter Symbol Test Conditions Min Typ. Max Unit\nSiC SBD Characteristics\nI =40A 1.60 1.9\nF\nForward Voltage V V\nF\nI =40A, T =175ºC 2.4\nF J\nV =1200V, T =25ºC 3 50\nR J\nReverse Current I µA\nR\nV =1200V, T =175ºC 7\nR J\nV =1V, f=1MHz 1380\nR\nTotal Capacitance C V =400V, f=1MHz 120 pF\nR\nV =800V, f=1MHz 85\nR\nV =800V, I =40A\nR F\nTotal Capacitive Charge Q 145 nC\nC\ndI /dt=300A/us\nF\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD",
+      "tables": [
+        [
+          [
+            "Parameter",
+            "Symbol",
+            "Test Conditions",
+            "Min",
+            "Typ.",
+            "Max",
+            "Unit"
+          ],
+          [
+            "SiC SBD Characteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Forward Voltage",
+            "V\nF",
+            "I =40A\nF",
+            "",
+            "1.60",
+            "1.9",
+            "V"
+          ],
+          [
+            null,
+            null,
+            "I =40A, T =175ºC\nF J",
+            "",
+            "2.4",
+            "",
+            null
+          ],
+          [
+            "Reverse Current",
+            "I\nR",
+            "V =1200V, T =25ºC\nR J",
+            "",
+            "3",
+            "50",
+            "µA"
+          ],
+          [
+            null,
+            null,
+            "V =1200V, T =175ºC\nR J",
+            "",
+            "7",
+            "",
+            null
+          ],
+          [
+            "Total Capacitance",
+            "C",
+            "V =1V, f=1MHz\nR",
+            "",
+            "1380",
+            "",
+            "pF"
+          ],
+          [
+            null,
+            null,
+            "V =400V, f=1MHz\nR",
+            "",
+            "120",
+            "",
+            null
+          ],
+          [
+            null,
+            null,
+            "V =800V, f=1MHz\nR",
+            "",
+            "85",
+            "",
+            null
+          ],
+          [
+            "Total Capacitive Charge",
+            "Q\nC",
+            "V =800V, I =40A\nR F\ndI /dt=300A/us\nF",
+            "",
+            "145",
+            "",
+            "nC"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 5,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nTypical Performance Characteristics\nFigure 3: IGBT FBSOA Figure 4: IGBT Transient Thermal Impedance\nI =f(V );V >=15/0V;Tj≤ 175 ºC R(thJC) = f(tp); parameter: D = tp/T\nC CE GE\nFigure 5: Power Dissipation Figure 6: Collector Current vs. Temperature\n600.0 120.0\n500.0 100.0\n400.0 80.0\n)W\n(\nP\nlatot\n)A\n(\nIC\n300.0 60.0\n200.0 40.0\n100.0 20.0\n0.0 0.0\n0 25 50 75 100 125 150 175 200 0 25 50 75 100 125 150 175\nT (⁰C)\nT\nC\n(⁰C) C\nPtot=f(T ) I = f(Tj); V >=15V;Tj≤ 175 ºC\nC C GE\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD",
+      "tables": [
+        [
+          [
+            "Figure 3: IGBT FBSOA",
+            "Figure 4: IGBT Transient Thermal Impedance"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I =f(V );V >=15/0V;Tj≤ 175 ºC\nC CE GE",
+            "R(thJC) = f(tp); parameter: D = tp/T"
+          ]
+        ],
+        [
+          [
+            "Figure 5: Power Dissipation",
+            "Figure 6: Collector Current vs. Temperature"
+          ],
+          [
+            "600.0\n500.0\n400.0\n)W\n(\nlatot\nP\n300.0\n200.0\n100.0\n0.0\n0 25 50 75 100 125 150 175 200\nT (⁰C)\nC",
+            "120.0\n100.0\n80.0\n)A\n(\nIC\n60.0\n40.0\n20.0\n0.0\n0 25 50 75 100 125 150 175\nT (⁰C)\nC"
+          ],
+          [
+            "Ptot=f(T )\nC",
+            "I = f(Tj); V >=15V;Tj≤ 175 ºC\nC GE"
+          ]
+        ],
+        [
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        [
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 6,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nFigure 7: Typ. Output Characteristics Figure 8: Typ. Output Characteristics\nI = f(V ); Tj= 25ºC; parameter: V I = f(V ); Tj= 175ºC; parameter: V\nC CE GE C CE GE\nFigure 9: Typ. Transfer Characteristics Figure 10: Typ. Collector Voltage vs. Temperature\n3\n2.5\nI = 50A\nC\n2\n)V\n(\nV\n)tas(EC 1.5\nI =25A\n1 C\n0.5\n0\n0 25 50 75 100 125 150 175\nT (⁰C)\nj\nI = f(V ); V =20V V =f(Tj); V =15V\nC GE CE CE GE\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD",
+      "tables": [
+        [
+          [
+            "Figure 7: Typ. Output Characteristics",
+            "Figure 8: Typ. Output Characteristics"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I = f(V ); Tj= 25ºC; parameter: V\nC CE GE",
+            "I = f(V ); Tj= 175ºC; parameter: V\nC CE GE"
+          ]
+        ],
+        [
+          [
+            "Figure 9: Typ. Transfer Characteristics",
+            "Figure 10: Typ. Collector Voltage vs. Temperature"
+          ],
+          [
+            "",
+            "3\n2.5\nI = 50A\nC\n2\n)V\n(\n)tas(EC 1.5\nV\nI =25A\n1 C\n0.5\n0\n0 25 50 75 100 125 150 175\nT (⁰C)\nj"
+          ],
+          [
+            "I = f(V ); V =20V\nC GE CE",
+            "V =f(Tj); V =15V\nCE GE"
+          ]
+        ],
+        [
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "I =\nC",
+            "50A",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "I =2\nC",
+            "5A",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 7,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nFigure 11: IGBT switching energy losses Figure 12: IGBT switching energy losses\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD\n)Jm(\nE\n8\n7\n6\n5\n4\n3\n2\n1\n0\n1 0 2 0 3 0 4 0 5 0\nIC (A\n6\n)\n0 7 0 8\nE\n0\nE\no\nE\nts\nn\no ff\n9 0 1 0 0\n7.00\n6.00\n5.00\nE\nts\n4.00\n)Jm\n(\nE\n3.00\nE\non\n2.00\nE\noff\n1.00\n0.00\n0 5 10 15 20 25 30 35 40 45 50\nR (Ω)\ng\nE=f(IC) ; VCE=600V;Tj=25℃; R =10Ω E=f(R ) ; VCE=600V;Tj=25℃; IC=50A\nG G\nFigure 13: Typ. Gate Charge Figure 14: Typ. Capacitances\nV = f(Qg ), I = 50A C=f(V ); V =0; f=1MHz\nGE C CE GE",
+      "tables": [
+        [
+          [
+            "Figure 11: IGBT switching energy losses",
+            "Figure 12: IGBT switching energy losses"
+          ],
+          [
+            "8\n7\nE\n6 ts\n5\n)Jm(\nE\n4\nE\no n\n3\nE\no ff\n2\n1\n0\n1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 1 0 0\nIC (A )",
+            "7.00\n6.00\n5.00\nE\nts\n4.00\n)Jm\n(\nE\n3.00\nE\non\n2.00\nE\noff\n1.00\n0.00\n0 5 10 15 20 25 30 35 40 45 50\nR (Ω)\ng"
+          ],
+          [
+            "E=f(IC) ; VCE=600V;Tj=25℃; R =10Ω\nG",
+            "E=f(R ) ; VCE=600V;Tj=25℃; IC=50A\nG"
+          ]
+        ],
+        [
+          [
+            "Figure 13: Typ. Gate Charge",
+            "Figure 14: Typ. Capacitances"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "V = f(Qg ), I = 50A\nGE C",
+            "C=f(V ); V =0; f=1MHz\nCE GE"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 8,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nFigure 15: Typ. emitter threshold voltage as a Figure 16: Typ. diode forward current as a function\nfunction of junction temperature of forward voltage\n6\n5.5\n5\n4.5\n4\n3.5\n3\n2.5\n2\n0 25 50 75 100 125 150 175\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD\n)V(\nV\n)ht(EG\nTyp\nT (⁰C)\nj\nVGE =f(Tj); ICE =1.6mA VF= f(IF);",
+      "tables": [
+        [
+          [
+            "Figure 15: Typ. emitter threshold voltage as a\nfunction of junction temperature",
+            "Figure 16: Typ. diode forward current as a function\nof forward voltage"
+          ],
+          [
+            "6\n5.5\n5\nTyp\n4.5\n)V(\n4 )ht(EG\nV\n3.5\n3\n2.5\n2\n0 25 50 75 100 125 150 175\nT (⁰C)\nj",
+            ""
+          ],
+          [
+            "VGE =f(Tj); ICE =1.6mA",
+            "VF= f(IF);"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 9,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nTest Circuits:\n1. Definition Switching times\n2. Definition Switching losses\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD",
+      "tables": []
+    },
+    {
+      "page": 10,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\n3. Definition Diode Switching Characteristics\n4. Dynamic test circuit\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD\nV c c\nC\n( D\nD U\nio\nR g\nTd\ne )\nR s\n( I\nDG\nL\nUB\nL\nTT\no\n)\na d",
+      "tables": []
+    },
+    {
+      "page": 11,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nMechanical Dimensions\nTO-247 Unit: mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.80 5.00 5.20 E2 - 5.00 -\nA1 2.21 2.41 2.61 E3 - 2.50 -\nA2 1.90 2.00 2.10 e 5.44(BSC)\nb 1.10 1.20 1.35 L 19.42 19.92 20.42\nb1 - 2.00 - L1 - 4.13 -\nb2 - 3.00 - P 3.50 3.60 3.70\nc 0.55 0.60 0.75 P1 - - 7.40\nD 20.80 21.00 21.20 P2 - 2.50 -\nD1 - 16.55 - Q - 5.80 -\nD2 - 1.20 - S 6.05 6.15 6.25\nE 15.60 15.80 16.00 T - 10.00 -\nE1 - 13.30 - U - 6.20 -\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            "Min.",
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.80",
+            "5.00",
+            "5.20",
+            null,
+            "E2",
+            "-",
+            "5.00",
+            "-"
+          ],
+          [
+            "A1",
+            "2.21",
+            "2.41",
+            "2.61",
+            null,
+            "E3",
+            "-",
+            "2.50",
+            "-"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "e",
+            "5.44(BSC)",
+            null,
+            null
+          ],
+          [
+            "b",
+            "1.10",
+            "1.20",
+            "1.35",
+            null,
+            "L",
+            "19.42",
+            "19.92",
+            "20.42"
+          ],
+          [
+            "b1",
+            "-",
+            "2.00",
+            "-",
+            null,
+            "L1",
+            "-",
+            "4.13",
+            "-"
+          ],
+          [
+            "b2",
+            "-",
+            "3.00",
+            "-",
+            null,
+            "P",
+            "3.50",
+            "3.60",
+            "3.70"
+          ],
+          [
+            "c",
+            "0.55",
+            "0.60",
+            "0.75",
+            null,
+            "P1",
+            "-",
+            "-",
+            "7.40"
+          ],
+          [
+            "D",
+            "20.80",
+            "21.00",
+            "21.20",
+            null,
+            "P2",
+            "-",
+            "2.50",
+            "-"
+          ],
+          [
+            "D1",
+            "-",
+            "16.55",
+            "-",
+            null,
+            "Q",
+            "-",
+            "5.80",
+            "-"
+          ],
+          [
+            "D2",
+            "-",
+            "1.20",
+            "-",
+            null,
+            "S",
+            "6.05",
+            "6.15",
+            "6.25"
+          ],
+          [
+            "E",
+            "15.60",
+            "15.80",
+            "16.00",
+            null,
+            "T",
+            "-",
+            "10.00",
+            "-"
+          ],
+          [
+            "E1",
+            "-",
+            "13.30",
+            "-",
+            null,
+            "U",
+            "-",
+            "6.20",
+            "-"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 12,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nMechanical Dimensions\nTO-247-4 Unit: mm\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD",
+      "tables": []
+    },
+    {
+      "page": 13,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nTO-247-4 Unit: mm\nDimensions(mm)\nSymbol\nMin. Typ. Max.\nA 4.90 5.00 5.10\nA1 2.31 2.41 2.51\nA2 1.90 2.00 2.10\nb 1.16 - 1.29\nb1 1.15 1.2 1.25\nc 0.59 - 0.66\nc1 0.58 0.60 0.62\nD 20.90 21.00 21.10\nD1 16.25 16.55 16.85\nD2 1.05 1.20 1.35\nE 15.70 15.80 15.90\nE1 13.10 13.30 13.50\nE2 4.90 5.00 5.10\nE3 2.40 2.50 2.60\ne 2.44 2.54 2.64\ne1 4.98 5.08 5.18\nL 19.80 19.92 20.10\nP 3.50 3.60 3.70\nP1 - - 7.40\nP2 2.40 2.50 2.60\nQ 5.60 - 6.00\nS 3.15 BSC\nT 9.80 - 10.20\nU 6.00 - 6.40\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.90",
+            "5.00",
+            "5.10"
+          ],
+          [
+            "A1",
+            "2.31",
+            "2.41",
+            "2.51"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10"
+          ],
+          [
+            "b",
+            "1.16",
+            "-",
+            "1.29"
+          ],
+          [
+            "b1",
+            "1.15",
+            "1.2",
+            "1.25"
+          ],
+          [
+            "c",
+            "0.59",
+            "-",
+            "0.66"
+          ],
+          [
+            "c1",
+            "0.58",
+            "0.60",
+            "0.62"
+          ],
+          [
+            "D",
+            "20.90",
+            "21.00",
+            "21.10"
+          ],
+          [
+            "D1",
+            "16.25",
+            "16.55",
+            "16.85"
+          ],
+          [
+            "D2",
+            "1.05",
+            "1.20",
+            "1.35"
+          ],
+          [
+            "E",
+            "15.70",
+            "15.80",
+            "15.90"
+          ],
+          [
+            "E1",
+            "13.10",
+            "13.30",
+            "13.50"
+          ],
+          [
+            "E2",
+            "4.90",
+            "5.00",
+            "5.10"
+          ],
+          [
+            "E3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "e",
+            "2.44",
+            "2.54",
+            "2.64"
+          ],
+          [
+            "e1",
+            "4.98",
+            "5.08",
+            "5.18"
+          ],
+          [
+            "L",
+            "19.80",
+            "19.92",
+            "20.10"
+          ],
+          [
+            "P",
+            "3.50",
+            "3.60",
+            "3.70"
+          ],
+          [
+            "P1",
+            "-",
+            "-",
+            "7.40"
+          ],
+          [
+            "P2",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "Q",
+            "5.60",
+            "-",
+            "6.00"
+          ],
+          [
+            "S",
+            "3.15 BSC",
+            null,
+            null
+          ],
+          [
+            "T",
+            "9.80",
+            "-",
+            "10.20"
+          ],
+          [
+            "U",
+            "6.00",
+            "-",
+            "6.40"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 14,
+      "text": "Datasheet\n50A 1200V Trench Fieldstop IGBT with SiC SBD SRE50N120FSUS7\nShenzhen Sanrise Technology Co., LTD\nhttp://www.sanrise-tech.com\nIMPORTANT NOTICE\nShenzhen Sanrise Technology Co., LTD. reserves the right to make changes without further notice to\nany products or specifications herein. Shenzhen Sanrise Technology Co., LTD. does not assume any\nresponsibility for use of any its products for any particular purpose, nor does Shenzhen Sanrise\nTechnology Co., LTD. assume any liability arising out of the application or use of any its products or\ncircuits. Shenzhen Sanrise Technology Co., LTD. does not convey any license under its patent rights or\nother rights nor the rights of others.\nMain Site:\n- Headquarter - Shanghai Office\nShenzhen Sanrise Technology Co., LTD. Shenzhen Sanrise Technology Co., LTD.\nA1206, Skyworth building, No. 008, gaoxinnan 1st Rm.401, Building B, No. 666, Zhangheng Road,\nRoad, Gaoxin District, Yuehai street, Nanshan District, Zhangjiang Hi-Tech Park, Shanghai, P.R.China\nShenZhen, P.R. China\nTel: +86-755-22953335 Tel: +86-21-68825918\nFax: +86-755-22916878\nJun. 2022, Rev.1.0 www.sanrise-tech.com Shenzhen Sanrise Technology Co., LTD",
+      "tables": []
+    }
+  ],
+  "SRC30R018BTLTR-G preliminary Datasheet V0.1 .pdf": [
+    {
+      "page": 1,
+      "text": "Preliminary Datasheet\n18mΩ, 300V, Super Junction N-Channel Power MOSFET SRC30R018B\nGeneral Description Symbol\nThe Sanrise SRC30R018B is a high voltage\npower MOSFET, fabricated using advanced super\njunction technology. The resulting device has\nextremely low on resistance, low gate charge and\nfast switching time, making it especially suitable\nfor applications which require superior power\ndensityand outstandingefficiency.\nFigure 1Symbol ofSRC30R018B\nThe SRC30R018B break down voltage is 300V\nandithas ahigh rugged avalanche characteristics.\nTheSRC30R018Bis available in TO-LL package.\nFeatures\n UltraLow R DS(ON) =18mΩ @V GS =10V. Package Type\n Vds@Tjmax=350V.\n UltraLow Gate Charge, Qg=71nC typ.\n Fast switchingcapability\n Robustdesign with better EAS performance\n EMIImproved\n Non-automotiveQualified\n Ultra-fast bodydiode\nTO-LL\nFigure 2Package Type ofSRC30R018B\nApplication\n Server / Telecom Power\n EVCharger\nOrdering Information\nSRC30R018B□□–□\nCircuitType G: Green\nPackage Blank: Tube\nTL:TO-Leadless TR:Tape & Reel\nPackage Part Number Marking ID Packing Type\nTO-LL SRC30R018BTLTR-G SRC30R018BTLG Tape& Reel\nApr.2025,Rev.0.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Package",
+            "Part Number",
+            "Marking ID",
+            "Packing Type"
+          ],
+          [
+            "TO-LL",
+            "SRC30R018BTLTR-G",
+            "SRC30R018BTLG",
+            "Tape& Reel"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "Preliminary Datasheet\n18mΩ, 300V, Super Junction N-Channel Power MOSFET SRC30R018B\nAbsolute Maximum Ratings\nParameter Symbol Rating Unit\nDrain-SourceVoltage V 300 V\nDSS\nGate-SourceVoltage (static) V ±20 V\nGSS\nGate-SourceVoltage (dynamic), AC f>1Hz V ±30 V\nGSS\nPowerDissipation（Tc=25℃,TO-LL） P 304 W\ntot\nT =25ºC 82\nC\nContinuousDrain Current T C =100ºC I D 52 A\nT =125ºC 36\nC\nPulsedDrain Current (Note 2) I 246 A\nDM\nAvalanche Energy, SinglePulse(Note 3) E 70 mJ\nAS\nAvalanche Energy, SinglePulse(Note 4) E 2880 mJ\nAS\nAvalanche Energy, Repetitive(Note2) E 0.28 mJ\nAR\nAvalanche Current, Repetitive(Note 2) I 24 A\nAR\nContinuousDiodeForward Current I 82 A\nS\nDiodePulseCurrent I 246 A\nS.PULSE\nMOSFET dv/dt Ruggedness, V DS <=240V dv/dt 80 V/ns\nReverseDiode dv/dt,V DS <=240V, I SD <=I D dv/dt 50 V/ns\nOperatingJunction Temperature T 150 ºC\nJ\nStorage Temperature T -55to 150 ºC\nSTG\nLeadTemperature (Soldering, 10sec) T 260 ºC\nLEAD\nNote:\n1. Absolute maximum ratings are those values beyond which the device could be permanently damaged.\nAbsolutemaximumratings are stress ratings only and functional device operation is not implied.\n2.RepetitiveRating: Pulsewidthlimited bymaximumjunction temperature\n3.I = 16A, V =60V,R =25Ω,Starting T = 25°C. Finish goods test condition.\nAS DD G J\n4.I = 24A, V =60V,R =25Ω,Starting T = 25°C. Typical Eas.\nAS DD G J\nThermal characteristics\nParameter Symbol Min Typ Max Unit\nThermal resistance, Junction-to-Case TO-LL R 0.41 ºC/W\nthJC\nThermal resistance, Junction-to-Ambient TO-LL R 62 ºC/W\nthJA\nApr.2025,Rev.0.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "Rating",
+            "Unit"
+          ],
+          [
+            "Drain-SourceVoltage",
+            null,
+            "V\nDSS",
+            "300",
+            "V"
+          ],
+          [
+            "Gate-SourceVoltage (static)",
+            null,
+            "V\nGSS",
+            "±20",
+            "V"
+          ],
+          [
+            "Gate-SourceVoltage (dynamic), AC f>1Hz",
+            null,
+            "V\nGSS",
+            "±30",
+            "V"
+          ],
+          [
+            "PowerDissipation（Tc=25℃,TO-LL）",
+            null,
+            "P\ntot",
+            "304",
+            "W"
+          ],
+          [
+            "ContinuousDrain Current",
+            "T =25ºC\nC",
+            "I\nD",
+            "82",
+            "A"
+          ],
+          [
+            null,
+            "T =100ºC\nC",
+            null,
+            "52",
+            null
+          ],
+          [
+            null,
+            "T =125ºC\nC",
+            null,
+            "36",
+            null
+          ],
+          [
+            "PulsedDrain Current (Note 2)",
+            null,
+            "I\nDM",
+            "246",
+            "A"
+          ],
+          [
+            "Avalanche Energy, SinglePulse(Note 3)",
+            null,
+            "E\nAS",
+            "70",
+            "mJ"
+          ],
+          [
+            "Avalanche Energy, SinglePulse(Note 4)",
+            null,
+            "E\nAS",
+            "2880",
+            "mJ"
+          ],
+          [
+            "Avalanche Energy, Repetitive(Note2)",
+            null,
+            "E\nAR",
+            "0.28",
+            "mJ"
+          ],
+          [
+            "Avalanche Current, Repetitive(Note 2)",
+            null,
+            "I\nAR",
+            "24",
+            "A"
+          ],
+          [
+            "ContinuousDiodeForward Current",
+            null,
+            "I\nS",
+            "82",
+            "A"
+          ],
+          [
+            "DiodePulseCurrent",
+            null,
+            "I\nS.PULSE",
+            "246",
+            "A"
+          ],
+          [
+            "MOSFET dv/dt Ruggedness, V <=240V\nDS",
+            null,
+            "dv/dt",
+            "80",
+            "V/ns"
+          ],
+          [
+            "ReverseDiode dv/dt,V <=240V, I <=I\nDS SD D",
+            null,
+            "dv/dt",
+            "50",
+            "V/ns"
+          ],
+          [
+            "OperatingJunction Temperature",
+            null,
+            "T\nJ",
+            "150",
+            "ºC"
+          ],
+          [
+            "Storage Temperature",
+            null,
+            "T\nSTG",
+            "-55to 150",
+            "ºC"
+          ],
+          [
+            "LeadTemperature (Soldering, 10sec)",
+            null,
+            "T\nLEAD",
+            "260",
+            "ºC"
+          ]
+        ],
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "Min",
+            "Typ",
+            "Max",
+            "Unit"
+          ],
+          [
+            "Thermal resistance, Junction-to-Case",
+            "TO-LL",
+            "R\nthJC",
+            "",
+            "",
+            "0.41",
+            "ºC/W"
+          ],
+          [
+            "Thermal resistance, Junction-to-Ambient",
+            "TO-LL",
+            "R\nthJA",
+            "",
+            "",
+            "62",
+            "ºC/W"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "Preliminary Datasheet\n18mΩ, 300V, Super Junction N-Channel Power MOSFET SRC30R018B\nElectrical Characteristics\nT =25℃, unless otherwisespecified.\nJ\nParameter Symbol TestConditions Min Typ Max Unit\nStatisticCharacteristics\nDrain-SourceBreakdown Voltage BV V =0V, I =250uA 300 V\nDSS GS D\nZero Gate VoltageDrain Current I V =300V, V =0V 10 uA\nDSS DS GS\nForward I V =30V, V =0V 100\nGSSF GS DS\nGate-Body Leakage Current nA\nReverse I V =-30V, V =0V -100\nGSSR GS DS\nGateThreshold Voltage V V =V ,I =1mA 3.0 4.0 5.0 V\nGS(TH) DS GS D\nStaticDrain-Source On-Resistance R V =10V, I =35A 14.5 18 mΩ\nDS(ON) GS D\nGateResistance R f=1MHz, Open Drain 1.7 Ω\nG\nDynamic Characteristics\nInput Capacitance C V =125V, 3.7 nF\nISS DS\nOutputCapacitance C V =0V, f=100KHz 150 pF\nOSS GS\nEffective output capacitance, energy\nC 254\nO(er)\nrelated NOTE5 V =0V,\nGS\npF\nEffective output capacitance, time V =0…240V\nDS\nC 814\nO(tr)\nrelated NOTE6\nTurn-on Delay Time t 12\nd(on)\nRiseTime t V =125V,I =15A 23\nr DD D\nns\nTurn-off Delay Time t R =10Ω,V =12V 75\nd(off) G GS\nFall Time t 10\nf\nGate ChargeCharacteristics\nGateto Source Charge Q 27\ngs\nGateto Drain Charge Q V =125V,I =15A 19 nC\ngd DD D\nGateCharge Total Q V =0 to10V 71\ng GS\nGatePlateau Voltage V 6.5 V\nplateau\nReverseDiodeCharacteristics\nDrain-SourceDiode Forward Voltage V V =0V, I =35A 0.9 1.1 V\nSD GS SD\nReverseRecovery Time t 130 ns\nrr\nV =125V,I =15A\nR F\nReverseRecovery Charge Q 650 nC\nrr\ndI /dt=100A/us\nF\nPeak Reverse Recovery Current I 10 A\nrrm\nNote:\n5.C is afixed capacitance that gives thesame stored energy as C whileV is rising from 0to\nO(er) OSS DS\n240V\n6.C isa fixedcapacitance that gives thesame charging timeas C whileV is rising from 0to\nO(tr) OSS DS\n240V\nApr.2025,Rev.0.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "TestConditions",
+            "Min",
+            "Typ",
+            "Max",
+            "Unit"
+          ],
+          [
+            "StatisticCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Drain-SourceBreakdown Voltage",
+            null,
+            "BV\nDSS",
+            "V =0V, I =250uA\nGS D",
+            "300",
+            "",
+            "",
+            "V"
+          ],
+          [
+            "Zero Gate VoltageDrain Current",
+            null,
+            "I\nDSS",
+            "V =300V, V =0V\nDS GS",
+            "",
+            "",
+            "10",
+            "uA"
+          ],
+          [
+            "Gate-Body Leakage Current",
+            "Forward",
+            "I\nGSSF",
+            "V =30V, V =0V\nGS DS",
+            "",
+            "",
+            "100",
+            "nA"
+          ],
+          [
+            null,
+            "Reverse",
+            "I\nGSSR",
+            "V =-30V, V =0V\nGS DS",
+            "",
+            "",
+            "-100",
+            null
+          ],
+          [
+            "GateThreshold Voltage",
+            null,
+            "V\nGS(TH)",
+            "V =V ,I =1mA\nDS GS D",
+            "3.0",
+            "4.0",
+            "5.0",
+            "V"
+          ],
+          [
+            "StaticDrain-Source On-Resistance",
+            null,
+            "R\nDS(ON)",
+            "V =10V, I =35A\nGS D",
+            "",
+            "14.5",
+            "18",
+            "mΩ"
+          ],
+          [
+            "GateResistance",
+            null,
+            "R\nG",
+            "f=1MHz, Open Drain",
+            "",
+            "1.7",
+            "",
+            "Ω"
+          ],
+          [
+            "Dynamic Characteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Input Capacitance",
+            null,
+            "C\nISS",
+            "V =125V,\nDS\nV =0V, f=100KHz\nGS",
+            "",
+            "3.7",
+            "",
+            "nF"
+          ],
+          [
+            "OutputCapacitance",
+            null,
+            "C\nOSS",
+            null,
+            "",
+            "150",
+            "",
+            "pF"
+          ],
+          [
+            "Effective output capacitance, energy\nrelated NOTE5",
+            null,
+            "C\nO(er)",
+            "V =0V,\nGS\nV =0…240V\nDS",
+            "",
+            "254",
+            "",
+            "pF"
+          ],
+          [
+            "Effective output capacitance, time\nrelated NOTE6",
+            null,
+            "C\nO(tr)",
+            null,
+            "",
+            "814",
+            "",
+            null
+          ],
+          [
+            "Turn-on Delay Time",
+            null,
+            "t\nd(on)",
+            "V =125V,I =15A\nDD D\nR =10Ω,V =12V\nG GS",
+            "",
+            "12",
+            "",
+            "ns"
+          ],
+          [
+            "RiseTime",
+            null,
+            "t\nr",
+            null,
+            "",
+            "23",
+            "",
+            null
+          ],
+          [
+            "Turn-off Delay Time",
+            null,
+            "t\nd(off)",
+            null,
+            "",
+            "75",
+            "",
+            null
+          ],
+          [
+            "Fall Time",
+            null,
+            "t\nf",
+            null,
+            "",
+            "10",
+            "",
+            null
+          ],
+          [
+            "Gate ChargeCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Gateto Source Charge",
+            null,
+            "Q\ngs",
+            "V =125V,I =15A\nDD D\nV =0 to10V\nGS",
+            "",
+            "27",
+            "",
+            "nC"
+          ],
+          [
+            "Gateto Drain Charge",
+            null,
+            "Q\ngd",
+            null,
+            "",
+            "19",
+            "",
+            null
+          ],
+          [
+            "GateCharge Total",
+            null,
+            "Q\ng",
+            null,
+            "",
+            "71",
+            "",
+            null
+          ],
+          [
+            "GatePlateau Voltage",
+            null,
+            "V\nplateau",
+            null,
+            "",
+            "6.5",
+            "",
+            "V"
+          ],
+          [
+            "ReverseDiodeCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Drain-SourceDiode Forward Voltage",
+            null,
+            "V\nSD",
+            "V =0V, I =35A\nGS SD",
+            "",
+            "0.9",
+            "1.1",
+            "V"
+          ],
+          [
+            "ReverseRecovery Time",
+            null,
+            "t\nrr",
+            "V =125V,I =15A\nR F\ndI /dt=100A/us\nF",
+            "",
+            "130",
+            "",
+            "ns"
+          ],
+          [
+            "ReverseRecovery Charge",
+            null,
+            "Q\nrr",
+            null,
+            "",
+            "650",
+            "",
+            "nC"
+          ],
+          [
+            "Peak Reverse Recovery Current",
+            null,
+            "I\nrrm",
+            null,
+            "",
+            "10",
+            "",
+            "A"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "Preliminary Datasheet\n18mΩ, 300V, Super Junction N-Channel Power MOSFET SRC30R018B\nTypical Performance Characteristics\nFigure 3: Power Dissipation Figure 4: Drain-Source Breakdown Voltage\nP =f(T ) MinimumV =f(T); I =10mA\ntot c BR(DSS) j D\nFigure 5: Typ. Drain-Source On-StateResistance Figure6: Typ. Capacitances\nRDS(ON)=f(Tj); ID=35A; VGS=10V C=f(Vds); VGS=0; f=100KHz\nApr.2025,Rev.0.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 3: Power Dissipation",
+            "Figure 4: Drain-Source Breakdown Voltage"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "P =f(T )\ntot c",
+            "MinimumV =f(T); I =10mA\nBR(DSS) j D"
+          ]
+        ],
+        [
+          [
+            "Figure 5: Typ. Drain-Source On-StateResistance",
+            "Figure6: Typ. Capacitances"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "RDS(ON)=f(Tj); ID=35A; VGS=10V",
+            "C=f(Vds); VGS=0; f=100KHz"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 5,
+      "text": "Preliminary Datasheet\n18mΩ, 300V, Super Junction N-Channel Power MOSFET SRC30R018B\nFigure 7:Coss Stored Energy\nE =f(Vds)\nOSS\nApr.2025,Rev.0.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 7:Coss Stored Energy"
+          ],
+          [
+            ""
+          ],
+          [
+            "E =f(Vds)\nOSS"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 6,
+      "text": "Preliminary Datasheet\n18mΩ, 300V, Super Junction N-Channel Power MOSFET SRC30R018B\nTest Circuits\n1.Gate ChargeTest Circuit &Waveform\n2.SwitchTime TestCircuit\n3.Unclaimed InductiveSwitchingTest Circuit& Waveforms\nApr.2025,Rev.0.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": []
+    },
+    {
+      "page": 7,
+      "text": "Preliminary Datasheet\n18mΩ, 300V, Super Junction N-Channel Power MOSFET SRC30R018B\n4.TestCircuitand WaveformforDiodeCharacteristics\nApr.2025,Rev.0.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": []
+    },
+    {
+      "page": 8,
+      "text": "Preliminary Datasheet\n18mΩ, 300V, Super Junction N-Channel Power MOSFET SRC30R018B\nMechanical Dimensions\nTO-Leadless Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Max. Min. Max.\nA 2.20 2.40 E4 0.25 0.45\nb 0.70 0.90 e 1.20BASIC\nb1 9.70 9.90 H 11.58 11.78\nb2 1.20REF. H1 7.23 7.43\nc 0.40 0.60 H2 2.45REF.\nD 10.28 10.48 i 0.10 -\nD1 4.08 4.28 j 0.45REF.\nD2 3.20 3.40 L 1.60 2.10\nD3 3.16 3.36 L1 0.60 0.80\nE 9.80 10.00 L2 0.50 0.70\nE1 8.40 8.60 L3 1.05 1.30\nE2 9.30 9.50 θ 10°REF\nE3 8.8REF.\nApr.2025,Rev.0.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null
+          ],
+          [
+            null,
+            "Min.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Max."
+          ],
+          [
+            "A",
+            "2.20",
+            "2.40",
+            null,
+            "E4",
+            "0.25",
+            "0.45"
+          ],
+          [
+            "b",
+            "0.70",
+            "0.90",
+            null,
+            "e",
+            "1.20BASIC",
+            null
+          ],
+          [
+            "b1",
+            "9.70",
+            "9.90",
+            null,
+            "H",
+            "11.58",
+            "11.78"
+          ],
+          [
+            "b2",
+            "1.20REF.",
+            null,
+            null,
+            "H1",
+            "7.23",
+            "7.43"
+          ],
+          [
+            "c",
+            "0.40",
+            "0.60",
+            null,
+            "H2",
+            "2.45REF.",
+            null
+          ],
+          [
+            "D",
+            "10.28",
+            "10.48",
+            null,
+            "i",
+            "0.10",
+            "-"
+          ],
+          [
+            "D1",
+            "4.08",
+            "4.28",
+            null,
+            "j",
+            "0.45REF.",
+            null
+          ],
+          [
+            "D2",
+            "3.20",
+            "3.40",
+            null,
+            "L",
+            "1.60",
+            "2.10"
+          ],
+          [
+            "D3",
+            "3.16",
+            "3.36",
+            null,
+            "L1",
+            "0.60",
+            "0.80"
+          ],
+          [
+            "E",
+            "9.80",
+            "10.00",
+            null,
+            "L2",
+            "0.50",
+            "0.70"
+          ],
+          [
+            "E1",
+            "8.40",
+            "8.60",
+            null,
+            "L3",
+            "1.05",
+            "1.30"
+          ],
+          [
+            "E2",
+            "9.30",
+            "9.50",
+            null,
+            "θ",
+            "10°REF",
+            null
+          ],
+          [
+            "E3",
+            "8.8REF.",
+            null,
+            null,
+            "",
+            "",
+            null
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 9,
+      "text": "Preliminary Datasheet\n18mΩ, 300V, Super Junction N-Channel Power MOSFET SRC30R018B\nShenzhen Sanrise Technology Co., LTD.\nhttp://www.sanrise-tech.com\nIMPORTANT NOTICE\nShenzhen Sanrise Technology Co., LTD. reserves the right to make changes without further notice to\nany products or specifications herein. Shenzhen Sanrise Technology Co., LTD. does not assume any\nresponsibility for use of any its products for any particular purpose, nor does Shenzhen Sanrise\nTechnology Co., LTD. assume any liability arising out of the application or use of any its products or\ncircuits. Shenzhen Sanrise Technology Co., LTD. does not convey any license under its patent rights or\notherrights northerights ofothers.\nMainSite:\n-Headquarter -ShanghaiOffice\nShenzhenSanriseTechnologyCo.,LTD. ShenzhenSanriseTechnologyCo.,LTD.\nA1206, Skyworth building, No. 008, gaoxinnan 1st Road, Rm.401, Building B, No. 666, Zhangheng Road,\nGaoxin District, Yuehai street,, Nanshan District, ShenZhen, ZhangjiangHi-TechPark,Shanghai,P.R.China\nP.R.China\nTel:+86-755-22953335 Tel:+86-21-68825918\nFax:+86-755-22916878\nApr.2025,Rev.0.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "",
+            ""
+          ]
+        ]
+      ]
+    }
+  ],
+  "SRC60R017FBDatasheetV1.pdf": [
+    {
+      "page": 1,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nGeneral Description\nSymbol\nThe Sanrise SRC60R017FB is a high voltage\npower MOSFET, fabricated using advanced super\njunction technology. The resulting device has\nextremely low on resistance, low gate charge and\nfast switching time, making it especially suitable\nfor applications which require superior power\ndensityand outstandingefficiency.\nThe SRC60R017FB break down voltage is 600V Figure 1Symbol ofSRC60R017FB\nandithas ahigh rugged avalanche characteristics.\nThe SRC60R017FB is available in TO-247\npackage.\nPackage Type\nFeatures\n UltraLow R =17mΩ @V =10V.\nDS(ON) GS\n UltraLow Gate Charge, Qg=291nC typ.\n Fast switchingcapability\n Robustdesign with better EAS performance\n EMIImproved\nTO-247\n Non-automotiveQualified\n Ultra-fast bodydiode\nFigure2Package Type ofSRC60R017FB\nApplication\n Sever /Telecom Power\n EVCharger\nOrdering Information\nSRC60R017FB□□–□\nCircuitType E:Lead Free\nG: Green\nPackage Blank: Tube\nT:TO-247 TR: Tape &Reel\nPart Number Marking ID\nPackage Packing Type\nLead Free Green LeadFree Green\nTO-247 SRC60R017FBT-E SRC60R017FBT-G SRC60R017FBTE SRC60R017FBTG Tube\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Package",
+            "Part Number",
+            null,
+            "Marking ID",
+            null,
+            "Packing Type"
+          ],
+          [
+            null,
+            "Lead Free",
+            "Green",
+            "LeadFree",
+            "Green",
+            null
+          ],
+          [
+            "TO-247",
+            "SRC60R017FBT-E",
+            "SRC60R017FBT-G",
+            "SRC60R017FBTE",
+            "SRC60R017FBTG",
+            "Tube"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nAbsolute Maximum Ratings\nParameter Symbol Rating Unit\nDrain-SourceVoltage V 600 V\nDSS\nGate-SourceVoltage (static) V ±20 V\nGSS\nGate-SourceVoltage (dynamic), AC f>1Hz V ±30 V\nGSS\nPowerDissipation（Tc=25℃,TO-247） P 657 W\ntot\nT =25ºC 120\nC\nContinuousDrain Current T C =100ºC I D 76 A\nT =125ºC 54\nC\nPulsedDrain Current (Note 2) I 360 A\nDM\nAvalanche Energy, SinglePulse(Note 3) E 600 mJ\nAS\nAvalanche Energy, Repetitive(Note2) E 0.6 mJ\nAR\nAvalanche Current, Repetitive(Note 2) I 5.5 A\nAR\nContinuousDiodeForward Current I 120 A\nS\nDiodePulseCurrent I 360 A\nS.PULSE\nMOSFET dv/dt Ruggedness, V DS <=480V dv/dt 80 V/ns\nReverseDiode dv/dt,V DS <=480V, I SD <=I D dv/dt 50 V/ns\nOperatingJunction Temperature T 150 ºC\nJ\nStorage Temperature T -55to 150 ºC\nSTG\nLeadTemperature (Soldering, 10sec) T 260 ºC\nLEAD\nNote:\n1. Absolute maximum ratings are those values beyond which the device could be permanently damaged.\nAbsolutemaximumratings are stress ratings only and functional device operation is not implied.\n2.RepetitiveRating: Pulsewidthlimited bymaximumjunction temperature\n3.I = 5.5A, V =60V,R =25Ω,Starting T = 25°C\nAS DD G J\nThermal characteristics\nParameter Symbol Min Typ Max Unit\nThermal resistance, Junction-to-Case TO-247 R 0.19 ºC/W\nthJC\nThermal resistance, Junction-to-Ambient TO-247 R 62 ºC/W\nthJA\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "Rating",
+            "Unit"
+          ],
+          [
+            "Drain-SourceVoltage",
+            null,
+            "V\nDSS",
+            "600",
+            "V"
+          ],
+          [
+            "Gate-SourceVoltage (static)",
+            null,
+            "V\nGSS",
+            "±20",
+            "V"
+          ],
+          [
+            "Gate-SourceVoltage (dynamic), AC f>1Hz",
+            null,
+            "V\nGSS",
+            "±30",
+            "V"
+          ],
+          [
+            "PowerDissipation（Tc=25℃,TO-247）",
+            null,
+            "P\ntot",
+            "657",
+            "W"
+          ],
+          [
+            "ContinuousDrain Current",
+            "T =25ºC\nC",
+            "I\nD",
+            "120",
+            "A"
+          ],
+          [
+            null,
+            "T =100ºC\nC",
+            null,
+            "76",
+            null
+          ],
+          [
+            null,
+            "T =125ºC\nC",
+            null,
+            "54",
+            null
+          ],
+          [
+            "PulsedDrain Current (Note 2)",
+            null,
+            "I\nDM",
+            "360",
+            "A"
+          ],
+          [
+            "Avalanche Energy, SinglePulse(Note 3)",
+            null,
+            "E\nAS",
+            "600",
+            "mJ"
+          ],
+          [
+            "Avalanche Energy, Repetitive(Note2)",
+            null,
+            "E\nAR",
+            "0.6",
+            "mJ"
+          ],
+          [
+            "Avalanche Current, Repetitive(Note 2)",
+            null,
+            "I\nAR",
+            "5.5",
+            "A"
+          ],
+          [
+            "ContinuousDiodeForward Current",
+            null,
+            "I\nS",
+            "120",
+            "A"
+          ],
+          [
+            "DiodePulseCurrent",
+            null,
+            "I\nS.PULSE",
+            "360",
+            "A"
+          ],
+          [
+            "MOSFET dv/dt Ruggedness, V <=480V\nDS",
+            null,
+            "dv/dt",
+            "80",
+            "V/ns"
+          ],
+          [
+            "ReverseDiode dv/dt,V <=480V, I <=I\nDS SD D",
+            null,
+            "dv/dt",
+            "50",
+            "V/ns"
+          ],
+          [
+            "OperatingJunction Temperature",
+            null,
+            "T\nJ",
+            "150",
+            "ºC"
+          ],
+          [
+            "Storage Temperature",
+            null,
+            "T\nSTG",
+            "-55to 150",
+            "ºC"
+          ],
+          [
+            "LeadTemperature (Soldering, 10sec)",
+            null,
+            "T\nLEAD",
+            "260",
+            "ºC"
+          ]
+        ],
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "Min",
+            "Typ",
+            "Max",
+            "Unit"
+          ],
+          [
+            "Thermal resistance, Junction-to-Case",
+            "TO-247",
+            "R\nthJC",
+            "",
+            "",
+            "0.19",
+            "ºC/W"
+          ],
+          [
+            "Thermal resistance, Junction-to-Ambient",
+            "TO-247",
+            "R\nthJA",
+            "",
+            "",
+            "62",
+            "ºC/W"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nElectrical Characteristics\nT =25℃, unless otherwisespecified.\nJ\nParameter Symbol TestConditions Min Typ Max Unit\nStatisticCharacteristics\nDrain-SourceBreakdown Voltage BV V =0V, I =250uA 600 V\nDSS GS D\nZero Gate VoltageDrain Current I V =600V, V =0V 10 uA\nDSS DS GS\nForward I V =30V, V =0V 200\nGSSF GS DS\nGate-Body Leakage Current nA\nReverse I V =-30V, V =0V -200\nGSSR GS DS\nGateThreshold Voltage V V =V ,I =2.9mA 3.0 4.0 5.0 V\nGS(TH) DS GS D\nStaticDrain-Source On-Resistance R V =10V, I =40A 15.1 17 mΩ\nDS(ON) GS D\nGateResistance R f=1MHz, Open Drain 1.3 Ω\nG\nDynamic Characteristics\nInput Capacitance C V =400V, V =0V, 13.7 nF\nISS DS GS\nOutputCapacitance C f=100KHz 222 pF\nOSS\nEffective output capacitance, energy\nC 291\nO(er)\nrelated NOTE5 V =0V,\nGS\npF\nEffective output capacitance, time V =0…480V 237\nDS\nC\nO(tr)\nrelated NOTE6 9\nTurn-on Delay Time t 73.2\nd(on)\nRiseTime t V =400V,I =60A 21.6\nr DD D\nns\nTurn-off Delay Time t R =2Ω,V =12V 184\nd(off) G GS\nFall Time t 12.4\nf\nGate ChargeCharacteristics\nGateto Source Charge Q 85\ngs\nGateto Drain Charge Q V =400V,I =60A 90 nC\ngd DD D\nGateCharge Total Q V =0 to10V 290\ng GS\nGatePlateau Voltage V 6.5 V\nplateau\nReverseDiodeCharacteristics\nDrain-SourceDiode Forward Voltage V V =0V, I =40A 0.85 1.1 V\nSD GS SD\nReverseRecovery Time t 195 ns\nrr\nV =400V,I =50A\nR F\nReverseRecovery Charge Q 1.8 uC\nrr\ndI /dt=100A/us\nF\nPeak Reverse Recovery Current I 15 A\nrrm\nNote:\n5.C isafixedcapacitancethatgivesthesamestoredenergyasC whileV isrisingfrom0to480V\nO(er) OSS DS\n6.C isafixedcapacitancethatgivesthesamechargingtimeasC whileV isrisingfrom0to480V\nO(tr) OSS DS\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "TestConditions",
+            "Min",
+            "Typ",
+            "Max",
+            "Unit"
+          ],
+          [
+            "StatisticCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Drain-SourceBreakdown Voltage",
+            null,
+            "BV\nDSS",
+            "V =0V, I =250uA\nGS D",
+            "600",
+            "",
+            "",
+            "V"
+          ],
+          [
+            "Zero Gate VoltageDrain Current",
+            null,
+            "I\nDSS",
+            "V =600V, V =0V\nDS GS",
+            "",
+            "",
+            "10",
+            "uA"
+          ],
+          [
+            "Gate-Body Leakage Current",
+            "Forward",
+            "I\nGSSF",
+            "V =30V, V =0V\nGS DS",
+            "",
+            "",
+            "200",
+            "nA"
+          ],
+          [
+            null,
+            "Reverse",
+            "I\nGSSR",
+            "V =-30V, V =0V\nGS DS",
+            "",
+            "",
+            "-200",
+            null
+          ],
+          [
+            "GateThreshold Voltage",
+            null,
+            "V\nGS(TH)",
+            "V =V ,I =2.9mA\nDS GS D",
+            "3.0",
+            "4.0",
+            "5.0",
+            "V"
+          ],
+          [
+            "StaticDrain-Source On-Resistance",
+            null,
+            "R\nDS(ON)",
+            "V =10V, I =40A\nGS D",
+            "",
+            "15.1",
+            "17",
+            "mΩ"
+          ],
+          [
+            "GateResistance",
+            null,
+            "R\nG",
+            "f=1MHz, Open Drain",
+            "",
+            "1.3",
+            "",
+            "Ω"
+          ],
+          [
+            "Dynamic Characteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Input Capacitance",
+            null,
+            "C\nISS",
+            "V =400V, V =0V,\nDS GS\nf=100KHz",
+            "",
+            "13.7",
+            "",
+            "nF"
+          ],
+          [
+            "OutputCapacitance",
+            null,
+            "C\nOSS",
+            null,
+            "",
+            "222",
+            "",
+            "pF"
+          ],
+          [
+            "Effective output capacitance, energy\nrelated NOTE5",
+            null,
+            "C\nO(er)",
+            "V =0V,\nGS\nV =0…480V\nDS",
+            "",
+            "291",
+            "",
+            "pF"
+          ],
+          [
+            "Effective output capacitance, time\nrelated NOTE6",
+            null,
+            "C\nO(tr)",
+            null,
+            "",
+            "237\n9",
+            "",
+            null
+          ],
+          [
+            "Turn-on Delay Time",
+            null,
+            "t\nd(on)",
+            "V =400V,I =60A\nDD D\nR =2Ω,V =12V\nG GS",
+            "",
+            "73.2",
+            "",
+            "ns"
+          ],
+          [
+            "RiseTime",
+            null,
+            "t\nr",
+            null,
+            "",
+            "21.6",
+            "",
+            null
+          ],
+          [
+            "Turn-off Delay Time",
+            null,
+            "t\nd(off)",
+            null,
+            "",
+            "184",
+            "",
+            null
+          ],
+          [
+            "Fall Time",
+            null,
+            "t\nf",
+            null,
+            "",
+            "12.4",
+            "",
+            null
+          ],
+          [
+            "Gate ChargeCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Gateto Source Charge",
+            null,
+            "Q\ngs",
+            "V =400V,I =60A\nDD D\nV =0 to10V\nGS",
+            "",
+            "85",
+            "",
+            "nC"
+          ],
+          [
+            "Gateto Drain Charge",
+            null,
+            "Q\ngd",
+            null,
+            "",
+            "90",
+            "",
+            null
+          ],
+          [
+            "GateCharge Total",
+            null,
+            "Q\ng",
+            null,
+            "",
+            "290",
+            "",
+            null
+          ],
+          [
+            "GatePlateau Voltage",
+            null,
+            "V\nplateau",
+            null,
+            "",
+            "6.5",
+            "",
+            "V"
+          ],
+          [
+            "ReverseDiodeCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Drain-SourceDiode Forward Voltage",
+            null,
+            "V\nSD",
+            "V =0V, I =40A\nGS SD",
+            "",
+            "0.85",
+            "1.1",
+            "V"
+          ],
+          [
+            "ReverseRecovery Time",
+            null,
+            "t\nrr",
+            "V =400V,I =50A\nR F\ndI /dt=100A/us\nF",
+            "",
+            "195",
+            "",
+            "ns"
+          ],
+          [
+            "ReverseRecovery Charge",
+            null,
+            "Q\nrr",
+            null,
+            "",
+            "1.8",
+            "",
+            "uC"
+          ],
+          [
+            "Peak Reverse Recovery Current",
+            null,
+            "I\nrrm",
+            null,
+            "",
+            "15",
+            "",
+            "A"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nTypical Performance Characteristics\nFigure 3: Power Dissipation Figure 4: Max.Transient Thermal Impedance\nP = f(T ) Z( )= f(t ); parameter: D=t /T\ntot c thJC p p\nFigure 5: Safe OperatingArea Figure 6: Safe OperatingArea\nI =f(V ); T =25ºC;V >7V; parametert I =f(V ); T =80ºC;V >7V; parametert\nD DS c GS p D DS c GS p\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 3: Power Dissipation",
+            "Figure 4: Max.Transient Thermal Impedance"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "P = f(T )\ntot c",
+            "Z( )= f(t ); parameter: D=t /T\nthJC p p"
+          ]
+        ],
+        [
+          [
+            "Figure 5: Safe OperatingArea",
+            "Figure 6: Safe OperatingArea"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I =f(V ); T =25ºC;V >7V; parametert\nD DS c GS p",
+            "I =f(V ); T =80ºC;V >7V; parametert\nD DS c GS p"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 5,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nFigure 7: Typ. Output Characteristics Figure 8: Typ. Output Characteristics\nI =f(V ); Tj=25ºC; parameter: V I =f(V ); T=125ºC;parameter: V\nD DS GS D DS j GS\nFigure 10: Typ. Drain-Source On-State\nFigure 9: Typ. Drain-Source On-StateResistance\nResistance\nR =f(I );T=125ºC;parameter: V R =f(T); I =40A; V =10V\nDS(ON) D j GS DS(ON) j D GS\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 7: Typ. Output Characteristics",
+            "Figure 8: Typ. Output Characteristics"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I =f(V ); Tj=25ºC; parameter: V\nD DS GS",
+            "I =f(V ); T=125ºC;parameter: V\nD DS j GS"
+          ]
+        ],
+        [
+          [
+            "Figure 9: Typ. Drain-Source On-StateResistance",
+            "Figure 10: Typ. Drain-Source On-State\nResistance"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "R =f(I );T=125ºC;parameter: V\nDS(ON) D j GS",
+            "R =f(T); I =40A; V =10V\nDS(ON) j D GS"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 6,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nFigure11: Typ. Transfer Characteristics Figure 12: Typ. GateCharge\nI = f(V ); V = 20V V = f(Q ), I =60Apulsed\nD GS DS GS gate D\nFigure13: Drain-Source Breakdown Voltage Figure14:ForwardCharacteristicsofReverseDiode\nMinimum V =f(T); I =10mA I =f(V ); parameter: T\nBR(DSS) j D F SD j\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure11: Typ. Transfer Characteristics",
+            "Figure 12: Typ. GateCharge"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I = f(V ); V = 20V\nD GS DS",
+            "V = f(Q ), I =60Apulsed\nGS gate D"
+          ]
+        ],
+        [
+          [
+            "Figure13: Drain-Source Breakdown Voltage",
+            "Figure14:ForwardCharacteristicsofReverseDiode"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "Minimum V =f(T); I =10mA\nBR(DSS) j D",
+            "I =f(V ); parameter: T\nF SD j"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 7,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nFigure 15: Avalanche Energy Figure 16: Typ. Capacitances\nE =f(T); I =9.0A; V =60V C=f(V ); V =0; f=100KHz\nAS j D DD DS GS\nFigure 17:C Stored Energy\nOSS\nE =f(V )\nOSS DS\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 15: Avalanche Energy",
+            "Figure 16: Typ. Capacitances"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "E =f(T); I =9.0A; V =60V\nAS j D DD",
+            "C=f(V ); V =0; f=100KHz\nDS GS"
+          ]
+        ],
+        [
+          [
+            "Figure 17:C Stored Energy\nOSS"
+          ],
+          [
+            ""
+          ],
+          [
+            "E =f(V )\nOSS DS"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 8,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nTest Circuits\n1.Gate ChargeTest Circuit &Waveform\n2.SwitchTime TestCircuit\n3.Unclaimed InductiveSwitchingTest Circuit& Waveforms\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": []
+    },
+    {
+      "page": 9,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\n4.TestCircuitand WaveformforDiodeCharacteristics\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": []
+    },
+    {
+      "page": 10,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nMechanical Dimensions\nTO-247(Package 1) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.80 5.00 5.20 E1 - 13.30 -\nA1 2.21 2.41 2.61 E2 - 5.00 -\nA2 1.90 2.00 2.10 E3 - 2.50 -\nb 1.10 1.20 1.35 L 19.42 19.92 20.42\nb1 - 2.00 - L1 - 4.13 -\nb2 - 3.00 - P 3.50 3.60 3.70\nc 0.55 0.60 0.75 P1 - 7.19 -\nD 20.80 21.00 21.20 P2 - 2.50 -\nD1 - 16.55 - Q - 5.80 -\nD2 - 1.20 - S 6.05 6.15 6.25\nE 15.60 15.80 16.0 T - 10.00 -\nU - 6.20 -\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.80",
+            "5.00",
+            "5.20",
+            "",
+            "E1",
+            "-",
+            "13.30",
+            "-"
+          ],
+          [
+            "A1",
+            "2.21",
+            "2.41",
+            "2.61",
+            null,
+            "E2",
+            "-",
+            "5.00",
+            "-"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "E3",
+            "-",
+            "2.50",
+            "-"
+          ],
+          [
+            "b",
+            "1.10",
+            "1.20",
+            "1.35",
+            null,
+            "L",
+            "19.42",
+            "19.92",
+            "20.42"
+          ],
+          [
+            "b1",
+            "-",
+            "2.00",
+            "-",
+            null,
+            "L1",
+            "-",
+            "4.13",
+            "-"
+          ],
+          [
+            "b2",
+            "-",
+            "3.00",
+            "-",
+            null,
+            "P",
+            "3.50",
+            "3.60",
+            "3.70"
+          ],
+          [
+            "c",
+            "0.55",
+            "0.60",
+            "0.75",
+            null,
+            "P1",
+            "-",
+            "7.19",
+            "-"
+          ],
+          [
+            "D",
+            "20.80",
+            "21.00",
+            "21.20",
+            null,
+            "P2",
+            "-",
+            "2.50",
+            "-"
+          ],
+          [
+            "D1",
+            "-",
+            "16.55",
+            "-",
+            null,
+            "Q",
+            "-",
+            "5.80",
+            "-"
+          ],
+          [
+            "D2",
+            "-",
+            "1.20",
+            "-",
+            null,
+            "S",
+            "6.05",
+            "6.15",
+            "6.25"
+          ],
+          [
+            "E",
+            "15.60",
+            "15.80",
+            "16.0",
+            null,
+            "T",
+            "-",
+            "10.00",
+            "-"
+          ],
+          [
+            "U",
+            "-",
+            "6.20",
+            "-",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 11,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nMechanical Dimensions\nTO-247(Package 2) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.90 5.00 5.10 E1 13.10 13.25 13.40\nA1 2.31 2.41 2.51 E2 4.85 4.95 5.10\nA2 1.90 2.00 2.10 E3 2.40 2.50 2.60\nb 1.15 1.20 1.25 L 19.80 19.98 20.15\nb1 1.95 2.10 2.25 L1 - - 4.30\nb2 2.95 3.10 3.25 ΦP 3.60 3.70 3.80\nc 0.55 0.60 0.65 ΦP1 3.40 3.50 3.60\nD 20.90 21.00 21.10 ΦP2 6.90 7.10 7.30\nD1 16.35 16.55 16.75 Q 5.60 5.80 6.00\nD2 1.05 1.20 1.35 S 6.05 6.15 6.25\nE 15.70 15.80 15.90 T 9.80 10.00 10.20\nU 6.00 6.20 6.40 e 5.40 5.44 5.48\nΘ1 5° 7° 9° ΦP3 2.40 2.50 2.60\nΘ2 1° 3° 5° Θ3 13° 15° 17°\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.90",
+            "5.00",
+            "5.10",
+            "",
+            "E1",
+            "13.10",
+            "13.25",
+            "13.40"
+          ],
+          [
+            "A1",
+            "2.31",
+            "2.41",
+            "2.51",
+            null,
+            "E2",
+            "4.85",
+            "4.95",
+            "5.10"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "E3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "b",
+            "1.15",
+            "1.20",
+            "1.25",
+            null,
+            "L",
+            "19.80",
+            "19.98",
+            "20.15"
+          ],
+          [
+            "b1",
+            "1.95",
+            "2.10",
+            "2.25",
+            null,
+            "L1",
+            "-",
+            "-",
+            "4.30"
+          ],
+          [
+            "b2",
+            "2.95",
+            "3.10",
+            "3.25",
+            null,
+            "ΦP",
+            "3.60",
+            "3.70",
+            "3.80"
+          ],
+          [
+            "c",
+            "0.55",
+            "0.60",
+            "0.65",
+            null,
+            "ΦP1",
+            "3.40",
+            "3.50",
+            "3.60"
+          ],
+          [
+            "D",
+            "20.90",
+            "21.00",
+            "21.10",
+            null,
+            "ΦP2",
+            "6.90",
+            "7.10",
+            "7.30"
+          ],
+          [
+            "D1",
+            "16.35",
+            "16.55",
+            "16.75",
+            null,
+            "Q",
+            "5.60",
+            "5.80",
+            "6.00"
+          ],
+          [
+            "D2",
+            "1.05",
+            "1.20",
+            "1.35",
+            null,
+            "S",
+            "6.05",
+            "6.15",
+            "6.25"
+          ],
+          [
+            "E",
+            "15.70",
+            "15.80",
+            "15.90",
+            null,
+            "T",
+            "9.80",
+            "10.00",
+            "10.20"
+          ],
+          [
+            "U",
+            "6.00",
+            "6.20",
+            "6.40",
+            "",
+            "e",
+            "5.40",
+            "5.44",
+            "5.48"
+          ],
+          [
+            "Θ1",
+            "5°",
+            "7°",
+            "9°",
+            "",
+            "ΦP3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "Θ2",
+            "1°",
+            "3°",
+            "5°",
+            "",
+            "Θ3",
+            "13°",
+            "15°",
+            "17°"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 12,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nMechanical Dimensions\nTO-247(Package 3) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.90 5.00 5.10 c1 0.58 0.60 0.62\nA1 2.31 2.41 2.51 D 20.90 21.00 21.10\nA2 1.90 2.00 2.10 D1 16.25 16.55 16.85\nb 1.16 - 1.26 D2 1.05 1.20 1.35\nb1 1.15 1.20 1.22 E 15.70 15.80 15.90\nb2 1.96 - 2.06 E1 13.10 13.30 13.50\nb3 1.95 2.00 2.02 E2 4.90 5.00 5.10\nb4 2.96 - 3.06 E3 2.40 2.50 2.60\nb5 2.95 3.00 3.02 e 5.34 5.44 5.54\nb6 - - 2.25 L 19.80 19.92 20.10\nb7 - - 3.25 L1 3.95 4.13 4.30\nc 0.59 - 0.66 M 0.35 - 0.95\nP 3.50 3.60 3.70 P1 7.00 - 7.40\nP2 2.40 2.50 2.60 Q 5.60 - 6.00\nS 6.05 6.15 6.25 T 9.80 - 10.20\nU 6.00 - 6.40 a 0 - 0.15\na’ 0 - 0.15\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.90",
+            "5.00",
+            "5.10",
+            "",
+            "c1",
+            "0.58",
+            "0.60",
+            "0.62"
+          ],
+          [
+            "A1",
+            "2.31",
+            "2.41",
+            "2.51",
+            null,
+            "D",
+            "20.90",
+            "21.00",
+            "21.10"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "D1",
+            "16.25",
+            "16.55",
+            "16.85"
+          ],
+          [
+            "b",
+            "1.16",
+            "-",
+            "1.26",
+            null,
+            "D2",
+            "1.05",
+            "1.20",
+            "1.35"
+          ],
+          [
+            "b1",
+            "1.15",
+            "1.20",
+            "1.22",
+            null,
+            "E",
+            "15.70",
+            "15.80",
+            "15.90"
+          ],
+          [
+            "b2",
+            "1.96",
+            "-",
+            "2.06",
+            null,
+            "E1",
+            "13.10",
+            "13.30",
+            "13.50"
+          ],
+          [
+            "b3",
+            "1.95",
+            "2.00",
+            "2.02",
+            null,
+            "E2",
+            "4.90",
+            "5.00",
+            "5.10"
+          ],
+          [
+            "b4",
+            "2.96",
+            "-",
+            "3.06",
+            null,
+            "E3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "b5",
+            "2.95",
+            "3.00",
+            "3.02",
+            null,
+            "e",
+            "5.34",
+            "5.44",
+            "5.54"
+          ],
+          [
+            "b6",
+            "-",
+            "-",
+            "2.25",
+            null,
+            "L",
+            "19.80",
+            "19.92",
+            "20.10"
+          ],
+          [
+            "b7",
+            "-",
+            "-",
+            "3.25",
+            null,
+            "L1",
+            "3.95",
+            "4.13",
+            "4.30"
+          ],
+          [
+            "c",
+            "0.59",
+            "-",
+            "0.66",
+            "",
+            "M",
+            "0.35",
+            "-",
+            "0.95"
+          ],
+          [
+            "P",
+            "3.50",
+            "3.60",
+            "3.70",
+            "",
+            "P1",
+            "7.00",
+            "-",
+            "7.40"
+          ],
+          [
+            "P2",
+            "2.40",
+            "2.50",
+            "2.60",
+            "",
+            "Q",
+            "5.60",
+            "-",
+            "6.00"
+          ],
+          [
+            "S",
+            "6.05",
+            "6.15",
+            "6.25",
+            "",
+            "T",
+            "9.80",
+            "-",
+            "10.20"
+          ],
+          [
+            "U",
+            "6.00",
+            "-",
+            "6.40",
+            "",
+            "a",
+            "0",
+            "-",
+            "0.15"
+          ],
+          [
+            "a’",
+            "0",
+            "-",
+            "0.15",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 13,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nMechanical Dimensions\nTO-247(Package 4) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.90 5.00 5.10 E2 4.90 5.00 5.10\nA1 2.31 2.41 2.51 E3 2.40 2.50 2.60\nA2 1.90 2.00 2.10 e 5.34 5.44 5.54\nb 1.12 - 1.22 L 19.80 19.92 20.10\nb1 1.11 1.16 1.18 L1 3.95 4.13 4.30\nb2 1.96 - 2.06 P 3.50 3.60 3.70\nc 0.59 - 0.66 P1 7.00 - 7.40\nD 20.90 21.00 21.10 P2 2.40 2.50 2.60\nD1 16.25 16.55 16.85 Q 5.60 - 6.00\nD2 1.05 1.20 1.35 S 6.05 6.15 6.25\nE 15.70 15.80 15.90 T 9.80 - 10.20\nE1 13.10 13.30 13.50 U 6.00 - 6.40\nb3 1.95 2.00 2.02 b6 - - 2.25\nb4 2.96 - 3.06 b7 - - 3.25\nb5 2.95 3.00 3.02 c1 0.58 0.60 0.62\nM 0.35 - 0.95 a 0 - 0.15\na’ 0 - 0.15\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.90",
+            "5.00",
+            "5.10",
+            null,
+            "E2",
+            "4.90",
+            "5.00",
+            "5.10"
+          ],
+          [
+            "A1",
+            "2.31",
+            "2.41",
+            "2.51",
+            null,
+            "E3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "e",
+            "5.34",
+            "5.44",
+            "5.54"
+          ],
+          [
+            "b",
+            "1.12",
+            "-",
+            "1.22",
+            null,
+            "L",
+            "19.80",
+            "19.92",
+            "20.10"
+          ],
+          [
+            "b1",
+            "1.11",
+            "1.16",
+            "1.18",
+            null,
+            "L1",
+            "3.95",
+            "4.13",
+            "4.30"
+          ],
+          [
+            "b2",
+            "1.96",
+            "-",
+            "2.06",
+            null,
+            "P",
+            "3.50",
+            "3.60",
+            "3.70"
+          ],
+          [
+            "c",
+            "0.59",
+            "-",
+            "0.66",
+            null,
+            "P1",
+            "7.00",
+            "-",
+            "7.40"
+          ],
+          [
+            "D",
+            "20.90",
+            "21.00",
+            "21.10",
+            null,
+            "P2",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "D1",
+            "16.25",
+            "16.55",
+            "16.85",
+            null,
+            "Q",
+            "5.60",
+            "-",
+            "6.00"
+          ],
+          [
+            "D2",
+            "1.05",
+            "1.20",
+            "1.35",
+            null,
+            "S",
+            "6.05",
+            "6.15",
+            "6.25"
+          ],
+          [
+            "E",
+            "15.70",
+            "15.80",
+            "15.90",
+            null,
+            "T",
+            "9.80",
+            "-",
+            "10.20"
+          ],
+          [
+            "E1",
+            "13.10",
+            "13.30",
+            "13.50",
+            null,
+            "U",
+            "6.00",
+            "-",
+            "6.40"
+          ],
+          [
+            "b3",
+            "1.95",
+            "2.00",
+            "2.02",
+            "",
+            "b6",
+            "-",
+            "-",
+            "2.25"
+          ],
+          [
+            "b4",
+            "2.96",
+            "-",
+            "3.06",
+            "",
+            "b7",
+            "-",
+            "-",
+            "3.25"
+          ],
+          [
+            "b5",
+            "2.95",
+            "3.00",
+            "3.02",
+            "",
+            "c1",
+            "0.58",
+            "0.60",
+            "0.62"
+          ],
+          [
+            "M",
+            "0.35",
+            "-",
+            "0.95",
+            "",
+            "a",
+            "0",
+            "-",
+            "0.15"
+          ],
+          [
+            "a’",
+            "0",
+            "-",
+            "0.15",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 14,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FB\nShenzhen Sanrise Technology Co., LTD.\nhttp://www.sanrise-tech.com\nIMPORTANT NOTICE\nShenzhen Sanrise Technology Co., LTD. reserves the right to make changes without further notice to\nany products or specifications herein. Shenzhen Sanrise Technology Co., LTD. does not assume any\nresponsibility for use of any its products for any particular purpose, nor does Shenzhen Sanrise\nTechnology Co., LTD. assume any liability arising out of the application or use of any its products or\ncircuits. Shenzhen Sanrise Technology Co., LTD. does not convey any license under its patent rights or\notherrights northerights ofothers.\nMainSite:\n-Headquarter -ShanghaiOffice\nShenzhenSanriseTechnologyCo.,LTD. ShenzhenSanriseTechnologyCo.,LTD.\nA1206, Skyworth building, No. 008, gaoxinnan 1st Road, Rm.401, Building B, No. 666, Zhangheng Road,\nGaoxin District, Yuehai street,, Nanshan District, ShenZhen, ZhangjiangHi-TechPark,Shanghai,P.R.China\nP.R.China\nTel:+86-755-22953335 Tel:+86-21-68825918\nFax:+86-755-22916878\nNov.2022,Rev.1.2 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "",
+            ""
+          ]
+        ]
+      ]
+    }
+  ],
+  "SRC60R017FBS Datasheet V1.1.pdf": [
+    {
+      "page": 1,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nGeneral Description Symbol\nThe Sanrise SRC60R017FBS is a high voltage\npower MOSFET, fabricated using advanced super\njunction technology. The resulting device has\nextremely low on resistance, low gate charge and\nfast switching time, making it especially suitable\nfor applications which require superior power\ndensityand outstandingefficiency.\nFigure 1Symbol ofSRC60R017FBS\nThe SRC60R017FBS break down voltage is\n600V and it has a high rugged avalanche\ncharacteristics.\nThe SRC60R017FBS is available in TO-247\npackage.\nPackage Type\nFeatures\n UltraLow R =17mΩ @V =10V.\nDS(ON) GS\n Vds@Tjmax=650V.\n UltraLow Gate Charge, Qg=290nCtyp.\n Fast switchingcapability\n Robustdesign with better EAS performance\nTO-247\n EMIImproved\n Non-automotiveQualified\nFigure2Package Type of SRC60R017FBS\n Ultra-fast bodydiode\nApplication\n Server / Telecom Power\n EVCharger\nOrdering Information\nSRC60R017FBS□□–□\nCircuitType E:Lead Free\nG: Green\nPackage Blank: Tube\nT:TO-247 TR: Tape &Reel\nPackage Part Number Marking ID Packing Type\nTO-247 SRC60R017FBST-G SRC60R017FBSTG Tube\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Package",
+            "Part Number",
+            "Marking ID",
+            "Packing Type"
+          ],
+          [
+            "TO-247",
+            "SRC60R017FBST-G",
+            "SRC60R017FBSTG",
+            "Tube"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nAbsolute Maximum Ratings\nParameter Symbol Rating Unit\nDrain-SourceVoltage V 600 V\nDSS\nGate-SourceVoltage (static) V ±20 V\nGSS\nGate-SourceVoltage (dynamic), AC f>1Hz V ±30 V\nGSS\nPowerDissipation（Tc=25℃,TO-247） P 657 W\ntot\nT =25ºC 120\nC\nContinuousDrain Current T C =100ºC I D 76 A\nT =125ºC 54\nC\nPulsedDrain Current (Note 2) I 360 A\nDM\nAvalanche Energy, SinglePulse(Note 3) E 600 mJ\nAS\nAvalanche Energy, Repetitive(Note2) E 0.4 mJ\nAR\nAvalanche Current, Repetitive(Note 2) I 5.5 A\nAR\nContinuousDiodeForward Current I 120 A\nS\nDiodePulseCurrent I 360 A\nS.PULSE\nMOSFET dv/dt Ruggedness, V DS <=480V dv/dt 80 V/ns\nReverseDiode dv/dt,V DS <=480V, I SD <=I D dv/dt 50 V/ns\nOperatingJunction Temperature T 150 ºC\nJ\nStorage Temperature T -55to 150 ºC\nSTG\nLeadTemperature (Soldering, 10sec) T 260 ºC\nLEAD\nNote:\n1. Absolute maximum ratings are those values beyond which the device could be permanently damaged.\nAbsolutemaximumratings are stress ratings only and functional device operation is not implied.\n2.RepetitiveRating: Pulsewidthlimited bymaximumjunction temperature\n3.I = 5.5A, V =60V,R =25Ω,Starting T = 25°C.\nAS DD G J\nThermal characteristics\nParameter Symbol Min Typ Max Unit\nThermal resistance, Junction-to-Case TO-247 R 0.19 ºC/W\nthJC\nThermal resistance, Junction-to-Ambient TO-247 R 62 ºC/W\nthJA\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "Rating",
+            "Unit"
+          ],
+          [
+            "Drain-SourceVoltage",
+            null,
+            "V\nDSS",
+            "600",
+            "V"
+          ],
+          [
+            "Gate-SourceVoltage (static)",
+            null,
+            "V\nGSS",
+            "±20",
+            "V"
+          ],
+          [
+            "Gate-SourceVoltage (dynamic), AC f>1Hz",
+            null,
+            "V\nGSS",
+            "±30",
+            "V"
+          ],
+          [
+            "PowerDissipation（Tc=25℃,TO-247）",
+            null,
+            "P\ntot",
+            "657",
+            "W"
+          ],
+          [
+            "ContinuousDrain Current",
+            "T =25ºC\nC",
+            "I\nD",
+            "120",
+            "A"
+          ],
+          [
+            null,
+            "T =100ºC\nC",
+            null,
+            "76",
+            null
+          ],
+          [
+            null,
+            "T =125ºC\nC",
+            null,
+            "54",
+            null
+          ],
+          [
+            "PulsedDrain Current (Note 2)",
+            null,
+            "I\nDM",
+            "360",
+            "A"
+          ],
+          [
+            "Avalanche Energy, SinglePulse(Note 3)",
+            null,
+            "E\nAS",
+            "600",
+            "mJ"
+          ],
+          [
+            "Avalanche Energy, Repetitive(Note2)",
+            null,
+            "E\nAR",
+            "0.4",
+            "mJ"
+          ],
+          [
+            "Avalanche Current, Repetitive(Note 2)",
+            null,
+            "I\nAR",
+            "5.5",
+            "A"
+          ],
+          [
+            "ContinuousDiodeForward Current",
+            null,
+            "I\nS",
+            "120",
+            "A"
+          ],
+          [
+            "DiodePulseCurrent",
+            null,
+            "I\nS.PULSE",
+            "360",
+            "A"
+          ],
+          [
+            "MOSFET dv/dt Ruggedness, V <=480V\nDS",
+            null,
+            "dv/dt",
+            "80",
+            "V/ns"
+          ],
+          [
+            "ReverseDiode dv/dt,V <=480V, I <=I\nDS SD D",
+            null,
+            "dv/dt",
+            "50",
+            "V/ns"
+          ],
+          [
+            "OperatingJunction Temperature",
+            null,
+            "T\nJ",
+            "150",
+            "ºC"
+          ],
+          [
+            "Storage Temperature",
+            null,
+            "T\nSTG",
+            "-55to 150",
+            "ºC"
+          ],
+          [
+            "LeadTemperature (Soldering, 10sec)",
+            null,
+            "T\nLEAD",
+            "260",
+            "ºC"
+          ]
+        ],
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "Min",
+            "Typ",
+            "Max",
+            "Unit"
+          ],
+          [
+            "Thermal resistance, Junction-to-Case",
+            "TO-247",
+            "R\nthJC",
+            "",
+            "",
+            "0.19",
+            "ºC/W"
+          ],
+          [
+            "Thermal resistance, Junction-to-Ambient",
+            "TO-247",
+            "R\nthJA",
+            "",
+            "",
+            "62",
+            "ºC/W"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nElectrical Characteristics\nT =25℃, unless otherwisespecified.\nJ\nParameter Symbol TestConditions Min Typ Max Unit\nStatisticCharacteristics\nDrain-SourceBreakdown Voltage BV V =0V, I =250uA 600 V\nDSS GS D\nZero Gate VoltageDrain Current I V =600V, V =0V 10 uA\nDSS DS GS\nForward I V =30V, V =0V 200\nGSSF GS DS\nGate-Body Leakage Current nA\nReverse I V =-30V, V =0V -200\nGSSR GS DS\nGateThreshold Voltage V V =V ,I =2.9mA 3.5 4.5 5.5 V\nGS(TH) DS GS D\nStaticDrain-Source On-Resistance R V =10V, I =40A 14.8 17 mΩ\nDS(ON) GS D\nGateResistance R f=1MHz, Open Drain 1.3 Ω\nG\nDynamic Characteristics\nInput Capacitance C V =400V, 13.7 nF\nISS DS\nOutputCapacitance C V =0V, f=100KHz 222 pF\nOSS GS\nEffective output capacitance, energy\nC 291\nO(er)\nrelated NOTE5 V =0V,\nGS\npF\nEffective output capacitance, time V =0…480V 237\nDS\nC\nO(tr)\nrelated NOTE6 9\nTurn-on Delay Time t 73.2\nd(on)\nRiseTime t V =400V,I =60A 21.6\nr DD D\nns\nTurn-off Delay Time t R =2Ω,V =12V 184\nd(off) G GS\nFall Time t 12.4\nf\nGate ChargeCharacteristics\nGateto Source Charge Q 85\ngs\nGateto Drain Charge Q V =400V,I =60A 90 nC\ngd DD D\nGateCharge Total Q V =0 to10V 290\ng GS\nGatePlateau Voltage V 6.5 V\nplateau\nReverseDiodeCharacteristics\nDrain-SourceDiode Forward Voltage V V =0V, I =40A 0.83 1.1 V\nSD GS SD\nReverseRecovery Time t 204 ns\nrr\nV =400V,I =60A\nR F\nReverseRecovery Charge Q 2.0 uC\nrr\ndI /dt=100A/us\nF\nPeak Reverse Recovery Current I 17.5 A\nrrm\nNote:\n5.C isafixedcapacitancethatgivesthesamestoredenergyasC whileV isrisingfrom0to480V\nO(er) OSS DS\n6.C isafixedcapacitancethatgivesthesamechargingtimeasC whileV isrisingfrom0to480V\nO(tr) OSS DS\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "TestConditions",
+            "Min",
+            "Typ",
+            "Max",
+            "Unit"
+          ],
+          [
+            "StatisticCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Drain-SourceBreakdown Voltage",
+            null,
+            "BV\nDSS",
+            "V =0V, I =250uA\nGS D",
+            "600",
+            "",
+            "",
+            "V"
+          ],
+          [
+            "Zero Gate VoltageDrain Current",
+            null,
+            "I\nDSS",
+            "V =600V, V =0V\nDS GS",
+            "",
+            "",
+            "10",
+            "uA"
+          ],
+          [
+            "Gate-Body Leakage Current",
+            "Forward",
+            "I\nGSSF",
+            "V =30V, V =0V\nGS DS",
+            "",
+            "",
+            "200",
+            "nA"
+          ],
+          [
+            null,
+            "Reverse",
+            "I\nGSSR",
+            "V =-30V, V =0V\nGS DS",
+            "",
+            "",
+            "-200",
+            null
+          ],
+          [
+            "GateThreshold Voltage",
+            null,
+            "V\nGS(TH)",
+            "V =V ,I =2.9mA\nDS GS D",
+            "3.5",
+            "4.5",
+            "5.5",
+            "V"
+          ],
+          [
+            "StaticDrain-Source On-Resistance",
+            null,
+            "R\nDS(ON)",
+            "V =10V, I =40A\nGS D",
+            "",
+            "14.8",
+            "17",
+            "mΩ"
+          ],
+          [
+            "GateResistance",
+            null,
+            "R\nG",
+            "f=1MHz, Open Drain",
+            "",
+            "1.3",
+            "",
+            "Ω"
+          ],
+          [
+            "Dynamic Characteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Input Capacitance",
+            null,
+            "C\nISS",
+            "V =400V,\nDS\nV =0V, f=100KHz\nGS",
+            "",
+            "13.7",
+            "",
+            "nF"
+          ],
+          [
+            "OutputCapacitance",
+            null,
+            "C\nOSS",
+            null,
+            "",
+            "222",
+            "",
+            "pF"
+          ],
+          [
+            "Effective output capacitance, energy\nrelated NOTE5",
+            null,
+            "C\nO(er)",
+            "V =0V,\nGS\nV =0…480V\nDS",
+            "",
+            "291",
+            "",
+            "pF"
+          ],
+          [
+            "Effective output capacitance, time\nrelated NOTE6",
+            null,
+            "C\nO(tr)",
+            null,
+            "",
+            "237\n9",
+            "",
+            null
+          ],
+          [
+            "Turn-on Delay Time",
+            null,
+            "t\nd(on)",
+            "V =400V,I =60A\nDD D\nR =2Ω,V =12V\nG GS",
+            "",
+            "73.2",
+            "",
+            "ns"
+          ],
+          [
+            "RiseTime",
+            null,
+            "t\nr",
+            null,
+            "",
+            "21.6",
+            "",
+            null
+          ],
+          [
+            "Turn-off Delay Time",
+            null,
+            "t\nd(off)",
+            null,
+            "",
+            "184",
+            "",
+            null
+          ],
+          [
+            "Fall Time",
+            null,
+            "t\nf",
+            null,
+            "",
+            "12.4",
+            "",
+            null
+          ],
+          [
+            "Gate ChargeCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Gateto Source Charge",
+            null,
+            "Q\ngs",
+            "V =400V,I =60A\nDD D\nV =0 to10V\nGS",
+            "",
+            "85",
+            "",
+            "nC"
+          ],
+          [
+            "Gateto Drain Charge",
+            null,
+            "Q\ngd",
+            null,
+            "",
+            "90",
+            "",
+            null
+          ],
+          [
+            "GateCharge Total",
+            null,
+            "Q\ng",
+            null,
+            "",
+            "290",
+            "",
+            null
+          ],
+          [
+            "GatePlateau Voltage",
+            null,
+            "V\nplateau",
+            null,
+            "",
+            "6.5",
+            "",
+            "V"
+          ],
+          [
+            "ReverseDiodeCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Drain-SourceDiode Forward Voltage",
+            null,
+            "V\nSD",
+            "V =0V, I =40A\nGS SD",
+            "",
+            "0.83",
+            "1.1",
+            "V"
+          ],
+          [
+            "ReverseRecovery Time",
+            null,
+            "t\nrr",
+            "V =400V,I =60A\nR F\ndI /dt=100A/us\nF",
+            "",
+            "204",
+            "",
+            "ns"
+          ],
+          [
+            "ReverseRecovery Charge",
+            null,
+            "Q\nrr",
+            null,
+            "",
+            "2.0",
+            "",
+            "uC"
+          ],
+          [
+            "Peak Reverse Recovery Current",
+            null,
+            "I\nrrm",
+            null,
+            "",
+            "17.5",
+            "",
+            "A"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nTypical Performance Characteristics\nFigure 3: Power Dissipation Figure 4: Max.Transient Thermal Impedance\nP = f(T ) Z( )= f(t ); parameter: D=t /T\ntot c thJC p p\nFigure 5: Safe OperatingArea Figure 6: Safe OperatingArea\nI =f(V ); T =25ºC;V >7V; parametert I =f(V ); T =80ºC;V >7V; parametert\nD DS c GS p D DS c GS p\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 3: Power Dissipation",
+            "Figure 4: Max.Transient Thermal Impedance"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "P = f(T )\ntot c",
+            "Z( )= f(t ); parameter: D=t /T\nthJC p p"
+          ]
+        ],
+        [
+          [
+            "Figure 5: Safe OperatingArea",
+            "Figure 6: Safe OperatingArea"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I =f(V ); T =25ºC;V >7V; parametert\nD DS c GS p",
+            "I =f(V ); T =80ºC;V >7V; parametert\nD DS c GS p"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 5,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nFigure7: Typ. OutputCharacteristics Figure8: Typ. OutputCharacteristics\nI = f(V ); Tj= 25ºC; parameter: V I = f(V ); T= 125ºC;parameter: V\nD DS GS D DS j GS\nFigure 9: Typ. Drain-Source On-StateResistance Figure10: Typ. Drain-Source On-StateResistance\nR =f(I ); T=125ºC;parameter: V R =f(T); I =40A; V =10V\nDS(ON) D j GS DS(ON) j D GS\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure7: Typ. OutputCharacteristics",
+            "Figure8: Typ. OutputCharacteristics"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I = f(V ); Tj= 25ºC; parameter: V\nD DS GS",
+            "I = f(V ); T= 125ºC;parameter: V\nD DS j GS"
+          ]
+        ],
+        [
+          [
+            "Figure 9: Typ. Drain-Source On-StateResistance",
+            "Figure10: Typ. Drain-Source On-StateResistance"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "R =f(I ); T=125ºC;parameter: V\nDS(ON) D j GS",
+            "R =f(T); I =40A; V =10V\nDS(ON) j D GS"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 6,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nFigure11: Typ. Transfer Characteristics Figure 12: Typ. GateCharge\nI = f(V ); V = 20V V = f(Q ), I =60Apulsed\nD GS DS GS gate D\nFigure13: Drain-Source Breakdown Voltage Figure14:ForwardCharacteristicsofReverseDiode\nMinimum V =f(T); I =10mA I =f(V ); parameter: T\nBR(DSS) j D F SD j\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure11: Typ. Transfer Characteristics",
+            "Figure 12: Typ. GateCharge"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I = f(V ); V = 20V\nD GS DS",
+            "V = f(Q ), I =60Apulsed\nGS gate D"
+          ]
+        ],
+        [
+          [
+            "Figure13: Drain-Source Breakdown Voltage",
+            "Figure14:ForwardCharacteristicsofReverseDiode"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "Minimum V =f(T); I =10mA\nBR(DSS) j D",
+            "I =f(V ); parameter: T\nF SD j"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 7,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nFigure 15: Avalanche Energy Figure 16: Typ. Capacitances\nE =f(T); V =60V C=f(V ); V =0; f=100KHz\nAS j DD DS GS\nFigure 17:C Stored Energy\nOSS\nE =f(V )\nOSS DS\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 15: Avalanche Energy",
+            "Figure 16: Typ. Capacitances"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "E =f(T); V =60V\nAS j DD",
+            "C=f(V ); V =0; f=100KHz\nDS GS"
+          ]
+        ],
+        [
+          [
+            "Figure 17:C Stored Energy\nOSS"
+          ],
+          [
+            ""
+          ],
+          [
+            "E =f(V )\nOSS DS"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 8,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nTest Circuits\n1.Gate ChargeTest Circuit &Waveform\n2.SwitchTime TestCircuit\n3.Unclaimed InductiveSwitchingTest Circuit& Waveforms\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": []
+    },
+    {
+      "page": 9,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\n4.TestCircuitand WaveformforDiodeCharacteristics\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": []
+    },
+    {
+      "page": 10,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nMechanical Dimensions\nTO-247(Package 1) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.80 5.00 5.20 E1 - 13.30 -\nA1 2.21 2.41 2.61 E2 - 5.00 -\nA2 1.90 2.00 2.10 E3 - 2.50 -\nb 1.10 1.20 1.35 L 19.42 19.92 20.42\nb1 - 2.00 - L1 - 4.13 -\nb2 - 3.00 - P 3.50 3.60 3.70\nc 0.55 0.60 0.75 P1 - 7.19 -\nD 20.80 21.00 21.20 P2 - 2.50 -\nD1 - 16.55 - Q - 5.80 -\nD2 - 1.20 - S 6.05 6.15 6.25\nE 15.60 15.80 16.0 T - 10.00 -\nU - 6.20 -\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.80",
+            "5.00",
+            "5.20",
+            "",
+            "E1",
+            "-",
+            "13.30",
+            "-"
+          ],
+          [
+            "A1",
+            "2.21",
+            "2.41",
+            "2.61",
+            null,
+            "E2",
+            "-",
+            "5.00",
+            "-"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "E3",
+            "-",
+            "2.50",
+            "-"
+          ],
+          [
+            "b",
+            "1.10",
+            "1.20",
+            "1.35",
+            null,
+            "L",
+            "19.42",
+            "19.92",
+            "20.42"
+          ],
+          [
+            "b1",
+            "-",
+            "2.00",
+            "-",
+            null,
+            "L1",
+            "-",
+            "4.13",
+            "-"
+          ],
+          [
+            "b2",
+            "-",
+            "3.00",
+            "-",
+            null,
+            "P",
+            "3.50",
+            "3.60",
+            "3.70"
+          ],
+          [
+            "c",
+            "0.55",
+            "0.60",
+            "0.75",
+            null,
+            "P1",
+            "-",
+            "7.19",
+            "-"
+          ],
+          [
+            "D",
+            "20.80",
+            "21.00",
+            "21.20",
+            null,
+            "P2",
+            "-",
+            "2.50",
+            "-"
+          ],
+          [
+            "D1",
+            "-",
+            "16.55",
+            "-",
+            null,
+            "Q",
+            "-",
+            "5.80",
+            "-"
+          ],
+          [
+            "D2",
+            "-",
+            "1.20",
+            "-",
+            null,
+            "S",
+            "6.05",
+            "6.15",
+            "6.25"
+          ],
+          [
+            "E",
+            "15.60",
+            "15.80",
+            "16.0",
+            null,
+            "T",
+            "-",
+            "10.00",
+            "-"
+          ],
+          [
+            "U",
+            "-",
+            "6.20",
+            "-",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 11,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nMechanical Dimensions\nTO-247(Package 2) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.90 5.00 5.10 E1 13.10 13.25 13.40\nA1 2.31 2.41 2.51 E2 4.85 4.95 5.10\nA2 1.90 2.00 2.10 E3 2.40 2.50 2.60\nb 1.15 1.20 1.25 L 19.80 19.98 20.15\nb1 1.95 2.10 2.25 L1 - - 4.30\nb2 2.95 3.10 3.25 ΦP 3.60 3.70 3.80\nc 0.55 0.60 0.65 ΦP1 3.40 3.50 3.60\nD 20.90 21.00 21.10 ΦP2 6.90 7.10 7.30\nD1 16.35 16.55 16.75 Q 5.60 5.80 6.00\nD2 1.05 1.20 1.35 S 6.05 6.15 6.25\nE 15.70 15.80 15.90 T 9.80 10.00 10.20\nU 6.00 6.20 6.40 e 5.40 5.44 5.48\nΘ1 5° 7° 9° ΦP3 2.40 2.50 2.60\nΘ2 1° 3° 5° Θ3 13° 15° 17°\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.90",
+            "5.00",
+            "5.10",
+            "",
+            "E1",
+            "13.10",
+            "13.25",
+            "13.40"
+          ],
+          [
+            "A1",
+            "2.31",
+            "2.41",
+            "2.51",
+            null,
+            "E2",
+            "4.85",
+            "4.95",
+            "5.10"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "E3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "b",
+            "1.15",
+            "1.20",
+            "1.25",
+            null,
+            "L",
+            "19.80",
+            "19.98",
+            "20.15"
+          ],
+          [
+            "b1",
+            "1.95",
+            "2.10",
+            "2.25",
+            null,
+            "L1",
+            "-",
+            "-",
+            "4.30"
+          ],
+          [
+            "b2",
+            "2.95",
+            "3.10",
+            "3.25",
+            null,
+            "ΦP",
+            "3.60",
+            "3.70",
+            "3.80"
+          ],
+          [
+            "c",
+            "0.55",
+            "0.60",
+            "0.65",
+            null,
+            "ΦP1",
+            "3.40",
+            "3.50",
+            "3.60"
+          ],
+          [
+            "D",
+            "20.90",
+            "21.00",
+            "21.10",
+            null,
+            "ΦP2",
+            "6.90",
+            "7.10",
+            "7.30"
+          ],
+          [
+            "D1",
+            "16.35",
+            "16.55",
+            "16.75",
+            null,
+            "Q",
+            "5.60",
+            "5.80",
+            "6.00"
+          ],
+          [
+            "D2",
+            "1.05",
+            "1.20",
+            "1.35",
+            null,
+            "S",
+            "6.05",
+            "6.15",
+            "6.25"
+          ],
+          [
+            "E",
+            "15.70",
+            "15.80",
+            "15.90",
+            null,
+            "T",
+            "9.80",
+            "10.00",
+            "10.20"
+          ],
+          [
+            "U",
+            "6.00",
+            "6.20",
+            "6.40",
+            "",
+            "e",
+            "5.40",
+            "5.44",
+            "5.48"
+          ],
+          [
+            "Θ1",
+            "5°",
+            "7°",
+            "9°",
+            "",
+            "ΦP3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "Θ2",
+            "1°",
+            "3°",
+            "5°",
+            "",
+            "Θ3",
+            "13°",
+            "15°",
+            "17°"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 12,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nMechanical Dimensions\nTO-247(Package 3) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.90 5.00 5.10 c1 0.58 0.60 0.62\nA1 2.31 2.41 2.51 D 20.90 21.00 21.10\nA2 1.90 2.00 2.10 D1 16.25 16.55 16.85\nb 1.16 - 1.26 D2 1.05 1.20 1.35\nb1 1.15 1.20 1.22 E 15.70 15.80 15.90\nb2 1.96 - 2.06 E1 13.10 13.30 13.50\nb3 1.95 2.00 2.02 E2 4.90 5.00 5.10\nb4 2.96 - 3.06 E3 2.40 2.50 2.60\nb5 2.95 3.00 3.02 e 5.34 5.44 5.54\nb6 - - 2.25 L 19.80 19.92 20.10\nb7 - - 3.25 L1 3.95 4.13 4.30\nc 0.59 - 0.66 M 0.35 - 0.95\nP 3.50 3.60 3.70 P1 7.00 - 7.40\nP2 2.40 2.50 2.60 Q 5.60 - 6.00\nS 6.05 6.15 6.25 T 9.80 - 10.20\nU 6.00 - 6.40 a 0 - 0.15\na’ 0 - 0.15\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.90",
+            "5.00",
+            "5.10",
+            "",
+            "c1",
+            "0.58",
+            "0.60",
+            "0.62"
+          ],
+          [
+            "A1",
+            "2.31",
+            "2.41",
+            "2.51",
+            null,
+            "D",
+            "20.90",
+            "21.00",
+            "21.10"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "D1",
+            "16.25",
+            "16.55",
+            "16.85"
+          ],
+          [
+            "b",
+            "1.16",
+            "-",
+            "1.26",
+            null,
+            "D2",
+            "1.05",
+            "1.20",
+            "1.35"
+          ],
+          [
+            "b1",
+            "1.15",
+            "1.20",
+            "1.22",
+            null,
+            "E",
+            "15.70",
+            "15.80",
+            "15.90"
+          ],
+          [
+            "b2",
+            "1.96",
+            "-",
+            "2.06",
+            null,
+            "E1",
+            "13.10",
+            "13.30",
+            "13.50"
+          ],
+          [
+            "b3",
+            "1.95",
+            "2.00",
+            "2.02",
+            null,
+            "E2",
+            "4.90",
+            "5.00",
+            "5.10"
+          ],
+          [
+            "b4",
+            "2.96",
+            "-",
+            "3.06",
+            null,
+            "E3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "b5",
+            "2.95",
+            "3.00",
+            "3.02",
+            null,
+            "e",
+            "5.34",
+            "5.44",
+            "5.54"
+          ],
+          [
+            "b6",
+            "-",
+            "-",
+            "2.25",
+            null,
+            "L",
+            "19.80",
+            "19.92",
+            "20.10"
+          ],
+          [
+            "b7",
+            "-",
+            "-",
+            "3.25",
+            null,
+            "L1",
+            "3.95",
+            "4.13",
+            "4.30"
+          ],
+          [
+            "c",
+            "0.59",
+            "-",
+            "0.66",
+            "",
+            "M",
+            "0.35",
+            "-",
+            "0.95"
+          ],
+          [
+            "P",
+            "3.50",
+            "3.60",
+            "3.70",
+            "",
+            "P1",
+            "7.00",
+            "-",
+            "7.40"
+          ],
+          [
+            "P2",
+            "2.40",
+            "2.50",
+            "2.60",
+            "",
+            "Q",
+            "5.60",
+            "-",
+            "6.00"
+          ],
+          [
+            "S",
+            "6.05",
+            "6.15",
+            "6.25",
+            "",
+            "T",
+            "9.80",
+            "-",
+            "10.20"
+          ],
+          [
+            "U",
+            "6.00",
+            "-",
+            "6.40",
+            "",
+            "a",
+            "0",
+            "-",
+            "0.15"
+          ],
+          [
+            "a’",
+            "0",
+            "-",
+            "0.15",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 13,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nMechanical Dimensions\nTO-247(Package 4) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.90 5.00 5.10 E2 4.90 5.00 5.10\nA1 2.31 2.41 2.51 E3 2.40 2.50 2.60\nA2 1.90 2.00 2.10 e 5.34 5.44 5.54\nb 1.12 - 1.22 L 19.80 19.92 20.10\nb1 1.11 1.16 1.18 L1 3.95 4.13 4.30\nb2 1.96 - 2.06 P 3.50 3.60 3.70\nc 0.59 - 0.66 P1 7.00 - 7.40\nD 20.90 21.00 21.10 P2 2.40 2.50 2.60\nD1 16.25 16.55 16.85 Q 5.60 - 6.00\nD2 1.05 1.20 1.35 S 6.05 6.15 6.25\nE 15.70 15.80 15.90 T 9.80 - 10.20\nE1 13.10 13.30 13.50 U 6.00 - 6.40\nb3 1.95 2.00 2.02 b6 - - 2.25\nb4 2.96 - 3.06 b7 - - 3.25\nb5 2.95 3.00 3.02 c1 0.58 0.60 0.62\nM 0.35 - 0.95 a 0 - 0.15\na’ 0 - 0.15\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.90",
+            "5.00",
+            "5.10",
+            null,
+            "E2",
+            "4.90",
+            "5.00",
+            "5.10"
+          ],
+          [
+            "A1",
+            "2.31",
+            "2.41",
+            "2.51",
+            null,
+            "E3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "e",
+            "5.34",
+            "5.44",
+            "5.54"
+          ],
+          [
+            "b",
+            "1.12",
+            "-",
+            "1.22",
+            null,
+            "L",
+            "19.80",
+            "19.92",
+            "20.10"
+          ],
+          [
+            "b1",
+            "1.11",
+            "1.16",
+            "1.18",
+            null,
+            "L1",
+            "3.95",
+            "4.13",
+            "4.30"
+          ],
+          [
+            "b2",
+            "1.96",
+            "-",
+            "2.06",
+            null,
+            "P",
+            "3.50",
+            "3.60",
+            "3.70"
+          ],
+          [
+            "c",
+            "0.59",
+            "-",
+            "0.66",
+            null,
+            "P1",
+            "7.00",
+            "-",
+            "7.40"
+          ],
+          [
+            "D",
+            "20.90",
+            "21.00",
+            "21.10",
+            null,
+            "P2",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "D1",
+            "16.25",
+            "16.55",
+            "16.85",
+            null,
+            "Q",
+            "5.60",
+            "-",
+            "6.00"
+          ],
+          [
+            "D2",
+            "1.05",
+            "1.20",
+            "1.35",
+            null,
+            "S",
+            "6.05",
+            "6.15",
+            "6.25"
+          ],
+          [
+            "E",
+            "15.70",
+            "15.80",
+            "15.90",
+            null,
+            "T",
+            "9.80",
+            "-",
+            "10.20"
+          ],
+          [
+            "E1",
+            "13.10",
+            "13.30",
+            "13.50",
+            null,
+            "U",
+            "6.00",
+            "-",
+            "6.40"
+          ],
+          [
+            "b3",
+            "1.95",
+            "2.00",
+            "2.02",
+            "",
+            "b6",
+            "-",
+            "-",
+            "2.25"
+          ],
+          [
+            "b4",
+            "2.96",
+            "-",
+            "3.06",
+            "",
+            "b7",
+            "-",
+            "-",
+            "3.25"
+          ],
+          [
+            "b5",
+            "2.95",
+            "3.00",
+            "3.02",
+            "",
+            "c1",
+            "0.58",
+            "0.60",
+            "0.62"
+          ],
+          [
+            "M",
+            "0.35",
+            "-",
+            "0.95",
+            "",
+            "a",
+            "0",
+            "-",
+            "0.15"
+          ],
+          [
+            "a’",
+            "0",
+            "-",
+            "0.15",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 14,
+      "text": "Datasheet\n17mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R017FBS\nShenzhen Sanrise Technology Co., LTD.\nhttp://www.sanrise-tech.com\nIMPORTANT NOTICE\nShenzhen Sanrise Technology Co., LTD. reserves the right to make changes without further notice to\nany products or specifications herein. Shenzhen Sanrise Technology Co., LTD. does not assume any\nresponsibility for use of any its products for any particular purpose, nor does Shenzhen Sanrise\nTechnology Co., LTD. assume any liability arising out of the application or use of any its products or\ncircuits. Shenzhen Sanrise Technology Co., LTD. does not convey any license under its patent rights or\notherrights northerights ofothers.\nMainSite:\n-Headquarter -ShanghaiOffice\nShenzhenSanriseTechnologyCo.,LTD. ShenzhenSanriseTechnologyCo.,LTD.\nA1206, Skyworth building, No. 008, gaoxinnan 1st Road, Rm.401, Building B, No. 666, Zhangheng Road,\nGaoxin District, Yuehai street,, Nanshan District, ShenZhen, ZhangjiangHi-TechPark,Shanghai,P.R.China\nP.R.China\nTel:+86-755-22953335 Tel:+86-21-68825918\nFax:+86-755-22916878\nAug.2024,Rev.1.1 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "",
+            ""
+          ]
+        ]
+      ]
+    }
+  ],
+  "SRC60R020BS   DatasheetV1.0(1).pdf": [
+    {
+      "page": 1,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nGeneral Description Symbol\nThe Sanrise SRC60R020BS is a high voltage\npower MOSFET, fabricated using advanced super\njunction technology. The resulting device has\nextremely low on resistance, low gate charge and\nfast switching time, making it especially suitable\nfor applications which require superior power\ndensityand outstandingefficiency.\nThe SRC60R020BS break down voltage is 600V\nFigure 1Symbol ofSRC60R020BS\nandithas ahigh rugged avalanche characteristics.\nThe SRC60R020BS is available in TO-247\npackage.\nFeatures\nPackage Type\n UltraLow R =20mΩ @V =10V.\nDS(ON) GS\n UltraLow Gate Charge, Qg=346nC typ.\n IntrinsicFast-Recovery Body Diode\n Fast switchingcapability\n Robustdesign with better EAS performance\n Non-automotiveQualified\n Ultra-fast bodydiode\nTO-247\nFigure2Package Type ofSRC60R020BS\nApplication\n EVCharger\n Server / Telecom\nOrdering Information\nSRC60R020BS□□–□\nCircuitType E:Lead Free\nG: Green\nPackage Blank: Tube\nT: TO-247 TR: Tape &Reel\nPackage Part Number Marking ID Packing Type\nTO-247 SRC60R020BST-G SRC60R020BSTG Tube\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Package",
+            "Part Number",
+            "Marking ID",
+            "Packing Type"
+          ],
+          [
+            "TO-247",
+            "SRC60R020BST-G",
+            "SRC60R020BSTG",
+            "Tube"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nAbsolute Maximum RatingsNote1\nParameter Symbol Rating Unit\nDrain-SourceVoltage V 600 V\nDSS\nGate-SourceVoltage (static) V ±20 V\nGSS\nGate-SourceVoltage (dynamic), AC (f>1 Hz) V ±30 V\nGSS\nT =25ºC 118\nC\nContinuousDrain Current T C =100ºC I D 75 A\nT =125ºC 53\nC\nPulsedDrain Current (Note 2) I 354 A\nDM\nAvalanche Energy, SinglePulse(Note 3) E 720 mJ\nAS\nAvalanche Energy, SinglePulse(Note 4) E 4500 mJ\nAS\nAvalanche Energy, Repetitive(Note2) E 0.7 mJ\nAR\nAvalanche Current, Repetitive(Note 2) I 6.0 A\nAR\nContinuousDiodeForward Current I 118 A\nS\nDiodePulseCurrent I 354 A\nS.PULSE\nMOSFET dv/dt Ruggedness, V DS <=480V dv/dt 80 V/ns\nReverseDiode dv/dt,V DS <=480V, I SD <=I D dv/dt 50 V/ns\nOperatingJunction Temperature T 150 ºC\nJ\nStorage Temperature T -55to 150 ºC\nSTG\nLeadTemperature (Soldering, 10sec) T 260 ºC\nLEAD\nNote:\n1. Absolute maximum ratings are those values beyond which the device could be permanently damaged.\nAbsolutemaximumratings are stress ratings only and functional device operation is not implied.\n2.RepetitiveRating: Pulsewidthlimited bymaximumjunction temperature\n3.I = 6.0A, V =90V,R =25Ω,Starting T = 25°C.Finish goods test condition.\nAS DD G J\n4.I = 15A, V =60V,R =25Ω,Starting T = 25°C.Typical Eas.\nAS DD G J\nThermal characteristics\nParameter (TO247-package) Symbol Min Typ Max Unit\nThermal Resistance，Junction-to-Case R - 0.18\nthJC\nºC/W\nThermal Resistance，Junction-to-Ambient R - 62\nthJA\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "Rating",
+            "Unit"
+          ],
+          [
+            "Drain-SourceVoltage",
+            null,
+            "V\nDSS",
+            "600",
+            "V"
+          ],
+          [
+            "Gate-SourceVoltage (static)",
+            null,
+            "V\nGSS",
+            "±20",
+            "V"
+          ],
+          [
+            "Gate-SourceVoltage (dynamic), AC (f>1 Hz)",
+            null,
+            "V\nGSS",
+            "±30",
+            "V"
+          ],
+          [
+            "ContinuousDrain Current",
+            "T =25ºC\nC",
+            "I\nD",
+            "118",
+            "A"
+          ],
+          [
+            null,
+            "T =100ºC\nC",
+            null,
+            "75",
+            null
+          ],
+          [
+            null,
+            "T =125ºC\nC",
+            null,
+            "53",
+            null
+          ],
+          [
+            "PulsedDrain Current (Note 2)",
+            null,
+            "I\nDM",
+            "354",
+            "A"
+          ],
+          [
+            "Avalanche Energy, SinglePulse(Note 3)",
+            null,
+            "E\nAS",
+            "720",
+            "mJ"
+          ],
+          [
+            "Avalanche Energy, SinglePulse(Note 4)",
+            null,
+            "E\nAS",
+            "4500",
+            "mJ"
+          ],
+          [
+            "Avalanche Energy, Repetitive(Note2)",
+            null,
+            "E\nAR",
+            "0.7",
+            "mJ"
+          ],
+          [
+            "Avalanche Current, Repetitive(Note 2)",
+            null,
+            "I\nAR",
+            "6.0",
+            "A"
+          ],
+          [
+            "ContinuousDiodeForward Current",
+            null,
+            "I\nS",
+            "118",
+            "A"
+          ],
+          [
+            "DiodePulseCurrent",
+            null,
+            "I\nS.PULSE",
+            "354",
+            "A"
+          ],
+          [
+            "MOSFET dv/dt Ruggedness, V <=480V\nDS",
+            null,
+            "dv/dt",
+            "80",
+            "V/ns"
+          ],
+          [
+            "ReverseDiode dv/dt,V <=480V, I <=I\nDS SD D",
+            null,
+            "dv/dt",
+            "50",
+            "V/ns"
+          ],
+          [
+            "OperatingJunction Temperature",
+            null,
+            "T\nJ",
+            "150",
+            "ºC"
+          ],
+          [
+            "Storage Temperature",
+            null,
+            "T\nSTG",
+            "-55to 150",
+            "ºC"
+          ],
+          [
+            "LeadTemperature (Soldering, 10sec)",
+            null,
+            "T\nLEAD",
+            "260",
+            "ºC"
+          ]
+        ],
+        [
+          [
+            "Parameter (TO247-package)",
+            "Symbol",
+            "Min",
+            "Typ",
+            "Max",
+            "Unit"
+          ],
+          [
+            "Thermal Resistance，Junction-to-Case",
+            "R\nthJC",
+            "-",
+            "",
+            "0.18",
+            "ºC/W"
+          ],
+          [
+            "Thermal Resistance，Junction-to-Ambient",
+            "R\nthJA",
+            "-",
+            "",
+            "62",
+            null
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nElectrical Characteristics\nT =25℃, unless otherwisespecified.\nJ\nParameter Symbol TestConditions Min Typ Max Unit\nStatisticCharacteristics\nDrain-SourceBreakdown Voltage BV V =0V, I =250uA 600 V\nDSS GS D\nZero Gate VoltageDrain Current I V =600V, V =0V 10 uA\nDSS DS GS\nForward I V =30V, V =0V 200\nGSSF GS DS\nGate-Body Leakage Current nA\nReverse I V =-30V, V =0V -200\nGSSR GS DS\nGateThreshold Voltage V V =V ,I =2.9mA 3.5 4.5 5.5 V\nGS(TH) DS GS D\nStaticDrain-Source On-Resistance R V =10V, I =40A 17 20 mΩ\nDS(ON) GS D\nGateResistance R f=1MHz, Open Drain 1.02 Ω\nG\nDynamic Characteristics\nInput Capacitance C V =400V, V =0V, 11.9 nF\nISS DS GS\nOutputCapacitance C f=100KHz 202 pF\nOSS\nEffective output capacitance, energy\nC 295\nO(er)\nrelated NOTE5 V =0V,\nGS\npF\nEffective output capacitance, time V =0…400V\nDS\nC 1722\nO(tr)\nrelated NOTE6\nTurn-on Delay Time t 31\nd(on)\nRiseTime t V =400V,I =40A 28\nr DD D\nns\nTurn-off Delay Time t R =1.8Ω,V =10V 132\nd(off) G GS\nFall Time t 6\nf\nGate ChargeCharacteristics\nGateto Source Charge Q 118\ngs\nGateto Drain Charge Q V =480V,I =40A 224 nC\ngd DD D\nGateCharge Total Q V =0 to10V 471\ng GS\nGatePlateau Voltage V 6.5 V\nplateau\nReverseDiodeCharacteristics\nDrain-SourceDiode Forward Voltage V V =0V, I =40A 0.86 1.1 V\nSD GS SD\nReverseRecovery Time t 91 ns\nrr\nV =100V,I =40A\nR F\nReverseRecovery Charge Q 1.45 uC\nrr\ndI /dt=100A/us\nF\nPeak Reverse Recovery Current I 27 A\nrrm\nNote:\n5.C is afixed capacitance that gives thesame stored energy as C whileV is rising from 0to\nO(er) OSS DS\n400V\n6.C isa fixedcapacitance that gives thesame charging timeas C whileV is rising from 0to\nO(tr) OSS DS\n400V\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Parameter",
+            null,
+            "Symbol",
+            "TestConditions",
+            "Min",
+            "Typ",
+            "Max",
+            "Unit"
+          ],
+          [
+            "StatisticCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Drain-SourceBreakdown Voltage",
+            null,
+            "BV\nDSS",
+            "V =0V, I =250uA\nGS D",
+            "600",
+            "",
+            "",
+            "V"
+          ],
+          [
+            "Zero Gate VoltageDrain Current",
+            null,
+            "I\nDSS",
+            "V =600V, V =0V\nDS GS",
+            "",
+            "",
+            "10",
+            "uA"
+          ],
+          [
+            "Gate-Body Leakage Current",
+            "Forward",
+            "I\nGSSF",
+            "V =30V, V =0V\nGS DS",
+            "",
+            "",
+            "200",
+            "nA"
+          ],
+          [
+            null,
+            "Reverse",
+            "I\nGSSR",
+            "V =-30V, V =0V\nGS DS",
+            "",
+            "",
+            "-200",
+            null
+          ],
+          [
+            "GateThreshold Voltage",
+            null,
+            "V\nGS(TH)",
+            "V =V ,I =2.9mA\nDS GS D",
+            "3.5",
+            "4.5",
+            "5.5",
+            "V"
+          ],
+          [
+            "StaticDrain-Source On-Resistance",
+            null,
+            "R\nDS(ON)",
+            "V =10V, I =40A\nGS D",
+            "",
+            "17",
+            "20",
+            "mΩ"
+          ],
+          [
+            "GateResistance",
+            null,
+            "R\nG",
+            "f=1MHz, Open Drain",
+            "",
+            "1.02",
+            "",
+            "Ω"
+          ],
+          [
+            "Dynamic Characteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Input Capacitance",
+            null,
+            "C\nISS",
+            "V =400V, V =0V,\nDS GS\nf=100KHz",
+            "",
+            "11.9",
+            "",
+            "nF"
+          ],
+          [
+            "OutputCapacitance",
+            null,
+            "C\nOSS",
+            null,
+            "",
+            "202",
+            "",
+            "pF"
+          ],
+          [
+            "Effective output capacitance, energy\nrelated NOTE5",
+            null,
+            "C\nO(er)",
+            "V =0V,\nGS\nV =0…400V\nDS",
+            "",
+            "295",
+            "",
+            "pF"
+          ],
+          [
+            "Effective output capacitance, time\nrelated NOTE6",
+            null,
+            "C\nO(tr)",
+            null,
+            "",
+            "1722",
+            "",
+            null
+          ],
+          [
+            "Turn-on Delay Time",
+            null,
+            "t\nd(on)",
+            "V =400V,I =40A\nDD D\nR =1.8Ω,V =10V\nG GS",
+            "",
+            "31",
+            "",
+            "ns"
+          ],
+          [
+            "RiseTime",
+            null,
+            "t\nr",
+            null,
+            "",
+            "28",
+            "",
+            null
+          ],
+          [
+            "Turn-off Delay Time",
+            null,
+            "t\nd(off)",
+            null,
+            "",
+            "132",
+            "",
+            null
+          ],
+          [
+            "Fall Time",
+            null,
+            "t\nf",
+            null,
+            "",
+            "6",
+            "",
+            null
+          ],
+          [
+            "Gate ChargeCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Gateto Source Charge",
+            null,
+            "Q\ngs",
+            "V =480V,I =40A\nDD D\nV =0 to10V\nGS",
+            "",
+            "118",
+            "",
+            "nC"
+          ],
+          [
+            "Gateto Drain Charge",
+            null,
+            "Q\ngd",
+            null,
+            "",
+            "224",
+            "",
+            null
+          ],
+          [
+            "GateCharge Total",
+            null,
+            "Q\ng",
+            null,
+            "",
+            "471",
+            "",
+            null
+          ],
+          [
+            "GatePlateau Voltage",
+            null,
+            "V\nplateau",
+            null,
+            "",
+            "6.5",
+            "",
+            "V"
+          ],
+          [
+            "ReverseDiodeCharacteristics",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "Drain-SourceDiode Forward Voltage",
+            null,
+            "V\nSD",
+            "V =0V, I =40A\nGS SD",
+            "",
+            "0.86",
+            "1.1",
+            "V"
+          ],
+          [
+            "ReverseRecovery Time",
+            null,
+            "t\nrr",
+            "V =100V,I =40A\nR F\ndI /dt=100A/us\nF",
+            "",
+            "91",
+            "",
+            "ns"
+          ],
+          [
+            "ReverseRecovery Charge",
+            null,
+            "Q\nrr",
+            null,
+            "",
+            "1.45",
+            "",
+            "uC"
+          ],
+          [
+            "Peak Reverse Recovery Current",
+            null,
+            "I\nrrm",
+            null,
+            "",
+            "27",
+            "",
+            "A"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nTypical Performance Characteristics\nFigure 3: Power Dissipation Figure 4: Max.Transient Thermal Impedance\nP = f(T ) Z( )= f(t ); parameter: D= t /T\ntot c thJC p p\nFigure 5: Safe OperatingArea Figure6: Safe Operating Area\nI =f(V ); T =25ºC;V >7V; parametert I = f(V ); T =80ºC; V >7V; parameter t\nD DS c GS p D DS c GS p\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 3: Power Dissipation",
+            "Figure 4: Max.Transient Thermal Impedance"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "P = f(T )\ntot c",
+            "Z( )= f(t ); parameter: D= t /T\nthJC p p"
+          ]
+        ],
+        [
+          [
+            "Figure 5: Safe OperatingArea",
+            "Figure6: Safe Operating Area"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I =f(V ); T =25ºC;V >7V; parametert\nD DS c GS p",
+            "I = f(V ); T =80ºC; V >7V; parameter t\nD DS c GS p"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 5,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nFigure 7: Typ. Output Characteristics Figure 8: Typ. Output Characteristics\nI =f(V ); Tj=25ºC; parameter: V I =f(V ); T=125ºC;parameter: V\nD DS GS D DS j GS\nFigure9: Typ. Drain-Source On-StateResistance Figure 10: Typ. Drain-Source On-StateResistance\nR =f(I ); T=125ºC;parameter: V R =f(T); I =40A; V =10V\nDS(ON) D j GS DS(ON) j D GS\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 7: Typ. Output Characteristics",
+            "Figure 8: Typ. Output Characteristics"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I =f(V ); Tj=25ºC; parameter: V\nD DS GS",
+            "I =f(V ); T=125ºC;parameter: V\nD DS j GS"
+          ]
+        ],
+        [
+          [
+            "Figure9: Typ. Drain-Source On-StateResistance",
+            "Figure 10: Typ. Drain-Source On-StateResistance"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "R =f(I ); T=125ºC;parameter: V\nDS(ON) D j GS",
+            "R =f(T); I =40A; V =10V\nDS(ON) j D GS"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 6,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nFigure 11: Typ. Transfer Characteristics Figure 12: Typ. GateCharge\nI = f(V ); V = 20V V = f(Q ), I =40Apulsed\nD GS DS GS gate D\nFigure13: Drain-Source Breakdown Voltage Figure 14: Forward Characteristics ofReverse Diode\nV =f(T); I =15mA I =f(V ); parameter: T\nBR(DSS) j D F SD j\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 11: Typ. Transfer Characteristics",
+            "Figure 12: Typ. GateCharge"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "I = f(V ); V = 20V\nD GS DS",
+            "V = f(Q ), I =40Apulsed\nGS gate D"
+          ]
+        ],
+        [
+          [
+            "Figure13: Drain-Source Breakdown Voltage",
+            "Figure 14: Forward Characteristics ofReverse Diode"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "V =f(T); I =15mA\nBR(DSS) j D",
+            "I =f(V ); parameter: T\nF SD j"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 7,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nFigure 15: Avalanche Energy Figure 16: Typ. Capacitances\nE =f(T); V =60V C=f(V ); V =0; f=100KHz\nAS j DD DS GS\nFigure 17: C Stored Energy\nOSS\nE =f(V )\nOSS DS\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Figure 15: Avalanche Energy",
+            "Figure 16: Typ. Capacitances"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "E =f(T); V =60V\nAS j DD",
+            "C=f(V ); V =0; f=100KHz\nDS GS"
+          ]
+        ],
+        [
+          [
+            "Figure 17: C Stored Energy\nOSS"
+          ],
+          [
+            ""
+          ],
+          [
+            "E =f(V )\nOSS DS"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 8,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nTest Circuits\n1.Gate ChargeTest Circuit &Waveform\n2.SwitchTime TestCircuit\n3.Unclaimed InductiveSwitchingTest Circuit& Waveforms\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": []
+    },
+    {
+      "page": 9,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\n4.TestCircuitand WaveformforDiodeCharacteristics\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": []
+    },
+    {
+      "page": 10,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nMechanical Dimensions\nTO-247(Package 1) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.80 5.00 5.20 E1 - 13.30 -\nA1 2.21 2.41 2.61 E2 - 5.00 -\nA2 1.90 2.00 2.10 E3 - 2.50 -\nb 1.10 1.20 1.35 L 19.42 19.92 20.42\nb1 - 2.00 - L1 - 4.13 -\nb2 - 3.00 - P 3.50 3.60 3.70\nc 0.55 0.60 0.75 P1 - 7.19 -\nD 20.80 21.00 21.20 P2 - 2.50 -\nD1 - 16.55 - Q - 5.80 -\nD2 - 1.20 - S 6.05 6.15 6.25\nE 15.60 15.80 16.0 T - 10.00 -\nU - 6.20 -\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.80",
+            "5.00",
+            "5.20",
+            "",
+            "E1",
+            "-",
+            "13.30",
+            "-"
+          ],
+          [
+            "A1",
+            "2.21",
+            "2.41",
+            "2.61",
+            null,
+            "E2",
+            "-",
+            "5.00",
+            "-"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "E3",
+            "-",
+            "2.50",
+            "-"
+          ],
+          [
+            "b",
+            "1.10",
+            "1.20",
+            "1.35",
+            null,
+            "L",
+            "19.42",
+            "19.92",
+            "20.42"
+          ],
+          [
+            "b1",
+            "-",
+            "2.00",
+            "-",
+            null,
+            "L1",
+            "-",
+            "4.13",
+            "-"
+          ],
+          [
+            "b2",
+            "-",
+            "3.00",
+            "-",
+            null,
+            "P",
+            "3.50",
+            "3.60",
+            "3.70"
+          ],
+          [
+            "c",
+            "0.55",
+            "0.60",
+            "0.75",
+            null,
+            "P1",
+            "-",
+            "7.19",
+            "-"
+          ],
+          [
+            "D",
+            "20.80",
+            "21.00",
+            "21.20",
+            null,
+            "P2",
+            "-",
+            "2.50",
+            "-"
+          ],
+          [
+            "D1",
+            "-",
+            "16.55",
+            "-",
+            null,
+            "Q",
+            "-",
+            "5.80",
+            "-"
+          ],
+          [
+            "D2",
+            "-",
+            "1.20",
+            "-",
+            null,
+            "S",
+            "6.05",
+            "6.15",
+            "6.25"
+          ],
+          [
+            "E",
+            "15.60",
+            "15.80",
+            "16.0",
+            null,
+            "T",
+            "-",
+            "10.00",
+            "-"
+          ],
+          [
+            "U",
+            "-",
+            "6.20",
+            "-",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 11,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nMechanical Dimensions\nTO-247(Package 2) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.90 5.00 5.10 E1 13.10 13.25 13.40\nA1 2.31 2.41 2.51 E2 4.85 4.95 5.10\nA2 1.90 2.00 2.10 E3 2.40 2.50 2.60\nb 1.15 1.20 1.25 L 19.80 19.98 20.15\nb1 1.95 2.10 2.25 L1 - - 4.30\nb2 2.95 3.10 3.25 ΦP 3.60 3.70 3.80\nc 0.55 0.60 0.65 ΦP1 3.40 3.50 3.60\nD 20.90 21.00 21.10 ΦP2 6.90 7.10 7.30\nD1 16.35 16.55 16.75 Q 5.60 5.80 6.00\nD2 1.05 1.20 1.35 S 6.05 6.15 6.25\nE 15.70 15.80 15.90 T 9.80 10.00 10.20\nU 6.00 6.20 6.40 e 5.40 5.44 5.48\nΘ1 5° 7° 9° ΦP3 2.40 2.50 2.60\nΘ2 1° 3° 5° Θ3 13° 15° 17°\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.90",
+            "5.00",
+            "5.10",
+            "",
+            "E1",
+            "13.10",
+            "13.25",
+            "13.40"
+          ],
+          [
+            "A1",
+            "2.31",
+            "2.41",
+            "2.51",
+            null,
+            "E2",
+            "4.85",
+            "4.95",
+            "5.10"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "E3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "b",
+            "1.15",
+            "1.20",
+            "1.25",
+            null,
+            "L",
+            "19.80",
+            "19.98",
+            "20.15"
+          ],
+          [
+            "b1",
+            "1.95",
+            "2.10",
+            "2.25",
+            null,
+            "L1",
+            "-",
+            "-",
+            "4.30"
+          ],
+          [
+            "b2",
+            "2.95",
+            "3.10",
+            "3.25",
+            null,
+            "ΦP",
+            "3.60",
+            "3.70",
+            "3.80"
+          ],
+          [
+            "c",
+            "0.55",
+            "0.60",
+            "0.65",
+            null,
+            "ΦP1",
+            "3.40",
+            "3.50",
+            "3.60"
+          ],
+          [
+            "D",
+            "20.90",
+            "21.00",
+            "21.10",
+            null,
+            "ΦP2",
+            "6.90",
+            "7.10",
+            "7.30"
+          ],
+          [
+            "D1",
+            "16.35",
+            "16.55",
+            "16.75",
+            null,
+            "Q",
+            "5.60",
+            "5.80",
+            "6.00"
+          ],
+          [
+            "D2",
+            "1.05",
+            "1.20",
+            "1.35",
+            null,
+            "S",
+            "6.05",
+            "6.15",
+            "6.25"
+          ],
+          [
+            "E",
+            "15.70",
+            "15.80",
+            "15.90",
+            null,
+            "T",
+            "9.80",
+            "10.00",
+            "10.20"
+          ],
+          [
+            "U",
+            "6.00",
+            "6.20",
+            "6.40",
+            "",
+            "e",
+            "5.40",
+            "5.44",
+            "5.48"
+          ],
+          [
+            "Θ1",
+            "5°",
+            "7°",
+            "9°",
+            "",
+            "ΦP3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "Θ2",
+            "1°",
+            "3°",
+            "5°",
+            "",
+            "Θ3",
+            "13°",
+            "15°",
+            "17°"
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 12,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nMechanical Dimensions\nTO-247(Package 3) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.90 5.00 5.10 c1 0.58 0.60 0.62\nA1 2.31 2.41 2.51 D 20.90 21.00 21.10\nA2 1.90 2.00 2.10 D1 16.25 16.55 16.85\nb 1.16 - 1.26 D2 1.05 1.20 1.35\nb1 1.15 1.20 1.22 E 15.70 15.80 15.90\nb2 1.96 - 2.06 E1 13.10 13.30 13.50\nb3 1.95 2.00 2.02 E2 4.90 5.00 5.10\nb4 2.96 - 3.06 E3 2.40 2.50 2.60\nb5 2.95 3.00 3.02 e 5.34 5.44 5.54\nb6 - - 2.25 L 19.80 19.92 20.10\nb7 - - 3.25 L1 3.95 4.13 4.30\nc 0.59 - 0.66 M 0.35 - 0.95\nP 3.50 3.60 3.70 P1 7.00 - 7.40\nP2 2.40 2.50 2.60 Q 5.60 - 6.00\nS 6.05 6.15 6.25 T 9.80 - 10.20\nU 6.00 - 6.40 a 0 - 0.15\na’ 0 - 0.15\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.90",
+            "5.00",
+            "5.10",
+            "",
+            "c1",
+            "0.58",
+            "0.60",
+            "0.62"
+          ],
+          [
+            "A1",
+            "2.31",
+            "2.41",
+            "2.51",
+            null,
+            "D",
+            "20.90",
+            "21.00",
+            "21.10"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "D1",
+            "16.25",
+            "16.55",
+            "16.85"
+          ],
+          [
+            "b",
+            "1.16",
+            "-",
+            "1.26",
+            null,
+            "D2",
+            "1.05",
+            "1.20",
+            "1.35"
+          ],
+          [
+            "b1",
+            "1.15",
+            "1.20",
+            "1.22",
+            null,
+            "E",
+            "15.70",
+            "15.80",
+            "15.90"
+          ],
+          [
+            "b2",
+            "1.96",
+            "-",
+            "2.06",
+            null,
+            "E1",
+            "13.10",
+            "13.30",
+            "13.50"
+          ],
+          [
+            "b3",
+            "1.95",
+            "2.00",
+            "2.02",
+            null,
+            "E2",
+            "4.90",
+            "5.00",
+            "5.10"
+          ],
+          [
+            "b4",
+            "2.96",
+            "-",
+            "3.06",
+            null,
+            "E3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "b5",
+            "2.95",
+            "3.00",
+            "3.02",
+            null,
+            "e",
+            "5.34",
+            "5.44",
+            "5.54"
+          ],
+          [
+            "b6",
+            "-",
+            "-",
+            "2.25",
+            null,
+            "L",
+            "19.80",
+            "19.92",
+            "20.10"
+          ],
+          [
+            "b7",
+            "-",
+            "-",
+            "3.25",
+            null,
+            "L1",
+            "3.95",
+            "4.13",
+            "4.30"
+          ],
+          [
+            "c",
+            "0.59",
+            "-",
+            "0.66",
+            "",
+            "M",
+            "0.35",
+            "-",
+            "0.95"
+          ],
+          [
+            "P",
+            "3.50",
+            "3.60",
+            "3.70",
+            "",
+            "P1",
+            "7.00",
+            "-",
+            "7.40"
+          ],
+          [
+            "P2",
+            "2.40",
+            "2.50",
+            "2.60",
+            "",
+            "Q",
+            "5.60",
+            "-",
+            "6.00"
+          ],
+          [
+            "S",
+            "6.05",
+            "6.15",
+            "6.25",
+            "",
+            "T",
+            "9.80",
+            "-",
+            "10.20"
+          ],
+          [
+            "U",
+            "6.00",
+            "-",
+            "6.40",
+            "",
+            "a",
+            "0",
+            "-",
+            "0.15"
+          ],
+          [
+            "a’",
+            "0",
+            "-",
+            "0.15",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 13,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nMechanical Dimensions\nTO-247(Package 4) Unit:mm\nDimensions(mm) Dimensions(mm)\nSymbol Symbol\nMin. Typ. Max. Min. Typ. Max.\nA 4.90 5.00 5.10 E2 4.90 5.00 5.10\nA1 2.31 2.41 2.51 E3 2.40 2.50 2.60\nA2 1.90 2.00 2.10 e 5.34 5.44 5.54\nb 1.12 - 1.22 L 19.80 19.92 20.10\nb1 1.11 1.16 1.18 L1 3.95 4.13 4.30\nb2 1.96 - 2.06 P 3.50 3.60 3.70\nc 0.59 - 0.66 P1 7.00 - 7.40\nD 20.90 21.00 21.10 P2 2.40 2.50 2.60\nD1 16.25 16.55 16.85 Q 5.60 - 6.00\nD2 1.05 1.20 1.35 S 6.05 6.15 6.25\nE 15.70 15.80 15.90 T 9.80 - 10.20\nE1 13.10 13.30 13.50 U 6.00 - 6.40\nb3 1.95 2.00 2.02 b6 - - 2.25\nb4 2.96 - 3.06 b7 - - 3.25\nb5 2.95 3.00 3.02 c1 0.58 0.60 0.62\nM 0.35 - 0.95 a 0 - 0.15\na’ 0 - 0.15\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "Symbol",
+            "Dimensions(mm)\nMin. Typ. Max.",
+            null,
+            null,
+            "",
+            "Symbol",
+            "Dimensions(mm)",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "Typ.",
+            "Max.",
+            null,
+            null,
+            "Min.",
+            "Typ.",
+            "Max."
+          ],
+          [
+            "A",
+            "4.90",
+            "5.00",
+            "5.10",
+            null,
+            "E2",
+            "4.90",
+            "5.00",
+            "5.10"
+          ],
+          [
+            "A1",
+            "2.31",
+            "2.41",
+            "2.51",
+            null,
+            "E3",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "A2",
+            "1.90",
+            "2.00",
+            "2.10",
+            null,
+            "e",
+            "5.34",
+            "5.44",
+            "5.54"
+          ],
+          [
+            "b",
+            "1.12",
+            "-",
+            "1.22",
+            null,
+            "L",
+            "19.80",
+            "19.92",
+            "20.10"
+          ],
+          [
+            "b1",
+            "1.11",
+            "1.16",
+            "1.18",
+            null,
+            "L1",
+            "3.95",
+            "4.13",
+            "4.30"
+          ],
+          [
+            "b2",
+            "1.96",
+            "-",
+            "2.06",
+            null,
+            "P",
+            "3.50",
+            "3.60",
+            "3.70"
+          ],
+          [
+            "c",
+            "0.59",
+            "-",
+            "0.66",
+            null,
+            "P1",
+            "7.00",
+            "-",
+            "7.40"
+          ],
+          [
+            "D",
+            "20.90",
+            "21.00",
+            "21.10",
+            null,
+            "P2",
+            "2.40",
+            "2.50",
+            "2.60"
+          ],
+          [
+            "D1",
+            "16.25",
+            "16.55",
+            "16.85",
+            null,
+            "Q",
+            "5.60",
+            "-",
+            "6.00"
+          ],
+          [
+            "D2",
+            "1.05",
+            "1.20",
+            "1.35",
+            null,
+            "S",
+            "6.05",
+            "6.15",
+            "6.25"
+          ],
+          [
+            "E",
+            "15.70",
+            "15.80",
+            "15.90",
+            null,
+            "T",
+            "9.80",
+            "-",
+            "10.20"
+          ],
+          [
+            "E1",
+            "13.10",
+            "13.30",
+            "13.50",
+            null,
+            "U",
+            "6.00",
+            "-",
+            "6.40"
+          ],
+          [
+            "b3",
+            "1.95",
+            "2.00",
+            "2.02",
+            "",
+            "b6",
+            "-",
+            "-",
+            "2.25"
+          ],
+          [
+            "b4",
+            "2.96",
+            "-",
+            "3.06",
+            "",
+            "b7",
+            "-",
+            "-",
+            "3.25"
+          ],
+          [
+            "b5",
+            "2.95",
+            "3.00",
+            "3.02",
+            "",
+            "c1",
+            "0.58",
+            "0.60",
+            "0.62"
+          ],
+          [
+            "M",
+            "0.35",
+            "-",
+            "0.95",
+            "",
+            "a",
+            "0",
+            "-",
+            "0.15"
+          ],
+          [
+            "a’",
+            "0",
+            "-",
+            "0.15",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      ]
+    },
+    {
+      "page": 14,
+      "text": "Datasheet\n20mΩ, 600V, Super Junction N-Channel Power MOSFET SRC60R020BS\nShenzhen Sanrise Technology Co., LTD\nhttp://www.sanrise-tech.com\nIMPORTANT NOTICE\nShenzhen Sanrise Technology Co., LTD reserves the right to make changes without further notice to\nany products or specifications herein. Shenzhen Sanrise Technology Co., LTD does not assume any\nresponsibility for use of any its products for any particular purpose, nor does Shenzhen Sanrise\nTechnology Co., LTD assume any liability arising out of the application or use of any its products or\ncircuits. Shenzhen Sanrise Technology Co., LTD does not convey any license under its patent rights or\notherrights northerights ofothers.\nMainSite:\n-Headquarter -ShanghaiOffice\nShenzhenSanriseTechnologyCo.,LTD. ShenzhenSanriseTechnologyCo.,LTD\nA1206, Skyworth building, No. 008, gaoxinnan 1st Road, Rm.401, Building B, No. 666, Zhangheng Road,\nGaoxin District, Yuehai street,, Nanshan District, ShenZhen, ZhangjiangHi-TechPark,Shanghai,P.R.China\nP.R.China\nTel:+86-755-22953335 Tel:+86-21-68825918\nFax:+86-755-22916878\nSep2023,Rev1.0 www.sanrise-tech.com ShenzhenSanriseTechnologyCo.,LTD.",
+      "tables": [
+        [
+          [
+            "",
+            ""
+          ]
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+# Si MOSFET 提参注意文档
+# 自监督优化循环自动生成
+# 最后更新: 2026-02-13 (第4轮)
+
+notes:
+- param: 厂家封装名
+  issue: 不完整 - AI可能只提取了一种封装，遗漏了其他封装类型
+  rule: "【封装提取规则】必须提取该器件所有可用封装类型，用逗号分隔。例如PDF中写'available in TO-247, TO-263-2, TO-220C and TO-220F packages'，则提取为'TO-247, TO-263-2, TO-220C, TO-220F'。搜索范围：1）首页产品描述中的封装信息；2）'Package Type'示意图标题；3）'Ordering Information'表格中所有封装列。如果PDF中只有一种封装则只填一种。"
+  verified: true
+  added_round: 4
+- param: OPN
+  issue: 不一致 - AI有时提取完整订货号(含封装后缀)，有时提取基础型号
+  rule: "【OPN提取规则】提取器件的基础通用型号（Base Part Number），不包含封装后缀、包装方式后缀或绿色标识后缀。例如：PDF标题为'SRC65R068BS'，则OPN应填'SRC65R068BS'。查找位置：优先取PDF标题/首页中最显眼的主型号名称。若PDF覆盖多个具体OPN（如不同封装变体），则取它们共同的基础型号部分。"
+  verified: true
+  added_round: 4
+- param: 认证
+  issue: 遗漏：PDF中存在'Green'等认证信息关键词，但未作为'认证'参数提取。
+  rule: 在文档的非表格区域（如首页、封底、备注部分）搜索'Green'、'RoHS'、'Halogen-free'等关键词。当发现这些关键词时，提取为'认证'参数，其值为关键词本身或相关描述（如'RoHS
+    Compliant'）。此参数不来自标准电气参数表格。
+  verified: false
+  added_round: 1
+- param: 特殊功能
+  issue: 遗漏。PDF中'Features'部分包含器件特性描述，但提取器未识别为'特殊功能'参数。
+  rule: 当PDF中出现'Features'、'Key Features'、'Product Features'等标题或章节时，将其下的所有要点（通常以项目符号'•'、'-'或数字开头）的文本内容完整提取，合并为一个字符串，作为'特殊功能'参数的值。
+  verified: false
+  added_round: 1
+- param: 安装
+  issue: AI编造了不存在的'安装'参数值。PDF中通常没有'安装'参数，AI可能根据器件类型（如TO-220）或上下文推断出'Surface Mount'。
+  rule: 严格禁止提取'安装'参数。除非PDF中有明确以'Mounting Type'、'Package'或类似标题列出的参数行，否则不提取此参数。禁止从封装名称（如TO-220,
+    D2PAK）推断安装方式。
+  verified: false
+  added_round: 2
+- param: Igss
+  issue: 遗漏：PDF中存在'Igss'参数，但提取器未能识别和提取。
+  rule: 在'Electrical Characteristics'或'Static Characteristics'表格中，定位'Gate-Body Leakage Current'或'Gate Leakage Current'所在行，并识别符号列中的'IGSS'、'IGSSF'、'IGSSR'等写法。仅从该行'Max.'列中提取栅漏电流数值（通常为nA级），禁止从其他参数行或测试条件说明中推断。
+  verified: false
+  added_round: 1
+- param: Vgs min
+  issue: AI编造了不存在的'Vgs min'值'-20V'。PDF中通常只提供'Vgs'的最大额定值（如±20V），AI可能错误地将最大绝对值复制为最小值。
+  rule: '提取''Vgs''参数时，必须严格匹配PDF中的表述。如果PDF中写的是''Gate-to-Source Voltage (Vgs) ±20V''，则提取为''Vgs:
+    ±20V''。禁止拆分出''Vgs min''或''Vgs max''，除非PDF中明确以''Min''和''Max''列分别标出。'
+  verified: false
+  added_round: 2
+- param: '*'
+  issue: AI倾向于从非参数描述性文本（如标题、特性列表、应用笔记）中提取或编造参数值，导致幻觉。
+  rule: 参数提取必须严格限定在明确标识的参数表格（Table）或参数列表（如'Absolute Maximum Ratings', 'Electrical
+    Characteristics'）区域内。忽略所有章节标题、特性要点（Features）、框图、应用电路描述和注释中的文本。只提取格式为'参数名 数值 单位'或类似表格结构的行。
+  verified: false
+  added_round: 2
+- param: Vgs max
+  issue: 遗漏。PDF中在'Absolute Maximum Ratings'表格或类似位置存在'VGS'的最大额定值，但提取器未提取。
+  rule: 在'Absolute Maximum Ratings'或'Maximum Ratings'表格中，精确查找参数名为'Gate-to-Source Voltage'、'VGS'或'VGS
+    (max)'的行。提取其对应的'Max.'数值（单位通常为V，注意正负号，如±20V）。
+  verified: false
+  added_round: 1
+- param: '*'
+  issue: 值错误。提取器可能选错了表格中的行或列，将其他参数的值误认为目标参数的值。
+  rule: 提取参数值时，必须严格匹配参数名称列（如'Symbol'、'Parameter'列）中的完整或标准缩写。然后，在同一行内，从'Value'、'Min.'、'Typ.'、'Max.'或'Test
+    Conditions'列中提取对应值。避免跨行或跨列提取。
+  verified: false
+  added_round: 1
+- param: '*'
+  issue: 幻觉。AI编造了PDF中不存在的参数值。
+  rule: 严格禁止推断、计算或猜测任何参数值。所有提取的值必须在PDF原文中有明确的数字和单位对应。如果PDF中某参数只有'--'、'N/A'或为空，则提取值为空字符串或null，不得填充任何内容。对于未在PDF中找到明确对应项的参数，直接标记为'未提供'。
+  verified: false
+  added_round: 1
+- param: EAS L=0.1mH
+  issue: 遗漏：PDF中存在'EAS'参数，但提取器未能识别和提取。
+  rule: 在'Switching Characteristics'或'Maximum Ratings'表格中，查找参数名包含'EAS'的行。注意参数名可能带有条件，如'EAS
+    (L=0.1mH)'。提取时，需完整捕获参数名和其对应的数值及单位（如mJ）。
+  verified: false
+  added_round: 1
+- param: '*'
+  issue: 值错误：提取器可能错误地将表头、单位行、条件说明行或无关注释行的文本当作参数值提取。
+  rule: 严格区分数据行与非数据行。参数值必须为明确的数字（可能带单位，如10A，100V，5.6mΩ）。忽略纯文本行（如'条件'、'符号'、'参数'、'单位'等表头）、仅包含单位的行、以及以'Note'、'*'、'**'开头的注释行。提取时，确保目标单元格或文本块的核心内容是数字。
+  verified: false
+  added_round: 1
+- param: '*'
+  issue: 幻觉：AI可能基于参数名称的常见模式或上下文，编造了PDF中并不存在的典型值或范围。
+  rule: 严格禁止推断、估算或使用常识填充参数值。每个参数值必须直接、明确地来源于PDF文档中紧邻参数名称或符号的文本或数字。如果PDF中某参数名称后无对应数值、或数值位置模糊无法确认，则将该参数标记为'未提供'或'无法提取'，绝不编造。
+  verified: false
+  added_round: 1
+- param: RthJC max
+  issue: 值错误 - Thermal Characteristics表格中RthJC有多行（不同封装），AI可能错取了TO-220F行(3.5)而非TO-247/TO-220C行(0.35)
+  rule: "【RthJC多封装表格规则】当Thermal resistance表格中RthJC按封装分多行时（如TO-220F、TO-220C、TO-247、TO-263），必须优先提取主封装（TO-247、TO-220C、TO-263）对应的数值（通常0.3~0.6°C/W）。TO-220F的RthJC通常为3.5°C/W量级，是小封装，禁止误取。若仅有一种封装则取该封装值。"
+  verified: true
+  added_round: 5
+- param: RthJA max
+  issue: 值错误 - RthJA表格按封装分多行时，AI可能错取TO-220F行(70)而非TO-247/TO-220C行(58)
+  rule: "【RthJA多封装表格规则】当RthJA按封装分多行时，优先提取TO-247、TO-220C、TO-263对应值（通常50~60°C/W）。TO-220F的RthJA约70°C/W，禁止误取。"
+  verified: true
+  added_round: 5
+- param: PD Tc=25℃
+  issue: 遗漏：PDF中存在'PD'参数，但提取器未能识别和提取。
+  rule: 在'Absolute Maximum Ratings'或'Thermal Characteristics'部分，首先在表格中查找'Power Dissipation'或'PD'行；若表格缺失，则结合'Power Dissipation'曲线图标题/图注中的额定功耗值。只在条件为'Tc=25℃'、'Case Temperature=25°C'或明显为外壳25°C时提取对应瓦数，禁止从瞬态曲线或Rth图中推断连续功耗。
+  verified: false
+  added_round: 1
+- param: '*'
+  issue: 温度严格匹配 - 必须严格按照参数清单中指定的温度条件提取
+  rule: "【重要-温度严格匹配规则】提取参数时，必须严格匹配参数清单中指定的温度条件。例如：要求'Ron 25℃'就只能提取Tj=25℃条件下的数值；要求'175℃'就只能提取Tj=175℃条件下的数值。如果PDF中没有对应温度条件的数据（例如PDF只有150℃而要求175℃），则该参数必须留空返回null，绝不允许用其他温度的数据替代。不同温度的数据不可互相混用。"
+  verified: true
+  added_round: 2
+- param: Qoss
+  issue: 幻觉 - AI将Coss(输出电容,单位pF)的值误填为Qoss(输出电荷,单位nC/μC)
+  rule: "【Qoss与Coss严格区分】Qoss(Output Charge)的单位是nC或μC，来自'Output Charge'或'Qoss'参数行。Coss(Output Capacitance)的单位是pF或nF，来自'Output Capacitance'或'COSS'参数行。两者绝不相同。如果PDF中只有Coss而无Qoss，则Qoss参数必须留空，禁止用Coss的值填充Qoss。"
+  verified: true
+  added_round: 6
+- param: 技术
+  issue: 遗漏 - PDF首页常有'trench technology'、'split gate'等工艺描述，但AI未提取为'技术'参数
+  rule: "【技术/工艺提取规则】在PDF首页或Features部分，搜索含'technology'、'process'、'structure'的描述，如'shielded gate trench DMOS'、'split gate trench'、'Super Junction'、'planar'等。提取该工艺名称作为'技术'参数值。"
+  verified: true
+  added_round: 6
+- param: ID TA=25℃
+  issue: 遗漏 - PDF中同时存在Package Limited和Silicon Limited两种ID，AI只提取了Silicon的值给ID Tc=25℃，遗漏了Package Limited的值
+  rule: "【ID TA=25℃ / Package Limited 提取规则】许多PDF在Absolute Maximum Ratings中将Continuous Drain Current分为两组：'Package Limited'和'Silicon Limited'。'ID Tc=25℃'对应Silicon Limited行的TC=25℃值（通常数值更大）；'ID TA=25℃'对应Package Limited行的TC=25℃值（通常数值更小）。两者都必须提取。如果PDF中只有一行ID（不区分Package/Silicon），则只填ID Tc=25℃，ID TA=25℃留空。"
+  verified: true
+  added_round: 7
+

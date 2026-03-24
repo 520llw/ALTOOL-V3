@@ -1,0 +1,143 @@
+# IGBT 参数配置
+# 严格按照 "IGBT参数提取格式.xlsx" → Sheet1 前68列
+# 参数顺序与Excel列顺序完全一致
+# 注：Excel列65-66同名"Rth(j-c)"，分别为IGBT和Diode，YAML用_diode后缀区分
+
+groups:
+  全部参数:
+    - name: "文件名"
+      aliases: ["PDF文件名", "FileName", "File Name", "PDF name"]
+    - name: "厂家"
+      aliases: ["Vendor", "Brand", "manufacturer", "Manufacturer", "厂商", "品牌"]
+    - name: "Part Number"
+      aliases: ["OPN", "Part No.", "型号", "器件型号", "Model", "Part No", "PartNumber", "Part_Number"]
+    - name: "Package"
+      aliases: ["封装", "厂家封装名", "PKG", "封装类型", "Package Type"]
+    - name: "技术"
+      aliases: ["Technology", "工艺"]
+    - name: "V(BR)CE"
+      aliases: ["VCES", "V(BR)CES", "Collector-emitter voltage", "BVCES", "VCE", "VCES max"]
+    - name: "IC (TC=25℃)"
+      aliases: ["IC", "DC collector current TC=25°C", "IC 25℃", "IC TC=25℃"]
+    - name: "IC (TC=100℃)"
+      aliases: ["DC collector current TC=100°C", "IC 100℃", "IC TC=100℃"]
+    - name: "ICpulse"
+      aliases: ["ICM", "Pulsed collector current", "IC pulse", "IC(pulse)", "ICpuls"]
+    - name: "IF (TC=25℃)"
+      aliases: ["IF", "Diode forward current TC=25°C", "IF 25℃", "IF TC=25℃"]
+    - name: "IF (TC=100℃)"
+      aliases: ["Diode forward current TC=100°C", "IF 100℃", "IF TC=100℃"]
+    - name: "IFpulse"
+      aliases: ["IFM", "Diode pulsed current", "IF pulse", "IF(pulse)", "IFpuls"]
+    - name: "Irrm 25℃"
+      aliases: ["Irrm", "IRRM", "Diode peak reverse recovery current 25°C", "Irrm 25°C"]
+    - name: "Irrm 175℃"
+      aliases: ["Diode peak reverse recovery current 175°C", "Irrm 175°C", "IRRM 175°C"]
+    - name: "VGE"
+      aliases: ["Gate-emitter voltage", "VGS", "Vgs max", "VGE max"]
+    - name: "LE"
+      aliases: ["Internal emitter inductance"]
+    - name: "Ptot-mos (TC=25℃)"
+      aliases: ["Ptot", "PD", "Power dissipation TC=25°C", "Ptot 25℃", "PD Tc=25℃", "总功耗"]
+    - name: "Ptot-mos (TC=100℃)"
+      aliases: ["Power dissipation TC=100°C", "Ptot 100℃", "PD Tc=100℃"]
+    - name: "Ptot-Diode (TC=25℃)"
+      aliases: ["Diode power dissipation TC=25°C", "PD diode 25℃"]
+    - name: "Ptot-Diode (TC=100℃)"
+      aliases: ["Diode power dissipation TC=100°C", "PD diode 100℃"]
+    - name: "tsc"
+      aliases: ["Short circuit withstand time", "tSC", "短路耐受时间"]
+    - name: "VCE(sat)-type (Tj=25℃)"
+      aliases: ["VCE(sat) typ", "Collector-emitter saturation voltage typ", "VCE(sat) typ 25°C", "Vcesat type 25℃", "VCE(sat) type 25℃"]
+    - name: "VCE(sat)max (Tj=25℃)"
+      aliases: ["VCE(sat) max", "VCE(sat) max 25°C", "Vcesat max 25℃"]
+    - name: "Vcesat type 175℃"
+      aliases: ["VCE(sat) typ 175°C", "VCE(sat) type 175℃"]
+    - name: "VF 25℃"
+      aliases: ["VF typ", "Diode forward voltage 25°C", "VF typ 25°C", "VSD", "VF"]
+    - name: "VF 100℃"
+      aliases: ["Diode forward voltage 100°C", "VF typ 100°C"]
+    - name: "VF 175℃"
+      aliases: ["Diode forward voltage 175°C", "VF typ 175°C"]
+    - name: "Vge(th)min"
+      aliases: ["VGE(th) min", "Gate-emitter threshold voltage min", "Vth min"]
+    - name: "Vge(th)-type"
+      aliases: ["VGE(th) typ", "Gate-emitter threshold voltage typ", "Vth type", "Vth typ"]
+    - name: "Vge(th)max"
+      aliases: ["VGE(th) max", "Gate-emitter threshold voltage max", "Vth max"]
+    - name: "ICES 25℃"
+      aliases: ["ICES", "Collector leakage current 25°C", "Idss", "IDSS"]
+    - name: "ICES 100℃"
+      aliases: ["Collector leakage current 100°C"]
+    - name: "IGES"
+      aliases: ["Gate-emitter leakage current", "Igss", "IGSS"]
+    - name: "gfs"
+      aliases: ["gFS", "Transconductance", "跨导"]
+    - name: "Cies（pF）"
+      aliases: ["Cies", "CIES", "Input capacitance", "Ciss", "CISS", "输入电容"]
+    - name: "Coes（pF）"
+      aliases: ["Coes", "COES", "Output capacitance", "Coss", "COSS", "输出电容"]
+    - name: "Cres（pF）"
+      aliases: ["Cres", "CRES", "Reverse transfer capacitance", "Crss", "CRSS", "反向传输电容"]
+    - name: "tdon 25℃（ns）"
+      aliases: ["tdon 25℃", "td(on)", "Turn-on delay time", "td(on) 25°C", "td-on", "tdon"]
+    - name: "tdon 175℃（ns）"
+      aliases: ["tdon 175℃", "td(on) 175°C", "td(on) 175℃", "tdon 175°C"]
+    - name: "tr 25℃（ns）"
+      aliases: ["tr 25℃", "tr", "Rise time", "tr 25°C"]
+    - name: "tr175℃（ns）"
+      aliases: ["tr 175℃", "tr175℃", "tr 175°C"]
+    - name: "tdoff 25℃（ns）"
+      aliases: ["tdoff 25℃", "td(off)", "Turn-off delay time", "td(off) 25°C", "td-off", "tdoff"]
+    - name: "tdoff 175℃（ns）"
+      aliases: ["tdoff 175℃", "td(off) 175°C", "td(off) 175℃", "tdoff 175°C"]
+    - name: "tf 25℃（ns）"
+      aliases: ["tf 25℃", "tf", "Fall time", "tf 25°C"]
+    - name: "tf 175℃（ns）"
+      aliases: ["tf 175℃", "tf 175°C"]
+    - name: "trr 25℃（ns）"
+      aliases: ["trr 25℃", "trr", "Reverse recovery time 25°C", "trr 25°C", "tRR"]
+    - name: "trr 175℃"
+      aliases: ["trr 175°C"]
+    - name: "Eon 25℃（uJ）"
+      aliases: ["Eon 25℃", "Eon", "Turn-on energy", "Turn-on energy 25°C", "Eon 25°C"]
+    - name: "Eon 175℃（uJ）"
+      aliases: ["Eon 175℃", "Eon 175°C"]
+    - name: "Eoff（uJ）"
+      aliases: ["Eoff 25℃", "Eoff", "Turn-off energy", "Turn-off energy 25°C", "Eoff 25°C"]
+    - name: "Eoff 175℃（uJ）"
+      aliases: ["Eoff 175℃", "Eoff 175°C"]
+    - name: "Ets 25℃（uJ）"
+      aliases: ["Ets 25℃", "Ets", "Total switching energy", "Ets 25°C", "Etot 25℃"]
+    - name: "Ets 175℃（uJ）"
+      aliases: ["Ets 175℃", "Ets 175°C", "Etot 175℃"]
+    - name: "QG(nc)"
+      aliases: ["QG", "Gate charge total", "Qg", "总栅极电荷", "Gate charge", "QG_IGBT"]
+    - name: "QGE(nc)"
+      aliases: ["QGE", "Gate-emitter charge", "Qge", "栅射电荷"]
+    - name: "QGC(nc)"
+      aliases: ["QGC", "Gate-collector charge", "Qgc", "栅集电荷", "Qgd"]
+    - name: "Qrr 25℃（uC）"
+      aliases: ["Qrr 25℃", "Qrr 25°C", "Diode reverse recovery charge 25°C", "Qrr", "QRR"]
+    - name: "Qrr 175℃"
+      aliases: ["Qrr 175°C", "Diode reverse recovery charge 175°C"]
+    - name: "dirr/dt 25℃"
+      aliases: ["di(rr)/dt 25°C", "Peak rate of fall of reverse recovery current", "di(rr)/dt", "dirr/dt"]
+    - name: "dirr/dt 150℃"
+      aliases: ["di(rr)/dt 150°C", "di(rr)/dt 150℃"]
+    - name: "Erec 25℃"
+      aliases: ["Erec", "Reverse recovery energy 25°C", "Erec 25°C"]
+    - name: "Erec 175℃"
+      aliases: ["Erec 175°C"]
+    - name: "标准等级"
+      aliases: ["AEC-Q101", "Non-Automotive", "Automotive", "认证", "Qualification", "Standard"]
+    - name: "Rth(j-a)"
+      aliases: ["RthJA", "Thermal resistance junction-ambient", "RthJA max", "RθJA"]
+    - name: "Rth(j-c)"
+      aliases: ["RthJC", "IGBT thermal resistance junction-case", "RthJC max", "RθJC"]
+    - name: "Rth(j-c)_diode"
+      aliases: ["RthJC diode", "Diode thermal resistance junction-case", "RthJC Diode"]
+    - name: "Tj min"
+      aliases: ["Operating junction temperature min", "工作温度min"]
+    - name: "Tj max"
+      aliases: ["Operating junction temperature max", "工作温度max"]

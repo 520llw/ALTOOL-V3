@@ -1,0 +1,257 @@
+
+======================================================================
+⚡ 功率器件参数提取 - 后端测试
+======================================================================
+测试时间: 2026-01-30 06:22:54
+测试文件数: 5
+
+🔧 正在初始化组件...
+   AI提供商: dashscope
+   AI模型: qwen-max
+   参数库: 62 个参数
+
+============================================================
+📄 正在处理: LSGT10R011_V1.0.pdf
+============================================================
+  📖 PDF解析完成 (0.66s)
+     - 页数: 8
+     - 表格数: 6
+     - 预识别OPN: LSGT10R011
+     - 预识别厂家: Lonten
+     - 预识别类型: Si MOSFET
+
+  🤖 正在调用AI提取参数...
+  ✅ AI提取完成 (92.27s)
+     - 器件类型: Si MOSFET
+     - 厂家: Lonten
+     - OPN: LSGT10R011
+     - 提取参数数: 49
+
+  📋 提取的参数 (前20项):
+  参数名                       参数值                  测试条件                          
+  ---------------------------------------------------------------------------
+  PDF文件名                    LSGT10R011_V1.0.pdf                                
+  厂家                        Lonten                                             
+  OPN                       LSGT10R011                                         
+  厂家封装名                     TOLL                                               
+  技术                        shielded gate trenc                                
+  VDS                       100 V                VGS=0 V, ID=250uA             
+  Ron 10V_type              0.98 mΩ              VGS=10V, ID=50A，TJ =25℃       
+  Ron 10V_max               1.15 mΩ              VGS=10V, ID=50A，TJ =25℃       
+  Qg_10V                    260.1 nC                                           
+  反二极管压降Vsd                 1.1 V                VGS=0V, IS=50A, TJ=25℃        
+  Is                        420 A                                              
+  Ism                       1680 A                                             
+  Irrm                      3.62 A               IS=50A, di/dt=100A/us, TJ=25℃ 
+  Vgs min                   -20 V                                              
+  Vgs max                   20 V                                               
+  Vth type                  3.18 V               VDS=VGS, ID=250uA             
+  Vth min                   2 V                  VDS=VGS, ID=250uA             
+  Vth max                   4 V                  VDS=VGS, ID=250uA             
+  ID Tc=25℃                 478 A                TC = 25℃ ,Silicon limit       
+  ID TA=25℃                 420 A                TC = 25℃, Package limit       
+  ... 还有 29 项未显示
+
+============================================================
+📄 正在处理: LSGT10R013_V1.1(1).pdf
+============================================================
+  📖 PDF解析完成 (0.65s)
+     - 页数: 8
+     - 表格数: 6
+     - 预识别OPN: LSGT10R013
+     - 预识别厂家: Lonten
+     - 预识别类型: Si MOSFET
+
+  🤖 正在调用AI提取参数...
+  ✅ AI提取完成 (87.76s)
+     - 器件类型: Si MOSFET
+     - 厂家: Lonten
+     - OPN: LSGT10R013
+     - 提取参数数: 49
+
+  📋 提取的参数 (前20项):
+  参数名                       参数值                  测试条件                          
+  ---------------------------------------------------------------------------
+  PDF文件名                    LSGT10R013_V1.1(1).                                
+  厂家                        Lonten                                             
+  OPN                       LSGT10R013                                         
+  厂家封装名                     TOLL                                               
+  技术                        shielded gate trenc                                
+  VDS                       100 V                VGS=0 V, ID=250uA             
+  Ron 10V_type              1.05 mΩ              VGS=10V, ID=50A，TJ = 25°C     
+  Ron 10V_max               1.35 mΩ              VGS=10V, ID=50A，TJ = 25°C     
+  Qg_10V                    252.9 nC                                           
+  反二极管压降Vsd                 1.1 V                VGS=0V, IS=50A, TJ=25℃        
+  Is                        420 A                                              
+  Ism                       1680 A                                             
+  Irrm                      4.29 A               IS=50A, di/dt=100A/us, TJ=25℃ 
+  Vgs min                   -20 V                                              
+  Vgs max                   20 V                                               
+  Vth type                  2.87 V               VDS=VGS, ID=250uA             
+  Vth min                   2 V                  VDS=VGS, ID=250uA             
+  Vth max                   4 V                  VDS=VGS, ID=250uA             
+  ID Tc=25℃                 420 A                TC = 25°C, Package limit      
+  ID TA=25℃                 445 A                TC = 25°C, Silicon limit      
+  ... 还有 29 项未显示
+
+============================================================
+📄 正在处理: LSGT10R016_V1.0.pdf
+============================================================
+  📖 PDF解析完成 (0.66s)
+     - 页数: 8
+     - 表格数: 6
+     - 预识别OPN: LSGT10R016
+     - 预识别厂家: Lonten
+     - 预识别类型: Si MOSFET
+
+  🤖 正在调用AI提取参数...
+  ✅ AI提取完成 (81.73s)
+     - 器件类型: Si MOSFET
+     - 厂家: Lonten
+     - OPN: LSGT10R016
+     - 提取参数数: 47
+
+  📋 提取的参数 (前20项):
+  参数名                       参数值                  测试条件                          
+  ---------------------------------------------------------------------------
+  PDF文件名                    LSGT10R016_V1.0.pdf                                
+  厂家                        Lonten                                             
+  OPN                       LSGT10R016                                         
+  厂家封装名                     TOLL                                               
+  技术                        shielded gate trenc                                
+  VDS                       100 V                VGS=0 V, ID=250uA             
+  Ron 10V_type              1.44 mΩ              VGS=10V, ID=50A，TJ =25℃       
+  Ron 10V_max               1.65 mΩ              VGS=10V, ID=50A，TJ =25℃       
+  Qg_10V                    175.4 nC                                           
+  反二极管压降Vsd                 1.1 V                VGS=0V, IS=50A, TJ=25℃        
+  Is                        300 A                                              
+  Ism                       1200 A                                             
+  Irrm                      3.15 A               IS=50A, di/dt=100A/us, TJ=25℃ 
+  Vgs min                   -20 V                                              
+  Vgs max                   20 V                                               
+  Vth type                  3.3 V                VDS=VGS, ID=250uA             
+  Vth min                   2 V                  VDS=VGS, ID=250uA             
+  Vth max                   4 V                  VDS=VGS, ID=250uA             
+  ID Tc=25℃                 300 A                TC = 25℃, Package limit       
+  ID puls Tc=25℃            1200 A                                             
+  ... 还有 27 项未显示
+
+============================================================
+📄 正在处理: LSGT20R089HCF _V1.3.pdf
+============================================================
+  📖 PDF解析完成 (0.66s)
+     - 页数: 8
+     - 表格数: 5
+     - 预识别OPN: LSGT20R089HCF
+     - 预识别厂家: Lonten
+     - 预识别类型: Si MOSFET
+
+  🤖 正在调用AI提取参数...
+  ✅ AI提取完成 (77.71s)
+     - 器件类型: Si MOSFET
+     - 厂家: Lonten
+     - OPN: LSGT20R089HCF
+     - 提取参数数: 50
+
+  📋 提取的参数 (前20项):
+  参数名                       参数值                  测试条件                          
+  ---------------------------------------------------------------------------
+  PDF文件名                    LSGT20R089HCF _V1.3                                
+  厂家                        Lonten                                             
+  OPN                       LSGT20R089HCF                                      
+  厂家封装名                     TOLL                                               
+  技术                        shielded gate trenc                                
+  VDS                       200 V                VGS=0V, ID=250uA              
+  Ron 10V_type              7.8 mΩ               VGS=10V, ID=50A, Tj=25°C      
+  Ron 10V_max               8.95 mΩ              VGS=10V, ID=50A, Tj=25°C      
+  Ron 4.5V_type             16.6 mΩ              VGS=4.5V, ID=50A, Tj=150°C    
+  Qg_10V                    63.5 nC                                            
+  反二极管压降Vsd                 1.1 V                VGS=0V, IS=50A, Tj=25℃        
+  Is                        159 A                                              
+  Ism                       636 A                                              
+  Irrm                      50 A                 di/dt=200A/us, Tj=25℃         
+  Vgs min                   -20 V                                              
+  Vgs max                   20 V                                               
+  Vth type                  3.5 V                VDS=VGS, ID=250uA             
+  Vth min                   2.5 V                VDS=VGS, ID=250uA             
+  Vth max                   4.5 V                VDS=VGS, ID=250uA             
+  ID Tc=25℃                 159 A                Tc=25℃, Silicon limit         
+  ... 还有 30 项未显示
+
+============================================================
+📄 正在处理: 快捷芯KJ06N20T.pdf
+============================================================
+  📖 PDF解析完成 (1.72s)
+     - 页数: 7
+     - 表格数: 15
+     - 预识别OPN: KJ06N20T
+     - 预识别厂家: 无
+     - 预识别类型: Si MOSFET
+
+  🤖 正在调用AI提取参数...
+  ✅ AI提取完成 (97.11s)
+     - 器件类型: Si MOSFET
+     - 厂家: 快捷芯
+     - OPN: KJ06N20T
+     - 提取参数数: 43
+
+  📋 提取的参数 (前20项):
+  参数名                       参数值                  测试条件                          
+  ---------------------------------------------------------------------------
+  PDF文件名                    快捷芯KJ06N20T.pdf                                    
+  厂家                        快捷芯                                                
+  OPN                       KJ06N20T                                           
+  厂家封装名                     TOLL-8L                                            
+  技术                        Advanced trench cel                                
+  VDS                       200 V                VGS = 0V, IDS = 250μA         
+  Ron 10V_type              5 mΩ                 VGS = 10V, IDS = 50A          
+  Ron 10V_max               6 mΩ                 VGS = 10V, IDS = 50A          
+  反二极管压降Vsd                 1.3 V                VGS = 0V, ISD = 50A           
+  Is                        149 A                Tc = 25℃                      
+  Ism                       596 A                Tc = 25℃, VGS = 10V           
+  Vgs min                   -20 V                Tc = 25℃                      
+  Vgs max                   20 V                 Tc = 25℃                      
+  Vth type                  2 V                  VDS = VGS, IDS = 250μA        
+  Vth min                   2 V                  VDS = VGS, IDS = 250μA        
+  Vth max                   4 V                  VDS = VGS, IDS = 250μA        
+  ID Tc=25℃                 149 A                Tc = 25℃, VGS = 10V           
+  ID TA=25℃                 149 A                TA = 25℃, VGS = 10V           
+  ID Tc=100℃                105 A                Tc = 100℃, VGS = 10V          
+  ID puls Tc=25℃            596 A                Tc = 25℃, VGS = 10V           
+  ... 还有 23 项未显示
+
+======================================================================
+📊 测试汇总报告
+======================================================================
+
+📈 整体统计:
+   成功/总数: 5/5
+   PDF解析总耗时: 4.35s
+   AI提取总耗时: 436.58s
+   总耗时: 440.93s
+   平均每份PDF: 88.19s
+
+📋 各文件详情:
+文件名                                 PDF解析      AI提取       总时间        参数数      状态
+------------------------------------------------------------------------------------------
+LSGT10R011_V1.0.pdf                 0.66       92.27      92.93      49       ✅
+LSGT10R013_V1.1(1).pdf              0.65       87.76      88.41      49       ✅
+LSGT10R016_V1.0.pdf                 0.66       81.73      82.39      47       ✅
+LSGT20R089HCF _V1.3.pdf             0.66       77.71      78.37      50       ✅
+快捷芯KJ06N20T.pdf                     1.72       97.11      98.83      43       ✅
+
+💾 详细结果已保存到: /home/gjw/AITOOL/test_results.json
+
+======================================================================
+📊 关键参数提取对比
+======================================================================
+
+文件名                           OPN            厂家             VDS            Ron 10V_type   Ron 10V_max    ID Tc=25℃      
+------------------------------------------------------------------------------------------------------------------------
+LSGT10R011_V1.0.pdf           LSGT10R011     Lonten         100 V          0.98 mΩ        1.15 mΩ        478 A          
+LSGT10R013_V1.1(1).pdf        LSGT10R013     Lonten         100 V          1.05 mΩ        1.35 mΩ        420 A          
+LSGT10R016_V1.0.pdf           LSGT10R016     Lonten         100 V          1.44 mΩ        1.65 mΩ        300 A          
+LSGT20R089HCF _V1.3.pdf       LSGT20R089HCF  Lonten         200 V          7.8 mΩ         8.95 mΩ        159 A          
+快捷芯KJ06N20T.pdf               KJ06N20T       快捷芯            200 V          5 mΩ           6 mΩ           149 A          
+
+✅ 测试完成!

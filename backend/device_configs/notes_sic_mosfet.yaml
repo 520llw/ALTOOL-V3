@@ -1,0 +1,138 @@
+# SiC MOSFET 提参注意文档
+# 自监督优化循环自动生成
+# 最后更新: 2026-02-13 (第2轮)
+
+notes:
+- param: 厂家封装名
+  issue: 不完整 - AI可能只提取了一种封装，遗漏了其他封装类型
+  rule: "【封装提取规则】必须提取该器件所有可用封装类型，用逗号分隔。搜索范围：1）首页产品描述中的封装信息；2）'Package Type'示意图标题；3）'Ordering Information'表格中所有封装列。若为SiC模块则提取模块封装（如SOP8）。如果PDF中只有一种封装则只填一种。"
+  verified: true
+  added_round: 2
+- param: OPN
+  issue: 不一致 - AI有时提取完整订货号(含封装后缀)，有时提取基础型号
+  rule: "【OPN提取规则】SiC单管：提取基础型号。SiC模块：模块通常以完整型号标识（如SRFIM75R65SOPB1GA-S02B），可提取完整型号或去掉包装后缀的基础部分。查找位置：PDF标题/首页主型号。"
+  verified: true
+  added_round: 2
+- param: Vgs min
+  issue: 幻觉。AI可能将'VGS'的'Maximum Ratings'（如±20V）或'Gate-Source Voltage'的负向最大值错误解读为最小值。
+  rule: 区分极限参数。'Vgs min'通常指保证器件关闭的负向栅极电压。仅在'Electrical Characteristics'或'Recommended
+    Operating Conditions'表格中，找到参数名明确为'Gate Threshold Voltage (VGS(th))'的'Min.'值，或明确标注'VGS(off)'的负电压值。禁止从'Maximum
+    Ratings'中的'VGS'提取。
+  verified: false
+  added_round: 1
+- param: ta
+  issue: 遗漏。'ta'（延迟时间）可能存在于开关特性波形图注释或开关参数表格中，AI可能只提取了'td(on)'、'td(off)'而忽略了简写'ta'，或未处理波形图中的参数定义。
+  rule: 波形图与表格结合提取。在'Switching Characteristics'部分，检查所有波形图（如Turn-On/Off Waveform）的标注，若出现'ta'，则在其对应表格或图注中查找数值。同时，在开关参数表格中查找参数名包含'delay
+    time'或明确为'ta'的行。
+  verified: false
+  added_round: 1
+- param: Erec
+  issue: 遗漏。'Erec'（反向恢复能量）可能存在于开关损耗特性图、测试条件说明或独立参数表中，AI可能未深入分析图表或忽略了缩写。
+  rule: 图表与文本深度扫描。在'Switching Characteristics'或'Typical Characteristics'部分，搜索包含'Reverse
+    Recovery'的图表标题或注释。提取图表中标注的'Erec'值，或查找参数表/文本中明确写有'Erec'或'Reverse recovery energy'的行。
+  verified: false
+  added_round: 1
+- param: PD Tc=25℃
+  issue: 遗漏。'PD'（功耗）通常出现在'Absolute Maximum Ratings'或'Thermal Characteristics'部分，AI可能只提取了'Tj'或'Rth'而忽略了'PD'本身，或未关联'TC
+    = 25°C'的条件。
+  rule: 定位热参数区。在'Absolute Maximum Ratings'或独立的热特性表格中，查找参数名为'Power Dissipation'的行，并确认其条件为'TC
+    = 25°C'（或'Case Temperature'为25°C），提取该条件下的值。
+  verified: false
+  added_round: 1
+- param: Ron 18V 25℃_type
+  issue: 幻觉与遗漏并存。AI可能错误地将'RDS(on)'在不同条件下的值（如10V Vgs）或最大值当作典型值，或未能正确关联'VGS = 18 V'条件下的'RDS(on)'典型值。
+  rule: 精确匹配条件。在'Electrical Characteristics'表格中，定位'ON-RESISTANCE'或'RDS(on)'行。必须同时匹配其测试条件为'VGS
+    = 18 V'和'TJ = 25°C'的列，提取该列下的'Typ.'值。忽略其他Vgs或温度条件。
+  verified: false
+  added_round: 1
+- param: Igss
+  issue: 遗漏。'Igss'（栅源漏电流）通常位于'Electrical Characteristics'表格中，可能因参数名称为'Gate Leakage
+    Current'而被AI忽略其标准缩写。
+  rule: 同义词映射提取。在'Electrical Characteristics'表格中，搜索参数名包含'Gate'和'Leakage'或直接为'IGSS'的行。提取其'Max.'值（通常为nA级）。
+  verified: false
+  added_round: 1
+- param: '*'
+  issue: 幻觉。AI编造了PDF中不存在的参数或数值。
+  rule: 严格禁止推断或生成PDF文本中未明确出现的任何参数名称、数值或单位。所有输出必须能直接追溯到PDF中的原文、表格单元格或图表标签。如果无法在指定范围内找到确切匹配，则将该参数标记为'未提供'或直接省略，而非编造。
+  verified: false
+  added_round: 2
+- param: '*'
+  issue: 值错误。提取器可能选错了表格中的行或列，导致提取了错误的值。
+  rule: 在表格中提取数据时，必须通过表头（Header）精确锚定参数所在列，并通过行标签或相邻的关键描述（如测试条件'Tj=25°C'）精确定位参数所在行。使用行列交叉验证，确保提取的单元格与目标参数在逻辑上完全对应。
+  verified: false
+  added_round: 2
+- param: Ron 18V 175℃_type
+  issue: 幻觉。AI可能将'RDS(on)'在25℃的典型值错误外推至175℃，或混淆了不同温度下的参数行。
+  rule: 温度条件严格校验。在'RDS(on)'参数行，必须找到测试条件明确为'VGS = 18 V'和'TJ = 175°C'的列，才提取该列的'Typ.'值。禁止跨温度条件赋值，禁止用150℃或其他温度的值替代175℃。
+  verified: false
+  added_round: 1
+- param: 标准
+  issue: 遗漏。'Automotive'等标准信息通常出现在文档标题、首段或订购信息中，而非参数表格内，容易被专注于表格提取的AI忽略。
+  rule: 在文档解析开始时，应扫描文档前两页的标题、副标题和首段摘要。若发现'Automotive'、'AEC-Q101'、'Industrial'等描述合规性或标准的词汇，应将其提取为参数'标准'。
+  verified: false
+  added_round: 1
+- param: gfs
+  issue: AI编造了'未提供'作为值。PDF中可能未包含跨导（gfs）参数，或者该参数以其他名称（如'Forward transconductance'）出现。AI可能因为常见器件包含此参数而进行了假设。
+  rule: 禁止为常见但PDF中未明确列出的参数（如gfs, Ciss, Coss, Crss）生成任何条目。只提取在'Electrical Characteristics'等章节的表格内明确出现的参数名（如'gfs',
+    'Forward transconductance'）。如果参数名未在表格行中出现，则绝不提取。
+  verified: false
+  added_round: 2
+- param: Ron 18V 25℃_max
+  issue: 幻觉。AI可能将其他条件（如高温、不同Vgs）的'Max.'值错误分配，或编造了不存在的最大值。
+  rule: 条件绑定提取。仅在找到'RDS(on)'参数行，且其测试条件明确包含'VGS = 18 V'和'TJ = 25°C'时，才提取该条件列对应的'Max.'值。若该条件下无'Max.'列，则此参数不存在，不得提取。
+  verified: false
+  added_round: 1
+- param: Qoss
+  issue: 幻觉。AI可能将'Coss'或'Crss'等电容相关参数错误关联或推断为'Qoss'，或从上下文推测了未明确列出的参数。
+  rule: 严格提取。仅当PDF表格或文本中明确出现'Qoss'、'Q_oss'、'Output Charge'或等效全称时，才提取该参数及其数值。禁止从'Coss'、'Crss'或开关损耗波形图推断'Qoss'。
+  verified: false
+  added_round: 1
+- param: '*'
+  issue: 通用防幻觉规则缺失。AI倾向于根据模式（如每个参数都有type/max）或常识（如Vgs min为负）编造数据。
+  rule: 提取规则：1. 严格锚定文本：只提取PDF中明确出现的参数名称和数值。2. 禁止推断：如果表格中某参数（如Ron）在特定条件（如VGS=18V, Tj=175°C）下无对应列，则判定该条件下参数不存在，输出null或跳过。3.
+    条件匹配：提取数值时，必须同时满足参数名和测试条件（电压、温度、测试电路等）与目标完全匹配。4. 单位确认：提取的数值必须附带PDF中明确的单位，不可假设。
+  verified: false
+  added_round: 1
+- param: Rg
+  issue: 遗漏。'Rg'（栅极电阻）可能作为内部参数在'Electrical Characteristics'中列出，或在开关测试条件中说明，AI可能未将其识别为独立提取参数。
+  rule: 多位置查找。首先在'Electrical Characteristics'表格中搜索'Gate Resistance'或'Rg'。若无，则在'Switching
+    Characteristics'的测试条件描述或典型特性图中查找'Rg ='的明确陈述并提取。
+  verified: false
+  added_round: 1
+- param: tr
+  issue: 遗漏。'tr'（上升时间）存在于开关参数表或波形图，AI可能提取了'td(on)'但遗漏了与之关联的'tr'。
+  rule: 关联开关参数集。在'Switching Characteristics'表格中，查找参数名包含'Rise Time'或明确为'tr'的行。同时，检查开关波形图的标注，提取图中标明的'tr'值。
+  verified: false
+  added_round: 1
+- param: tf
+  issue: 遗漏。'tf'（下降时间）与'tr'类似，存在于开关参数表或波形图，AI可能未完整提取开关时间参数集。
+  rule: 关联开关参数集。在'Switching Characteristics'表格中，查找参数名包含'Fall Time'或明确为'tf'的行。同时，检查开关波形图的标注，提取图中标明的'tf'值。
+  verified: false
+  added_round: 1
+- param: '*'
+  issue: 通用幻觉。AI可能基于参数名常见搭配（如'Qoss'常与'Coss'共存）或部分匹配的上下文，推断并编造未明确列出的参数值。
+  rule: 存在性验证规则。对于每一个待提取参数，必须在PDF的表格、列表、图表标注或正文描述中找到该参数的标准名称或明确同义词（如'RDS(on)'对应'Ron'），并与其数值直接关联。禁止基于参数相关性、典型值范围或文档其他部分的值进行推断。若未找到明确对应，则判定该参数'未提供'。
+  verified: false
+  added_round: 1
+- param: '*'
+  issue: 通用遗漏。AI可能因参数名称变体（全称vs缩写）、位置分散（不同章节/图表）或表格结构复杂（多级表头、合并单元格）而未能识别和提取。
+  rule: 结构化遍历与同义词库。按文档章节顺序系统扫描：1. Absolute Maximum Ratings。2. Thermal Characteristics。3.
+    Electrical Characteristics (静态)。4. Switching Characteristics (动态)。在每个区域，使用参数的标准名及其常见变体/全称（如'Ron'对应'RDS(on)',
+    'On-Resistance'）进行搜索。对于图表，必须解析图标题、坐标轴标签、图内标注和数据点标签。
+  verified: false
+  added_round: 1
+- param: '*'
+  issue: 温度严格匹配 - 必须严格按照参数清单中指定的温度条件提取
+  rule: "【重要-温度严格匹配规则】提取参数时，必须严格匹配参数清单中指定的温度条件。例如：要求'Ron 175℃'就只能提取Tj=175℃条件下的数值；要求'Ron 25℃'就只能提取Tj=25℃条件下的数值。如果PDF中没有对应温度条件的数据（例如PDF只有150℃而要求175℃），则该参数必须留空返回null，绝不允许用其他温度的数据替代。不同温度的数据不可互相混用。"
+  verified: true
+  added_round: 2
+- param: Vgs max
+  issue: 遗漏 - PDF的Absolute Maximum Ratings中有'Gate-Source Voltage (VGSS) ±20V'但未提取为Vgs max
+  rule: "【Vgs max提取规则】在'Absolute Maximum Ratings'或'Maximum Ratings'表格中查找'Gate-Source Voltage'或'VGS'或'VGSS'行。如果值为'±20V'，则Vgs max提取为'±20V'（含正负号）。注意区分：Vgs max是额定最大栅源电压（来自Maximum Ratings），Vth是阈值电压（来自Electrical Characteristics），两者不同。"
+  verified: true
+  added_round: 6
+- param: Qoss
+  issue: 幻觉 - AI将Coss(输出电容,pF)误填为Qoss(输出电荷,nC)
+  rule: "【Qoss与Coss严格区分】Qoss(Output Charge)单位为nC或μC。Coss(Output Capacitance)单位为pF或nF。如果PDF中只有Coss而无明确的Qoss/Output Charge参数行，则Qoss必须留空，禁止用Coss的值填充。"
+  verified: true
+  added_round: 6

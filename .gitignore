@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+.venv/
+venv/
+env/
+
+# 数据与缓存（用户本地生成）
+data/params.db
+data/config.json
+logs/*.log
+cache/
+output/*.xlsx
+output/*.json
+backup/
+
+# 测试与临时文件
+*.pdf
+test_results*.json
+ground_truth*.json
+*_report*.json
+optimized_pdfs.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db

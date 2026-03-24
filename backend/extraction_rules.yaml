@@ -1,0 +1,325 @@
+# 参数提取规则配置文件
+# 用户可以在此添加新的提取规则，无需修改代码
+# 更新日期: 2026-01-31
+
+# ============================================================================
+# 基本信息提取规则
+# ============================================================================
+basic_info:
+  厂家:
+    description: "从PDF页脚网址域名识别厂家"
+    examples:
+      - "www.lonten.cc → Lonten"
+      - "www.infineon.com → Infineon"
+      - "www.onsemi.com → ONSEMI"
+    priority: "优先从网址识别，比公司名称更准确"
+  
+  OPN:
+    description: "器件型号，通常在标题或第一页显著位置"
+    examples:
+      - "LSGT10R018B"
+      - "IRF540N"
+      - "KJ06N20T"
+  
+  技术:
+    description: "器件技术类型"
+    important: "必须保持完整名称，不要简化"
+    examples:
+      - "Shielded Gate Trench VDMOS"
+      - "Shielded Gate Trench DMOS"
+      - "SuperJunction MOSFET"
+      - "Advanced trench cell design"
+    wrong_examples:
+      - "不要简化VDMOS为DMOS"
+      - "不要用N-Channel MOSFET代替具体技术名称"
+
+  安装:
+    description: "安装方式，分为贴片(SMD)和插件(THT)"
+    mapping:
+      - "Through hole | TO-247 | TO-220 | TO-3P → THT"
+      - "Surface Mount | TOLL | DFN | QFN | SOP → SMD"
+    standard_output: "THT 或 SMD"
+    examples:
+      - "TO-247 → THT"
+      - "TOLL → SMD"
+
+  EAS:
+    description: "雪崩能量"
+    priority_rule: "如果存在多组EAS值，优先提取标注为'Typical'或值较大的一项作为参数值，较小的一项通常是生产测试下限。"
+    condition_hint: "必须将L=xxmH, IAS=xxA等完整条件放入test_condition。"
+
+# ============================================================================
+# 温度参数提取规则
+# ============================================================================
+temperature_params:
+  工作温度:
+    description: "Operating/Junction Temperature Range"
+    params:
+      - name: "工作温度min"
+        example: "-55"
+      - name: "工作温度max"
+        example: "175"
+  
+  存储温度:
+    description: "Storage Temperature Range (TSTG)"
+    params:
+      - name: "TSTG min"
+        example: "-55"
+      - name: "TSTG max"
+        example: "175"
+    location: "Absolute Maximum Ratings"
+  
+  焊接温度:
+    name: "Tsold"
+    description: "Soldering Temperature"
+    typical_value: "260℃ (1.6mm距外壳10s)"
+    location: "Package Information或Absolute Maximum Ratings"
+
+# ============================================================================
+# 导通电阻RDS(on)提取规则 - 符号统一
+# ============================================================================
+rds_on_params:
+  symbol_standard: "RDS(on)"  # 统一使用此符号，不用Ron
+  
+  常温参数:
+    - name: "RDS(on) 10V_type"
+      condition: "VGS=10V, TJ=25℃"
+      type: "typical"
+    - name: "RDS(on) 10V_max"
+      condition: "VGS=10V, TJ=25℃"
+      type: "maximum"
+    - name: "RDS(on) 4.5V_type"
+      condition: "VGS=4.5V, TJ=25℃"
+    - name: "RDS(on) 4.5V_max"
+      condition: "VGS=4.5V, TJ=25℃"
+    - name: "RDS(on) 2.5V_type"
+      condition: "VGS=2.5V, TJ=25℃"
+    - name: "RDS(on) 2.5V_max"
+      condition: "VGS=2.5V, TJ=25℃"
+  
+  高温参数:
+    - name: "RDS(on) 10V TJ=175℃"
+      condition: "VGS=10V, TJ=175℃"
+      type: "typical"
+      note: "高温导通电阻，通常为常温的1.5-2倍"
+    - name: "RDS(on) 10V TJ=150℃"
+      condition: "VGS=10V, TJ=150℃"
+      type: "typical"
+
+# ============================================================================
+# 栅极泄漏电流细分规则
+# ============================================================================
+gate_leakage:
+  description: "将IGSS拆分为正向和反向"
+  original_symbol: "IGSS"
+  split_params:
+    - name: "IGSSF"
+      description: "Forward Gate-Source Leakage Current"
+      condition: "VGS为正值（如VGS=+20V）"
+      example: "+100nA"
+    - name: "IGSSR"
+      description: "Reverse Gate-Source Leakage Current"
+      condition: "VGS为负值（如VGS=-20V）"
+      example: "-100nA"
+  note: "PDF中可能标注为IGSS=±100nA，需拆分"
+
+# ============================================================================
+# 高温漏极泄漏电流规则
+# ============================================================================
+drain_leakage:
+  常温:
+    name: "Idss"
+    condition: "TJ=25℃"
+    typical: "1μA"
+  
+  高温:
+    - name: "IDSS TJ=175℃"
+      condition: "TJ=175℃"
+      typical: "300μA"
+      note: "大多数100V型号"
+    - name: "IDSS TJ=150℃"
+      condition: "TJ=150℃"
+      typical: "10mA"
+      note: "如LSGT20R089HCF等200V型号"
+
+# ============================================================================
+# 测试条件提取规则（新增重要）
+# ============================================================================
+test_conditions:
+  Qg测试条件:
+    description: "栅极电荷测试条件"
+    format: "VDS=XXV, ID=XXA"
+    example: "VDS=50V, ID=50A"
+    location: "Gate Charge Characteristics"
+  
+  Ciss测试条件:
+    description: "电容参数测试条件"
+    format: "VDS=XXV, VGS=0V, f=XXkHz"
+    example: "VDS=50V, VGS=0V, f=1MHz"
+    location: "Capacitance Characteristics"
+  
+  开关时间测试条件:
+    description: "开关时间测试条件"
+    format: "VDD=XXV, ID=XXA, RG=XXΩ"
+    example: "VDD=50V, ID=50A, RG=10Ω"
+    location: "Switching Characteristics"
+  
+  Qrr测试条件:
+    description: "反向恢复电荷测试条件"
+    format: "di/dt=XXA/μs"
+    example: "di/dt=100A/μs 或 di/dt=200A/μs"
+    location: "Diode Characteristics"
+  
+  EAS测试条件:
+    description: "雪崩能量测试条件"
+    format: "VDD=XXV, L=XXmH, IAS=XXA"
+    example: "VDD=50V, L=0.5mH, IAS=84A"
+    location: "Absolute Maximum Ratings"
+  
+  IDM限制条件:
+    description: "脉冲漏极电流限制条件"
+    format: "脉冲宽度≤XXμs, 占空比≤X%"
+    example: "脉冲宽度≤300μs, 占空比≤2%"
+    location: "Absolute Maximum Ratings"
+
+# ============================================================================
+# 认证信息提取规则
+# ============================================================================
+certification:
+  description: "从PDF文本中查找认证信息"
+  keywords:
+    - pattern: "RoHS"
+      output: "RoHS"
+    - pattern: "REACH"
+      output: "REACH"
+    - pattern: "AEC-Q101"
+      output: "AEC-Q101"
+    - pattern: "Pb-free|lead-free|Lead Free"
+      output: "Pb-free"
+    - pattern: "Halogen-free|halogen free"
+      output: "Halogen-free"
+  search_locations:
+    - "PDF首页Features区域"
+    - "PDF文本描述"
+    - "环保声明部分"
+
+# ============================================================================
+# 多值单元格处理规则（关键）
+# ============================================================================
+multi_value_cells:
+  description: "PDF中电流ID常有多个值在同一单元格"
+  example_format: |
+    Continuous drain current  | ID | 445    | A
+    (TC=25℃, Silicon limit)  |    | 420    | A  
+    (TC=25℃, Package limit)  |    | 314    | A
+    (TC=100℃, Silicon limit) |    |        |
+  
+  mapping_rules:
+    - condition: "TC=25℃, Silicon limit 或第一个值"
+      param: "ID TC=25℃"
+      note: "取最大值（Silicon limit）"
+    
+    - condition: "TA=25℃ 或 Package limit 或第二个值"
+      param: "ID TA=25℃"
+      note: "环境温度条件"
+    
+    - condition: "TC=100℃ 或第三个值"
+      param: "ID TC=100℃"
+      note: "高温条件"
+  
+  warning: "不要把值搞混！第一个值对应第一个条件"
+
+# ============================================================================
+# 电荷参数提取规则
+# ============================================================================
+charge_params:
+  Qg_10V:
+    description: "VGS=10V时的栅极电荷"
+    rule: "如果Qg的测试条件是VGS=10V或VGS=0~10V，同时提取为Qg和Qg_10V"
+  
+  Qoss:
+    description: "Output Charge，输出电荷"
+    note: "PDF中符号可能显示为'Q oss'或带换行'Q\\noss'，仔细查找"
+  
+  Qrr:
+    description: "Reverse Recovery Charge，反向恢复电荷"
+    location: "通常在Drain-Source diode characteristics部分"
+
+# ============================================================================
+# 反向恢复参数规则
+# ============================================================================
+reverse_recovery:
+  trr:
+    description: "Reverse Recovery Time，反向恢复时间"
+    unit: "ns"
+    symbols:
+      - "trr"
+      - "t rr"
+      - "t(rr)"
+    location: "Drain-Source diode characteristics 或 Diode Characteristics"
+  
+  Qrr:
+    description: "Reverse Recovery Charge，反向恢复电荷"
+    unit: "nC"
+    symbols:
+      - "Qrr"
+      - "Q rr"
+      - "Q(rr)"
+  
+  Irrm:
+    description: "Peak reverse recovery current，反向恢复峰值电流"
+    unit: "A"
+
+# ============================================================================
+# 特殊功能提取规则
+# ============================================================================
+special_features:
+  description: "从Features部分提取功能特性"
+  include:
+    - "Improved dv/dt capability"
+    - "Fast switching"
+    - "100% EAS Guaranteed"
+    - "Green device available"
+    - "Low on-resistance"
+    - "Surface-mounted package"
+    - "Advanced trench cell design"
+  exclude:
+    - "规格数据如100V,420A,RDS.max=1.15mΩ（这是规格，不是功能）"
+
+# ============================================================================
+# 提取优先级
+# ============================================================================
+extraction_priority:
+  high:
+    - "VDS"
+    - "RDS(on) 10V_type"
+    - "RDS(on) 10V_max"
+    - "ID TC=25℃"
+    - "Vth type"
+    - "Ciss"
+    - "Qg"
+    - "封装"
+    - "厂家"
+    - "OPN"
+  
+  medium:
+    - "Qoss"
+    - "Qrr"
+    - "trr"
+    - "Irrm"
+    - "gfs"
+    - "Rg"
+    - "RDS(on) 10V TJ=175℃"
+    - "IDSS TJ=175℃"
+    - "IGSSF"
+    - "IGSSR"
+    - "Qg测试条件"
+    - "Ciss测试条件"
+  
+  low:
+    - "认证"
+    - "ESD"
+    - "Product Status"
+    - "TSTG min"
+    - "TSTG max"
+    - "Tsold"
