@@ -1,0 +1,137 @@
+# ALTOOL V3 - main.py 集成代码片段
+# 将这些代码添加到main.py的适当位置
+
+# ==================== 片段1: 导入部分（添加到现有导入之后） ====================
+
+# 导入前端组件（添加到第29行之后）
+try:
+    from frontend.dashboard import Dashboard, render_dashboard_page
+    from frontend.progress import ProgressWidget, BatchProgressTracker
+    from frontend.guide import UserGuide, check_and_show_guide, render_guide_button
+    FRONTEND_AVAILABLE = True
+except ImportError:
+    FRONTEND_AVAILABLE = False
+
+
+# ==================== 片段2: 添加仪表盘页面函数（添加到所有render函数之后） ====================
+
+def render_dashboard_page():
+    """渲染仪表盘页面"""
+    if not FRONTEND_AVAILABLE:
+        st.error("仪表盘组件未加载，请检查frontend模块")
+        return
+    
+    # 获取数据库管理器
+    db_manager = None
+    try:
+        db_manager = DatabaseManager()
+    except:
+        pass
+    
+    # 渲染仪表盘
+    render_dashboard_page(db_manager)
+    
+    # 添加重新观看引导按钮
+    if st.button("🎓 重新观看新手引导"):
+        user_id = st.session_state.get('user_id', 'default')
+        guide = UserGuide(user_id)
+        guide.reset_guide()
+        st.rerun()
+
+
+# ==================== 片段3: 更新页面列表（找到pages定义的地方替换） ====================
+
+# 更新页面列表，添加仪表盘
+pages = [
+    '仪表盘',      # 新增！
+    '解析任务',
+    '数据中心', 
+    '参数管理',
+    '生成表格',
+    '系统设置',
+    '个人中心',
+]
+
+# 更新页面图标
+page_icons = {
+    '仪表盘': '📊',      # 新增！
+    '解析任务': '🔍',
+    '数据中心': '💾',
+    '参数管理': '⚙️',
+    '生成表格': '📋',
+    '系统设置': '🔧',
+    '个人中心': '👤',
+}
+
+
+# ==================== 片段4: 添加页面路由（在页面路由部分添加） ====================
+
+# 在主循环中添加仪表盘路由（在其他页面判断之前）
+if st.session_state.current_page == '仪表盘':
+    render_dashboard_page()
+elif st.session_state.current_page == '解析任务':
+    render_parse_page()
+# ... 其他页面路由
+
+
+# ==================== 片段5: 显示新手引导（在登录成功后的地方） ====================
+
+# 在登录成功后显示新手引导
+if FRONTEND_AVAILABLE:
+    user_id = st.session_state.get('user_id', 'default')
+    if check_and_show_guide(user_id):
+        st.info("👆 请查看上方的新手引导，帮助您快速上手系统")
+
+
+# ==================== 片段6: 增强解析任务进度显示（在render_parse_page中） ====================
+
+# 在批量解析时，使用新的进度组件（可选）
+# 找到批量解析的代码段，替换进度显示部分
+
+# 原有代码:
+# progress_bar = st.progress(0)
+# for i, pdf_file in enumerate(pdf_files):
+#     progress_bar.progress((i + 1) / len(pdf_files))
+
+# 新代码（增强版）:
+if FRONTEND_AVAILABLE and len(pdf_files) > 1:
+    # 使用高级进度组件
+    tracker = BatchProgressTracker(pdf_files, "PDF批量解析")
+    
+    for i, pdf_file in enumerate(pdf_files):
+        tracker.start_file(pdf_file.name if hasattr(pdf_file, 'name') else str(pdf_file))
+        
+        # ... 解析逻辑 ...
+        
+        tracker.complete_file(
+            pdf_file.name if hasattr(pdf_file, 'name') else str(pdf_file),
+            success=True  # 或根据实际结果
+        )
+    
+    results = tracker.finish_all()
+else:
+    # 使用原有进度显示
+    progress_bar = st.progress(0)
+    for i, pdf_file in enumerate(pdf_files):
+        progress_bar.progress((i + 1) / len(pdf_files))
+
+
+# ==================== 使用说明 ====================
+
+"""
+集成步骤:
+
+1. 备份main.py:
+   cp main.py main.py.backup
+
+2. 添加上述代码片段到main.py的适当位置
+
+3. 验证集成:
+   - 启动应用: streamlit run main.py
+   - 检查侧边栏是否有"仪表盘"菜单
+   - 点击仪表盘查看是否正常显示
+   - 首次登录查看是否有新手引导
+
+4. 如遇到问题，恢复备份:
+   cp main.py.backup main.py
+"""

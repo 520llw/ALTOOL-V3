@@ -24,6 +24,18 @@ from backend.pdf_parser import PDFParser
 from backend.ai_processor import AIProcessor
 from backend.data_writer import DataWriter
 from backend.user_manager import UserManager
+from backend.cache_manager import get_cache_manager
+from backend.backup_manager import get_backup_manager
+from backend.security import get_security_manager
+
+# 导入前端组件
+try:
+    from frontend.dashboard import Dashboard, render_dashboard_page
+    from frontend.progress import ProgressWidget, BatchProgressTracker
+    from frontend.guide import UserGuide, check_and_show_guide
+    FRONTEND_AVAILABLE = True
+except ImportError:
+    FRONTEND_AVAILABLE = False
 
 # 导入优化模块（简化版）
 try:
@@ -532,7 +544,7 @@ def folder_browser_dialog(start_path: str = "/home/gjw"):
 
 # ==================== 登录页面 ====================
 def render_login_page():
-    """渲染登录页面"""
+    """渲染登录页面 - 新增密码强度检测和登录锁定提示"""
     # 登录页面样式 - 简洁版
     st.markdown("""
     <style>
@@ -566,6 +578,10 @@ def render_login_page():
         # 标题
         st.markdown('<div class="login-title">⚡ 功率器件参数提取系统</div>', unsafe_allow_html=True)
         
+        # 获取安全管理器
+        security_manager = get_security_manager()
+        user_manager = get_cached_user_manager()
+        
         if st.session_state.show_register:
             # ========== 注册表单 ==========
             st.markdown('<div class="login-subtitle">创建新账号</div>', unsafe_allow_html=True)
@@ -574,6 +590,28 @@ def render_login_page():
                 reg_username = st.text_input("👤 用户名", placeholder="3-20个字符")
                 reg_password = st.text_input("🔒 密码", type="password", placeholder="至少6位")
                 reg_password2 = st.text_input("🔒 确认密码", type="password", placeholder="再次输入密码")
+                
+                # 密码强度实时显示
+                if reg_password:
+                    feedback = security_manager.get_password_strength_feedback(reg_password)
+                    color = feedback['color']
+                    score = feedback['score']
+                    
+                    st.markdown(f"""
+                    <div style="margin: 8px 0;">
+                        <div style="font-size: 12px; color: #6B7280; margin-bottom: 4px;">
+                            密码强度: <span style="color: {color}; font-weight: bold;">{feedback['level_name']}</span>
+                        </div>
+                        <div style="width: 100%; height: 6px; background: #E5E7EB; border-radius: 3px;">
+                            <div style="width: {score}%; height: 100%; background: {color}; border-radius: 3px;"></div>
+                        </div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    if feedback['suggestions']:
+                        with st.expander("💡 改进建议", expanded=False):
+                            for suggestion in feedback['suggestions']:
+                                st.caption(f"• {suggestion}")
                 
                 submitted = st.form_submit_button("📝 注 册", use_container_width=True, type="primary")
                 
@@ -587,15 +625,19 @@ def render_login_page():
                     elif reg_password != reg_password2:
                         show_toast("两次输入的密码不一致", "warning")
                     else:
-                        user_manager = get_cached_user_manager()
-                        success, message = user_manager.create_user(reg_username, reg_password, "user")
-                        
-                        if success:
-                            st.session_state.show_register = False
-                            st.toast(f"{message}，请登录")
-                            st.rerun()
+                        # 检查密码强度
+                        feedback = security_manager.get_password_strength_feedback(reg_password)
+                        if not feedback['is_acceptable']:
+                            show_toast(f"密码强度太弱，请加强密码", "warning")
                         else:
-                            show_toast(message, "error")
+                            success, message = user_manager.create_user(reg_username, reg_password, "user")
+                            
+                            if success:
+                                st.session_state.show_register = False
+                                st.toast(f"{message}，请登录")
+                                st.rerun()
+                            else:
+                                show_toast(message, "error")
             
             st.markdown("---")
             if st.button("⬅️ 返回登录", use_container_width=True):
@@ -606,9 +648,21 @@ def render_login_page():
             # ========== 登录表单 ==========
             st.markdown('<div class="login-subtitle">请登录以继续使用</div>', unsafe_allow_html=True)
             
+            # 显示锁定提示（如果有）
+            if 'login_username' in st.session_state and st.session_state.login_username:
+                is_locked, remaining = security_manager.is_account_locked(st.session_state.login_username)
+                if is_locked:
+                    minutes = remaining // 60
+                    seconds = remaining % 60
+                    st.error(f"🔒 账号已被锁定，请等待 {minutes}分{seconds}秒 后重试")
+            
             with st.form("login_form"):
                 username = st.text_input("👤 用户名", placeholder="请输入用户名")
                 password = st.text_input("🔒 密码", type="password", placeholder="请输入密码")
+                
+                # 保存用户名用于锁定检查
+                if username:
+                    st.session_state.login_username = username
                 
                 col_a, col_b = st.columns(2)
                 with col_a:
@@ -620,21 +674,41 @@ def render_login_page():
                     if not username or not password:
                         show_toast("请填写用户名和密码后登录", "warning")
                     else:
-                        user_manager = get_cached_user_manager()
-                        success, message, user = user_manager.authenticate(username, password)
-                        
-                        if success:
-                            st.session_state.logged_in = True
-                            st.session_state.user_id = user.id
-                            st.session_state.username = user.username
-                            st.session_state.user_role = user.role
-                            st.session_state.remember_me = remember_me
-                            # 加载用户专属API密钥（为空则使用系统默认）
-                            user_key = user_manager.get_user_api_key(user.id)
-                            st.session_state.ai_api_key = user_key if user_key else config.ai.api_key
-                            st.rerun()
+                        # 检查账号是否被锁定
+                        is_locked, remaining = security_manager.is_account_locked(username)
+                        if is_locked:
+                            minutes = remaining // 60
+                            seconds = remaining % 60
+                            show_toast(f"账号已被锁定，请{minutes}分{seconds}秒后重试", "error")
                         else:
-                            show_toast(message, "error")
+                            success, message, user = user_manager.authenticate(username, password)
+                            
+                            # 记录登录尝试
+                            security_manager.record_login_attempt(username, success)
+                            
+                            if success:
+                                st.session_state.logged_in = True
+                                st.session_state.user_id = user.id
+                                st.session_state.username = user.username
+                                st.session_state.user_role = user.role
+                                st.session_state.remember_me = remember_me
+                                # 加载用户专属API密钥（为空则使用系统默认）
+                                user_key = user_manager.get_user_api_key(user.id)
+                                st.session_state.ai_api_key = user_key if user_key else config.ai.api_key
+                                st.rerun()
+                            else:
+                                # 检查锁定状态
+                                is_now_locked, remaining = security_manager.is_account_locked(username)
+                                if is_now_locked:
+                                    show_toast(f"密码错误次数过多，账号已锁定", "error")
+                                else:
+                                    # 获取剩余尝试次数
+                                    attempt_info = security_manager.get_login_attempts_info(username)
+                                    remaining_attempts = 5 - attempt_info['failed_count']
+                                    if remaining_attempts > 0:
+                                        show_toast(f"{message}，还剩{remaining_attempts}次机会", "error")
+                                    else:
+                                        show_toast(message, "error")
             
             st.markdown("---")
             
@@ -646,9 +720,11 @@ def render_login_page():
 
 # ==================== 个人中心页面 ====================
 def render_profile_page():
-    """渲染个人中心页面 - 简洁版"""
+    """渲染个人中心页面 - 新增密码强度检测和数据备份恢复"""
     
     user_manager = get_cached_user_manager()
+    backup_manager = get_backup_manager()
+    security_manager = get_security_manager()
     user = user_manager.get_user_by_id(st.session_state.user_id)
     
     if not user:
@@ -668,21 +744,125 @@ def render_profile_page():
     
     st.markdown("---")
     
-    # 修改密码
+    # 修改密码（带强度检测）
     st.subheader("🔐 修改密码")
+    
+    # 初始化密码强度状态
+    if 'pwd_strength_feedback' not in st.session_state:
+        st.session_state.pwd_strength_feedback = None
+    
     with st.form("change_pwd_form", clear_on_submit=True):
         col1, col2 = st.columns(2)
         with col1:
             old_pwd = st.text_input("原密码", type="password")
         with col2:
             new_pwd = st.text_input("新密码", type="password", help="至少6位")
+            
+            # 实时显示密码强度
+            if new_pwd:
+                feedback = security_manager.get_password_strength_feedback(new_pwd)
+                st.session_state.pwd_strength_feedback = feedback
+                
+                # 显示强度条
+                color = feedback['color']
+                score = feedback['score']
+                st.markdown(f"""
+                <div style="margin-top: 8px;">
+                    <div style="font-size: 12px; color: #6B7280; margin-bottom: 4px;">
+                        密码强度: <span style="color: {color}; font-weight: bold;">{feedback['level_name']}</span>
+                    </div>
+                    <div style="width: 100%; height: 6px; background: #E5E7EB; border-radius: 3px;">
+                        <div style="width: {score}%; height: 100%; background: {color}; border-radius: 3px; transition: all 0.3s;"></div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # 显示建议
+                if feedback['suggestions']:
+                    with st.expander("💡 改进建议"):
+                        for suggestion in feedback['suggestions']:
+                            st.caption(f"• {suggestion}")
         
         if st.form_submit_button("确认修改"):
             if old_pwd and new_pwd:
-                success, msg = user_manager.change_password(st.session_state.user_id, old_pwd, new_pwd)
-                show_toast(msg, "success" if success else "error")
+                # 检查密码强度
+                feedback = security_manager.get_password_strength_feedback(new_pwd)
+                if not feedback['is_acceptable']:
+                    show_toast(f"密码强度太弱: {', '.join(feedback['suggestions'][:2])}", "warning")
+                else:
+                    success, msg = user_manager.change_password(st.session_state.user_id, old_pwd, new_pwd)
+                    show_toast(msg, "success" if success else "error")
             else:
                 show_toast("请填写完整", "warning")
+    
+    st.markdown("---")
+    
+    # 数据备份/恢复
+    st.subheader("💾 数据备份与恢复")
+    
+    backup_tab1, backup_tab2 = st.tabs(["创建备份", "恢复备份"])
+    
+    with backup_tab1:
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            backup_name = st.text_input("备份名称（可选）", placeholder="留空自动生成时间戳名称")
+        with col2:
+            if st.button("📦 创建备份", type="primary", use_container_width=True):
+                try:
+                    with st.spinner("正在创建备份..."):
+                        name = backup_name.strip() if backup_name else None
+                        backup_path = backup_manager.create_backup(name)
+                    show_toast(f"备份创建成功！", "success")
+                    st.markdown(f"**备份路径：** `{backup_path}`")
+                except Exception as e:
+                    show_toast(f"备份失败: {e}", "error")
+    
+    with backup_tab2:
+        backups = backup_manager.list_backups()
+        
+        if not backups:
+            st.info("暂无备份文件")
+        else:
+            st.caption(f"共 {len(backups)} 个备份")
+            
+            for backup in backups:
+                with st.expander(f"📦 {backup['name']} ({backup['size_mb']} MB)", expanded=False):
+                    col1, col2, col3 = st.columns([3, 1, 1])
+                    with col1:
+                        st.write(f"**创建时间：** {backup['created_at'][:19]}")
+                        st.write(f"**文件大小：** {backup['size_mb']} MB")
+                        st.write(f"**路径：** `{backup['path']}`")
+                    with col2:
+                        if st.button("🔄 恢复", key=f"restore_{backup['name']}", use_container_width=True):
+                            confirm_key = f"confirm_restore_{backup['name']}"
+                            st.session_state[confirm_key] = True
+                            st.rerun()
+                    with col3:
+                        if st.button("🗑️ 删除", key=f"delete_{backup['name']}", use_container_width=True):
+                            if backup_manager.delete_backup(backup['path']):
+                                show_toast("备份已删除", "success")
+                                st.rerun()
+                            else:
+                                show_toast("删除失败", "error")
+                    
+                    # 确认恢复
+                    confirm_key = f"confirm_restore_{backup['name']}"
+                    if st.session_state.get(confirm_key):
+                        st.warning("⚠️ 恢复将覆盖当前数据，确定要继续吗？")
+                        col_yes, col_no = st.columns(2)
+                        with col_yes:
+                            if st.button("确认恢复", key=f"yes_restore_{backup['name']}", type="primary", use_container_width=True):
+                                with st.spinner("正在恢复数据..."):
+                                    success = backup_manager.restore_backup(backup['path'])
+                                    if success:
+                                        st.session_state[confirm_key] = False
+                                        show_toast("数据恢复成功！请刷新页面", "success")
+                                    else:
+                                        show_toast("恢复失败", "error")
+                        with col_no:
+                            if st.button("取消", key=f"no_restore_{backup['name']}", use_container_width=True):
+                                st.session_state[confirm_key] = False
+                                st.rerun()
     
     # 管理员功能
     if user.role == 'admin':
@@ -746,8 +926,8 @@ def render_sidebar():
         st.markdown("---")
         
         # 导航菜单（优化后的6个页面）
-        pages = ['解析任务', '数据中心', '参数管理', '生成表格', '系统设置', '个人中心']
-        icons = ['📋', '📊', '📦', '📤', '⚙️', '👤']
+        pages = ['仪表盘', '解析任务', '数据中心', '参数管理', '生成表格', '系统设置', '个人中心']
+        icons = ['📊', '🔍', '💾', '⚙️', '📋', '🔧', '👤']
         
         # 解析中显示状态提示
         is_parsing = st.session_state.get('parsing', False)
@@ -1017,11 +1197,13 @@ def run_parsing_background(pdf_folder, user_id, ai_config, max_concurrent, share
         from backend.ai_processor import AIProcessor
         from backend.db_manager import DatabaseManager
         from backend.data_writer import DataWriter
+        from backend.cache_manager import get_cache_manager
         
         pdf_parser = PDFParser()
         ai_processor = AIProcessor()
         db_manager = DatabaseManager()
         data_writer = DataWriter(db_manager)
+        cache_manager = get_cache_manager()
         
         # 更新AI配置
         ai_processor.update_config(
@@ -1049,6 +1231,33 @@ def run_parsing_background(pdf_folder, user_id, ai_config, max_concurrent, share
         
         total_files = len(pdf_list)
         start_time = time.time()
+        
+        # ===== 缓存系统：检查缓存并过滤已缓存文件 =====
+        cached_results = []
+        files_to_parse = []
+        
+        for pdf_file in pdf_list:
+            file_path = os.path.join(pdf_folder, pdf_file)
+            md5_hash = cache_manager.compute_md5(file_path)
+            
+            if cache_manager.is_cache_valid(md5_hash):
+                # 缓存命中
+                cached_result = cache_manager.get_cached_result(md5_hash)
+                if cached_result:
+                    cached_results.append((pdf_file, cached_result, md5_hash))
+                else:
+                    files_to_parse.append((pdf_file, md5_hash))
+            else:
+                files_to_parse.append((pdf_file, md5_hash))
+        
+        cache_hit_count = len(cached_results)
+        cache_miss_count = len(files_to_parse)
+        
+        shared['cache_info'] = {
+            'hit': cache_hit_count,
+            'miss': cache_miss_count,
+            'total': total_files
+        }
         
         # 阶段1: 解析PDF（使用带缓存的批量解析：MD5 去重 + 缓存命中加速）
         shared['status'] = f"解析PDF中 (0/{total_files})"
@@ -1100,6 +1309,40 @@ def run_parsing_background(pdf_folder, user_id, ai_config, max_concurrent, share
                 max_concurrent=max_concurrent,
                 progress_callback=progress_callback
             )
+            
+            # ===== 缓存系统：保存解析结果到缓存 =====
+            for i, result in enumerate(results):
+                if not result.error:
+                    # 找到对应的MD5
+                    pdf_name = result.pdf_name
+                    for pdf_file, md5_hash in files_to_parse:
+                        if pdf_file == pdf_name:
+                            cache_result = {
+                                'pdf_name': result.pdf_name,
+                                'opn': result.opn,
+                                'manufacturer': result.manufacturer,
+                                'device_type': result.device_type,
+                                'params': result.params,
+                                'tables': result.tables if hasattr(result, 'tables') else [],
+                                'error': result.error
+                            }
+                            cache_manager.cache_result(md5_hash, cache_result, pdf_name)
+                            break
+            
+            # ===== 缓存系统：合并缓存结果 =====
+            for pdf_name, cached_result, md5_hash in cached_results:
+                from backend.ai_processor import ExtractionResult
+                result = ExtractionResult(
+                    pdf_name=cached_result.get('pdf_name', pdf_name),
+                    opn=cached_result.get('opn'),
+                    manufacturer=cached_result.get('manufacturer'),
+                    device_type=cached_result.get('device_type'),
+                    params=cached_result.get('params', {}),
+                    tables=cached_result.get('tables', []),
+                    error=cached_result.get('error')
+                )
+                results.append(result)
+                
         except Exception as e:
             logger.error(f"batch_extract 失败，降级为串行: {e}")
             results = []
@@ -1140,14 +1383,17 @@ def run_parsing_background(pdf_folder, user_id, ai_config, max_concurrent, share
         elif failed_count > 0 and success_count == 0:
             shared['status'] = f"❌ 全部失败 ({failed_count}个文件) · 耗时{total_time:.1f}s"
         else:
-            shared['status'] = f"✅ 完成 · 成功{success_count} · 失败{failed_count} · 耗时{total_time:.1f}s"
+            cache_info_str = f" | 缓存命中{cache_hit_count}/{total_files}" if cache_hit_count > 0 else ""
+            shared['status'] = f"✅ 完成 · 成功{success_count} · 失败{failed_count}{cache_info_str} · 耗时{total_time:.1f}s"
         shared['results'] = results
         shared['stats'] = {
             'total': total_files,
             'success': success_count,
             'failed': failed_count,
             'total_params': total_params,
-            'time': total_time
+            'time': total_time,
+            'cache_hit': cache_hit_count,
+            'cache_miss': cache_miss_count
         }
     except Exception as e:
         # 兜底：无论什么异常都要让解析状态恢复
@@ -1709,10 +1955,14 @@ def render_table_generation_page():
 
 # ==================== 系统设置页面 ====================
 def render_settings_page():
-    """渲染系统设置页面"""
+    """渲染系统设置页面 - 新增缓存清理和自动备份设置"""
     st.title("⚙️ 系统设置")
     
-    # AI模型配置
+    # 获取管理器实例
+    cache_manager = get_cache_manager()
+    backup_manager = get_backup_manager()
+    
+    # ========== AI模型配置 ==========
     st.subheader("🤖 AI模型配置")
     
     with st.form("ai_settings"):
@@ -1779,8 +2029,104 @@ def render_settings_page():
                 else:
                     show_toast("配置已保存（仅对当前账号生效）", "success")
     
-    # 测试连接
     st.markdown("---")
+    
+    # ========== 缓存管理 ==========
+    st.subheader("💾 缓存管理")
+    
+    # 获取缓存统计
+    cache_stats = cache_manager.get_cache_stats()
+    
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("缓存文件数", cache_stats['total_files'])
+    with col2:
+        st.metric("缓存大小", f"{cache_stats['total_size_mb']} MB")
+    with col3:
+        st.metric("命中率", f"{cache_stats['hit_rate']}%")
+    with col4:
+        st.metric("总访问", cache_stats['total_access'])
+    
+    st.caption(f"缓存保留时间：{cache_stats['max_age_days']}天 | 命中：{cache_stats['hits']}次 | 未命中：{cache_stats['misses']}次")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("🧹 清理过期缓存", use_container_width=True):
+            count, msg = cache_manager.clear_expired_cache()
+            show_toast(msg, "success" if count > 0 else "info")
+            st.rerun()
+    with col2:
+        if st.button("🗑️ 清除全部缓存", type="secondary", use_container_width=True):
+            confirm_key = "confirm_clear_cache"
+            if confirm_key not in st.session_state:
+                st.session_state[confirm_key] = True
+                st.warning("⚠️ 确定要清除所有缓存吗？")
+                col_yes, col_no = st.columns(2)
+                with col_yes:
+                    if st.button("确认清除", key="yes_clear_cache", type="primary", use_container_width=True):
+                        success, msg = cache_manager.clear_all_cache()
+                        st.session_state[confirm_key] = False
+                        show_toast(msg, "success" if success else "error")
+                        st.rerun()
+                with col_no:
+                    if st.button("取消", key="no_clear_cache", use_container_width=True):
+                        st.session_state[confirm_key] = False
+                        st.rerun()
+            else:
+                st.session_state[confirm_key] = False
+                st.rerun()
+    
+    st.markdown("---")
+    
+    # ========== 自动备份设置 ==========
+    st.subheader("📦 自动备份设置")
+    
+    auto_config = backup_manager.get_auto_backup_config()
+    
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        auto_backup_enabled = st.toggle("启用自动备份", value=auto_config.get('enabled', False))
+    with col2:
+        interval_days = st.number_input(
+            "备份间隔（天）",
+            value=auto_config.get('interval_days', 7),
+            min_value=1,
+            max_value=30,
+            help="每隔多少天自动创建一次备份"
+        )
+    with col3:
+        max_backups = st.number_input(
+            "保留备份数",
+            value=auto_config.get('max_backups', 5),
+            min_value=1,
+            max_value=20,
+            help="自动备份最多保留的数量"
+        )
+    
+    # 显示上次备份时间
+    last_backup = auto_config.get('last_backup')
+    if last_backup:
+        st.caption(f"上次自动备份：{last_backup[:19]}")
+    else:
+        st.caption("尚未进行过自动备份")
+    
+    if st.button("💾 保存自动备份设置", use_container_width=True):
+        backup_manager.set_auto_backup_config(
+            enabled=auto_backup_enabled,
+            interval_days=int(interval_days),
+            max_backups=int(max_backups)
+        )
+        show_toast("自动备份设置已保存", "success")
+    
+    # 手动触发自动备份检查
+    if auto_backup_enabled and backup_manager.should_auto_backup():
+        st.info("📦 已达到自动备份间隔，将在下次启动时自动创建备份")
+    
+    st.markdown("---")
+    
+    # ========== 测试连接 ==========
+    st.subheader("🔗 连接测试")
+    
     if st.button("🔗 测试API连接"):
         with st.spinner("正在测试连接..."):
             ai_processor = AIProcessor()
@@ -1799,7 +2145,7 @@ def render_settings_page():
     
     st.markdown("---")
     
-    # AI性能配置
+    # ========== AI性能配置 ==========
     st.subheader("⚡ AI性能配置")
     
     col1, col2, col3 = st.columns(3)
@@ -1839,7 +2185,7 @@ def render_settings_page():
 
     st.markdown("---")
     
-    # 提示词调试工具
+    # ========== 提示词调试工具 ==========
     st.subheader("🧪 提示词调试工具")
     st.caption("为指定PDF生成当前配置下的完整提示词（不调用大模型），用于检查参数清单和规则是否正确。")
     
@@ -2667,6 +3013,33 @@ def initialize_params_from_excel() -> int:
     return count
 
 
+# ==================== 仪表盘页面 ====================
+def render_dashboard_page():
+    """渲染仪表盘页面"""
+    if not FRONTEND_AVAILABLE:
+        st.error("仪表盘组件未加载，请检查frontend模块")
+        return
+    
+    st.title("📊 系统仪表盘")
+    
+    # 获取数据库管理器
+    db_manager = None
+    try:
+        db_manager = DatabaseManager()
+    except:
+        pass
+    
+    # 使用前端组件渲染仪表盘
+    try:
+        from frontend.dashboard import Dashboard
+        dashboard = Dashboard(db_manager)
+        dashboard.render()
+    except Exception as e:
+        st.error(f"渲染仪表盘失败: {e}")
+        # 降级显示
+        st.info("系统运行正常，暂无详细统计数据")
+
+
 # ==================== 主函数 ====================
 def main():
     """主函数"""
@@ -2694,7 +3067,9 @@ def main():
     render_sidebar()
     
     # 根据当前页面渲染内容
-    if st.session_state.current_page == '解析任务':
+    if st.session_state.current_page == '仪表盘':
+        render_dashboard_page()
+    elif st.session_state.current_page == '解析任务':
         render_parse_page()
     elif st.session_state.current_page == '数据中心':
         render_data_center_page()
